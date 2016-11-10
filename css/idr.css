@@ -34,7 +34,11 @@ hr {
 
 a.button {
     background-color: #ff9800;
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+a.button:hover {
+    background-color: #ffc107;
 }
 
 a {
