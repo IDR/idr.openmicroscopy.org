@@ -43,13 +43,13 @@ a {
 }
 
 .logo {
-    margin: 15px auto;
+    margin: 20px auto;
     width: 150px;
 }
 
 .marketing-hero {
     background: #e8eaf6 url('../img/bg/11001_Well_A07_Field_1.jpg') 100% 100%;
-    padding: 50px 10px 50px;
+    padding: 80px 10px 80px;
 }
 
 .marketing-hero h1, .marketing-hero p {
