@@ -1,0 +1,14 @@
+body {
+    color: #546e7a;
+    font-family: 'Open Sans', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #455a64;
+    font-family: 'Open Sans', serif;
+    font-weight: normal;
+}
+
+hr {
+    border-style: dashed;
+}
