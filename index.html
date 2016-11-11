@@ -1,62 +1,62 @@
 ---
 layout: idr
 title: Home
----     
+---
         <!-- begin marketing header -->
         <div class="logo"><img src="{{ site.baseurl }}/img/logos/logo-idr.svg" alt="IDR logo"></div>
         <header class="marketing-hero">
             <div class="row homepage text-center">
-            
+
                 <div class="medium-12 columns">
                     <h1 class="hero-main-header">Image Data Repository (IDR)</h1>
-                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Welcome to the Image Data Repository (IDR). This online, public resource seeks to store, integrate and serve image datasets from published scientific studies. We have collected and are continuing to receive existing and newly created “reference” image datasets that are valuable resources for a broad community of users, either because they will be frequently accessed and cited or because they can serve as a basis for re-analysis and the development of new computational tools.</p>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Welcome to the Image Data Resource (IDR). This online, public data repository seeks to store, integrate and serve image datasets from published scientific studies. We have collected and are continuing to receive existing and newly created “reference image" datasets that are valuable resources for a broad community of users, either because they will be frequently accessed and cited or because they can serve as a basis for re-analysis and the development of new computational tools.</p>
                     <br>
                     <a href="http://idr-demo.openmicroscopy.org/webclient/userdata/?experimenter=-1" class="large button sites-button">Take a look at the data</a>
                 </div>
             </div>
         </header>
         <!-- end marketing header -->
-        
+
         <!-- begin Goal section -->
-        <hr class="whitespace">        
+        <hr class="whitespace">
         <div class="row column text-center">
             <h2>Goal</h2>
-        </div>        
+        </div>
         <hr>
         <div class="row">
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>The IDR aims to make datasets that have never previously been accessible publicly available, allowing the community to search, view, mine and even process and analyze large complex multidimensional life sciences image data. Sharing data promotes the validation of experimental methods and scientific conclusions, the comparison with new data obtained by scientists around the world, and allows the possibility of data reuse by developers of new analysis and processing tools.</p>        
-                        <p>All datasets have been annotated with author-supplied metadata (e.g., annotations, defined regions, feature vectors and ontological annotations) which are all stored and available for browsing. All metadata are also available through the OMERO API.</p>
+                        <p>The IDR makes datasets that have never previously been accessible publicly available, allowing the community to search, view, mine and even process and analyze large, complex, multidimensional life sciences image data. Sharing data promotes the validation of experimental methods and scientific conclusions, the comparison with new data obtained by the global scientific community, and enables data reuse by developers of new analysis and processing tools.</p>
+                        <p>IDR datasets are annotated with author-supplied metadata (e.g., annotations, defined regions, feature vectors and ontological annotations) which are all stored and available for browsing. All metadata are also available through the <a href="https://www.openmicroscopy.org/site/support/omero5.2/developers/Modules/Api.html">OMERO API</a>.
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Goal section -->
-        
+
         <!-- begin Technology section -->
-        <hr class="whitespace">        
+        <hr class="whitespace">
         <div class="row column text-center">
             <h2>Technology</h2>
-        </div>        
+        </div>
         <hr>
         <div class="row">
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>IDR uses OME’s <a href="http://www.openmicroscopy.org/site/products/bio-formats">Bio-Formats</a> and <a href="http://www.openmicroscopy.org/site/products/omero">OMERO</a> tools to read, manage and serve data, and provide links to EMBL-EBI’s molecular and structural resources. The resource is built upon EMBL-EBI’s OpenStack-based Embassy infrastructure. All tools used for reading and converting metadata associated with each dataset are available and all scripts used to build the infrastructure are maintained and available. We will be extending the system to enable computational re-analysis of the data.</p>
+                        <p>IDR uses OME’s <a href="http://www.openmicroscopy.org/site/products/bio-formats">Bio-Formats</a> and <a href="http://www.openmicroscopy.org/site/products/omero">OMERO</a> tools to read, manage and serve data, and provide links to EMBL-EBI’s molecular and structural resources. The resource is built upon EMBL-EBI’s OpenStack-based Embassy infrastructure. All tools used for reading and converting metadata associated with <a href="https://github.com/IDR/idr-metadata">each dataset</a> and all scripts used to build the <a href="https://github.com/IDR/infrastructure">infrastructure</a> are maintained and available. A parallel system that enables computational re-analysis of IDR data will be released soon.</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Technology section -->
-        
+
         <!-- begin Examples section -->
-        <hr class="whitespace">        
+        <hr class="whitespace">
         <div class="row column text-center">
             <h2>Examples</h2>
-        </div>        
+        </div>
         <hr>
         <div class="row">
             <div class="small-10 small-centered medium-10 medium-centered columns">
@@ -75,12 +75,12 @@ title: Home
             </div>
         </div>
         <!-- end Examples section -->
-        
+
         <!-- begin Funding section -->
-        <hr class="whitespace">        
+        <hr class="whitespace">
         <div class="row column text-center">
             <h2>Funding and Project Participants</h2>
-        </div>        
+        </div>
         <hr>
         <div class="row">
             <div class="small-10 small-centered medium-10 medium-centered columns">
@@ -92,22 +92,21 @@ title: Home
             </div>
         </div>
         <!-- end Funding section -->
-        
+
         <!-- begin Current Status section -->
-        <hr class="whitespace">        
+        <hr class="whitespace">
         <div class="row column text-center">
             <h2>Current Status</h2>
-        </div>        
+        </div>
         <hr>
         <div class="row">
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>Currently the IDR contains 35 Tb of multi-dimensional image data consisting of 26 million individual planes from 20 different imaging studies. Data comes from studies on human, Drosophila, budding and fission yeast, and mouse cells. Imaging modalities included so far include high content screens and histopathology, super-resolution and 3D-SIM datasets.</p>
+                        <p>Currently (Nov 2016) the IDR contains >40 Tb of multi-dimensional image data consisting of &gt;30 Mio individual planes from 23 different imaging studies. IDR contains ~988,000 different experiments. Data comes from studies on human, Drosophila, budding and fission yeast, and mouse cells and tissue. Imaging modalities represented so far include high content screens, time-lapse imaging, whole slide histopathology, and super-resolution microscopy.</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Current Status section -->
-        
         <hr class="whitespace">
