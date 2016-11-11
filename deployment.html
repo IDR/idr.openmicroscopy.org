@@ -38,7 +38,9 @@ title: Deployment
                         <p>Details of the configuration for these servers are in `idr-playbooks/group_vars/`.</p>
                         <p>The playbooks are designed to handle the setup of all servers together, including configuring internal network addresses so that OMERO can talk to the database, and the web proxy can talk to OMERO.</p>
                         <br>
-                        <p>In addition to the production IDR we also have playbooks for setting up the analysis platform based around [JupyterHub](https://github.com/jupyterhub/jupyterhub) and [Docker Swarm](https://docs.docker.com/engine/swarm/).
+                        <p>In addition to the production IDR we also have playbooks for setting up the analysis platform based around
+                        <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> and
+                        <a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a>.
                         This uses a separate copy of the IDR to ensure that heavy access loads resulting from analysis workflows do not have a detrimental impact on the production server, and requires three or more servers:</p>
                         <ul>
                             <li>Database</li>
@@ -73,7 +75,8 @@ TODO: A diagram?
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>The Ansible roles and playbooks are stored on [GitHub](https://github.com/openmicroscopy/infrastructure/).
+                        <p>The Ansible roles and playbooks are stored on
+                        <a href="https://github.com/openmicroscopy/infrastructure/">GitHub</a>.
                         Clone this directory, and change into the `ansible` directory:</p>
                         <pre>
     git clone --recursive https://github.com/openmicroscopy/infrastructure.git
