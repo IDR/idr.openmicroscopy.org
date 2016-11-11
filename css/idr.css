@@ -52,9 +52,9 @@ a {
 }
 
 .marketing-hero {
-    background: #e8eaf6 url('../img/bg/11001_Well_A07_Field_1.jpg') 100% 100%;
+    background-color: #e8eaf6 
+    background-image: url('../img/bg/11001_Well_A07_Field_1.jpg');
     padding: 80px 10px 80px;
-    background-size: cover;
 }
 
 .marketing-hero h1, .marketing-hero p {
