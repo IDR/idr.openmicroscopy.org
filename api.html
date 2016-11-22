@@ -38,7 +38,8 @@ title: API
                         as well as on the IDR <a href="/jupyter">virtual analysis environment</a>.
                         </p>
 
-                        {% markdown IDR_API_example_script.md %}
+                        {% capture my-include %}{% include IDR_API_example_script.md %}{% endcapture %}
+                        {{ my-include | markdownify }}
 
                     </div>
                 </div>
