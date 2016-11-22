@@ -10,7 +10,7 @@ import requests
 
 INDEX_PAGE = "http://idr-demo.openmicroscopy.org/webclient/?experimenter=-1"
 
-# create http session
+""" create http session """
 with requests.Session() as session:
     request = requests.Request('GET', INDEX_PAGE)
     prepped = session.prepare_request(request)
