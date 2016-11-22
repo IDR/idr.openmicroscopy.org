@@ -19,7 +19,7 @@ title: API
             </div>
         </header>
 
-        <!-- begin Background section -->
+        <!-- begin Example section -->
         <hr class="whitespace">
         <div class="row column text-center">
             <h2>Example Usage</h2>
@@ -33,87 +33,127 @@ title: API
 
                         <p>Example script begins by creating HTTP session using Requests:</p>
 
-                        <code><pre>
-                        import requests
+                        <pre>
+import requests
 
-                        COOKIE_NAME = "sessionid_demo3"
-                        INDEX_PAGE = "http://idr-demo.openmicroscopy.org/webclient/?experimenter=-1"
+COOKIE_NAME = "sessionid_demo3"
+INDEX_PAGE = "http://idr-demo.openmicroscopy.org/webclient/?experimenter=-1"
 
-                        # create http session
-                        with requests.Session() as session:
-                            request = requests.Request('GET', INDEX_PAGE)
-                            prepped = session.prepare_request(request)
-                            response = session.send(prepped)
-                            if response.status_code != 200:
-                                response.raise_for_status()
-                            cookies = dict(sessionid=response.cookies[COOKIE_NAME])
-                        </pre></code>
+# create http session
+with requests.Session() as session:
+    request = requests.Request('GET', INDEX_PAGE)
+    prepped = session.prepare_request(request)
+    response = session.send(prepped)
+    if response.status_code != 200:
+        response.raise_for_status()
+    cookies = dict(sessionid=response.cookies[COOKIE_NAME])
+                        </pre>
 
-                        <p>get Screens that are annotated with gene:</p>
-
-                        <code><pre>
-                        SCREENS_PROJECTS_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/?value={value}"
-
-                        qs = {'key': 'gene', 'value': 'CDC20'}
-                        url = SCREENS_PROJECTS_URL.format(**qs)
-                        for s in session.get(url).json()['screens']:
-                            screen_id = s['id']
-                        </pre></code>
-
-                        <p>get Plates in Screen that are annotated with gene:</p>
-
-                        <code><pre>
-                        PLATES_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/plates/?value={value}&amp;id={screen_id}"
-
-                        qs = {'key': 'gene', 'value': 'CDC20', 'screen_id': screen_id}
-                        url = PLATES_URL.format(**qs)
-                        for p in session.get(url).json()['plates']:
-                            plate_id = p['id']
-                        </pre></code>
-
-                        <p>get Images in Plate that are annotated with gene:</p>
-
-                        <code><pre>
-                        IMAGES_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/images/?value={value}&amp;node={parent_type}&amp;id={parent_id}"
-
-                        IMAGE_URL = "http://idr-demo.openmicroscopy.org/webclient/?show=image-{image_id}"
-                        IMAGE_VIEWER = "http://idr-demo.openmicroscopy.org/webclient/img_detail/{image_id}/"
-                        THUMBNAIL_URL = "http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
-                        ATTRIBUTES_URL = "http://idr-demo.openmicroscopy.org/webclient/api/annotations/?type=map&amp;image={image_id}"
-
-                        qs = {'key': 'gene', 'value': 'CDC20', 'parent_type': 'plate', 'parent_id': plate_id}
-                        url = IMAGES_URL.format(**qs)
-                        for i in session.get(url).json()['images']:
-                            image_id = i['id']
-                            print "Image link:", IMAGE_URL.format(**{'image_id': image_id})
-                            print "Image viewer link:", IMAGE_VIEWER.format(**{'image_id': image_id})
-                            print 'Thumbnail URL:', THUMBNAIL_URL.format(**{'image_id': image_id})
-                            url = ATTRIBUTES_URL.format(**{'image_id': image_id})
-                            for a in session.get(_url).json()['annotations']:
-                                print 'Annotaitons:'
-                                print a['values']
-                        </pre></code>
-
-                        <p>example output:</p>
-
-                        <code><pre>
-                        Image link: http://idr-demo.openmicroscopy.org/webclient/?show=image-124486
-                        Image viewer link: http://idr-demo.openmicroscopy.org/webclient/img_detail/124486/
-                        Thumbnail URL: http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/124486/
-                        Annotaitons:
-                        [[u'Gene Identifier', u'YGL116W'], [u'Gene Identifier URL', u'http://www.yeastgenome.org/locus/YGL116W/overview'], [u'Gene Symbol', u'CDC20']]
-                        Annotaitons:
-                        [[u'Organism', u'Saccharomyces cerevisiae']]
-                        Annotaitons:
-                        [[u'Phenotype', u'GFP localization: cytosol'], [u'Phenotype Term Name', u'protein localized in cytosol phenotype'], [u'Phenotype Term Accession', u'CMPO_0000393'], [u'Phenotype Term Accession URL', u'http://www.ebi.ac.uk/cmpo/CMPO_0000393']]
-                        Annotaitons:
-                        [[u'Phenotype', u'GFP localization: nucleus'], [u'Phenotype Term Name', u'protein localized in nucleus phenotype'], [u'Phenotype Term Accession', u'CMPO_0000398'], [u'Phenotype Term Accession URL', u'http://www.ebi.ac.uk/cmpo/CMPO_0000398']]
-                        Annotaitons:
-                        [[u'Strain', u'Y6545'], [u'Environmental Stress', u'dithiothreitol'], [u'Channels', u'H2B-mCherry:cytosol;GFP:tagged protein;bright field/transmitted:cell '], [u'Has Phenotype', u'yes'], [u'Phenotype Annotation Level', u'experimental condition and gene']]
-                        </pre></code>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end Background section -->
+        <!-- end Example section -->
 
+        <!-- begin Screen section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h3>Get Screens that are annotated with a gene</h3>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <pre>
+SCREENS_PROJECTS_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/?value={value}"
+
+qs = {'key': 'gene', 'value': 'CDC20'}
+url = SCREENS_PROJECTS_URL.format(**qs)
+for s in session.get(url).json()['screens']:
+    screen_id = s['id']
+                        </pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Screen section -->
+
+        <!-- begin Plates section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h3>Get Plates in Screen that are annotated with a gene</h3>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <pre>
+PLATES_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/plates/?value={value}&amp;id={screen_id}"
+
+qs = {'key': 'gene', 'value': 'CDC20', 'screen_id': screen_id}
+url = PLATES_URL.format(**qs)
+for p in session.get(url).json()['plates']:
+    plate_id = p['id']
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Plates section -->
+
+        <!-- begin Images section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h3>Get Images in Plate that are annotated with gene</h3>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <pre>
+IMAGES_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/images/?value={value}&amp;node={parent_type}&amp;id={parent_id}"
+
+IMAGE_URL = "http://idr-demo.openmicroscopy.org/webclient/?show=image-{image_id}"
+IMAGE_VIEWER = "http://idr-demo.openmicroscopy.org/webclient/img_detail/{image_id}/"
+THUMBNAIL_URL = "http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
+ATTRIBUTES_URL = "http://idr-demo.openmicroscopy.org/webclient/api/annotations/?type=map&amp;image={image_id}"
+
+qs = {'key': 'gene', 'value': 'CDC20', 'parent_type': 'plate', 'parent_id': plate_id}
+url = IMAGES_URL.format(**qs)
+for i in session.get(url).json()['images']:
+    image_id = i['id']
+    print "Image link:", IMAGE_URL.format(**{'image_id': image_id})
+    print "Image viewer link:", IMAGE_VIEWER.format(**{'image_id': image_id})
+    print 'Thumbnail URL:', THUMBNAIL_URL.format(**{'image_id': image_id})
+    url = ATTRIBUTES_URL.format(**{'image_id': image_id})
+    for a in session.get(_url).json()['annotations']:
+        print 'Annotations:'
+        print a['values']
+                        </pre>
+
+                        <p>Example output:</p>
+
+                        <pre>
+Image link: http://idr-demo.openmicroscopy.org/webclient/?show=image-124486
+Image viewer link: http://idr-demo.openmicroscopy.org/webclient/img_detail/124486/
+Thumbnail URL: http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/124486/
+Annotations:
+[[u'Gene Identifier', u'YGL116W'], [u'Gene Identifier URL', u'http://www.yeastgenome.org/locus/YGL116W/overview'], [u'Gene Symbol', u'CDC20']]
+Annotations:
+[[u'Organism', u'Saccharomyces cerevisiae']]
+Annotations:
+[[u'Phenotype', u'GFP localization: cytosol'], [u'Phenotype Term Name', u'protein localized in cytosol phenotype'], [u'Phenotype Term Accession', u'CMPO_0000393'], [u'Phenotype Term Accession URL', u'http://www.ebi.ac.uk/cmpo/CMPO_0000393']]
+Annotations:
+[[u'Phenotype', u'GFP localization: nucleus'], [u'Phenotype Term Name', u'protein localized in nucleus phenotype'], [u'Phenotype Term Accession', u'CMPO_0000398'], [u'Phenotype Term Accession URL', u'http://www.ebi.ac.uk/cmpo/CMPO_0000398']]
+Annotations:
+[[u'Strain', u'Y6545'], [u'Environmental Stress', u'dithiothreitol'], [u'Channels', u'H2B-mCherry:cytosol;GFP:tagged protein;bright field/transmitted:cell '], [u'Has Phenotype', u'yes'], [u'Phenotype Annotation Level', u'experimental condition and gene']]
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Images section -->
