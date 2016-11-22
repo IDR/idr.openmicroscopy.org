@@ -65,3 +65,12 @@ a {
     background-color: #fff;
     color: #90a4ae;
 }
+
+code {
+ font-weight: normal;
+ color: #0a0a0a ;
+ background-color: #fafafa ;
+ border: none;
+ padding: 0.125rem 0.3125rem 0.0625rem;
+ width: 200px;
+}
