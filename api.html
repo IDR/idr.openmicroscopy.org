@@ -23,11 +23,6 @@ title: API
         </header>
 
         <!-- begin Example section -->
-        <hr class="whitespace">
-        <div class="row column text-center">
-            <h2>Example Notebook</h2>
-        </div>
-        <hr>
         <div class="row">
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
@@ -37,6 +32,8 @@ title: API
                             https://github.com/IDR/idr-notebooks/tree/master/notebooks</a>
                         as well as on the IDR <a href="/jupyter">virtual analysis environment</a>.
                         </p>
+
+                        <hr>
 
                         {% capture my-include %}{% include IDR_API_example_script.md %}{% endcapture %}
                         {{ my-include | markdownify }}
