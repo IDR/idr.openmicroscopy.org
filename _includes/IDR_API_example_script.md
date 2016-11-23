@@ -28,20 +28,6 @@ First create a HTTP session using the `requests` library:
         screen_id = s['id']
         print (s['id'], s['name'])
 
-Output:
-
-    (102, u'idr0002-heriche-condensation/screenA (24)')
-    (51, u'idr0003-breker-plasticity/screenA (15)')
-    (253, u'idr0006-fong-nuclearbodies/screenA (48)')
-    (201, u'idr0007-srikumar-sumo/screenA (9)')
-    (1351, u'idr0010-doil-dnadamage/screenA (4)')
-    (1551, u'idr0011-ledesmafernandez-dad4/screenB (13)')
-    (1602, u'idr0011-ledesmafernandez-dad4/screenD (21)')
-    (1202, u'idr0012-fuchs-cellmorph/screenA (2)')
-    (1101, u'idr0013-neumann-mitocheck/screenA (6)')
-    (1302, u'idr0013-neumann-mitocheck/screenB (8)')
-    (1204, u'idr0020-barr-chtog/screenA (120)')
-
 
 #### Get Plates in Screen that are annotated with gene:
 
@@ -53,13 +39,6 @@ Output:
     for p in session.get(url).json()['plates']:
         plate_id = p['id']
         print (p['id'], p['name'])
-
-Output:
-
-    (4357, u'200972429 TOG[2702]')
-    (4401, u'200972430 TOG[2703]')
-    (4451, u'200972431 NS[2667]')
-    (4453, u'200972432 NS[2668]')
 
 
 #### Get Images in Plate that are annotated with gene:
@@ -83,12 +62,3 @@ Output:
         print 'Annotations:'
         for a in session.get(url).json()['annotations']:
             print '\t%s' % a['values']
-
-Partial output:
-
-    Image link: http://idr-demo.openmicroscopy.org/webclient/?show=image-1915895
-    Image viewer link: http://idr-demo.openmicroscopy.org/webclient/img_detail/1915895/
-    Thumbnail URL: http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/1915895/
-    Annotations:
-    	[[u'Gene Identifier', u'991'], [u'Gene Identifier URL', u'http://www.ncbi.nlm.nih.gov/gene/991'], [u'Gene Symbol', u'CDC20'], [u'Gene Identifier URL', u'http://www.ncbi.nlm.nih.gov/gene/?term=991']]
-    	...
