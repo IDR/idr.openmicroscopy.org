@@ -61,6 +61,16 @@ a {
     color: #fff;
 }
 
+.marketing-hero p > a {
+    border-bottom: 1px dashed #fefefe;
+    color: #fefefe;
+}
+
+.marketing-hero p > a:hover {
+    border-bottom: none;
+    color: #fff;
+}
+
 .callout.secondary {
     background-color: #fff;
     color: #90a4ae;
