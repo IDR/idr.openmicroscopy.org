@@ -1,0 +1,49 @@
+---
+layout: idr
+title: API
+---
+
+        <!-- begin marketing header -->
+        <div class="logo"><a href="index.html"><img src="{{ site.baseurl }}/img/logos/logo-idr.svg" alt="IDR logo"/></a></div>
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+
+                    <h1 class="hero-main-header">IDR API</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    The Image Data Resource (IDR) provides a JSON-based API for accessing all datasets,
+                    thumbnails and metadata. This API is a combination of the standard
+                    <a href="https://www.openmicroscopy.org/site/support/omero/developers/Web.html">OMERO.web API</a>
+                    and newly developed plugins like <a href="https://github.com/ome/omero-mapr/tree/master/docs">OMERO.mapr</a>.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- begin Example section -->
+
+        <hr class="whitespace">
+
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>The code for the IPython notebook below is available on GitHub
+                        at <a href="https://github.com/IDR/idr-notebooks/tree/master/notebooks">
+                            https://github.com/IDR/idr-notebooks/blob/master/notebooks/IDR_API_example_script.ipynb</a>
+                        as well as on the IDR <a href="/jupyter">virtual analysis environment</a>.
+                        </p>
+
+                        <hr>
+
+                        {% capture my-include %}{% include IDR_API_example_script.md %}{% endcapture %}
+                        {{ my-include | markdownify }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="whitespace">
+        <!-- end Images section -->
