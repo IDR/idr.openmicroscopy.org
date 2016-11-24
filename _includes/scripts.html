@@ -1,9 +1,9 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="{{ site.baseurl }}/js/vendor/jquery.js"></script>
-    <script src="{{ site.baseurl }}/js/vendor/what-input.js"></script>
-    <script src="{{ site.baseurl }}/js/vendor/foundation.js"></script>
-    <script src="{{ site.baseurl }}/js/app.js"></script>
-    <script src="{{ site.baseurl }}/js/responsive-tables.js"></script>
+    <script src="{{ "/js/vendor/jquery.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script src="{{ "/js/vendor/what-input.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script src="{{ "/js/vendor/foundation.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script src="{{ "/js/app.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script src="{{ "/js/responsive-tables.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     <script>
         $(document).foundation();
     </script>

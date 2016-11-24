@@ -3,7 +3,7 @@ layout: idr
 title: Demo
 ---
         <!-- begin marketing header -->
-        <div class="logo"><img src="{{ site.baseurl }}/img/logos/logo-idr.svg" alt="IDR logo"></div>
+        <div class="logo"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></div>
         <header class="marketing-hero">
             <div class="row homepage text-center">
 
