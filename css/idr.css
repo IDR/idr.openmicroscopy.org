@@ -1,7 +1,7 @@
 code {
  font-weight: normal;
  color: #0a0a0a ;
- background-color: #e8eaf6;
+ background-color: #f4f5f9;
  border: none;
  padding: 0.125rem 0.3125rem 0.0625rem;
  width: 200px;
@@ -23,13 +23,13 @@ h1 {
     font-size: 1.25rem; }
 
 h2 {
-  font-size: 1.875rem; }
-
-h3 {
   font-size: 1.125rem; }
 
+h3 {
+  font-size: 1.0625em; }
+
 h4 {
-  font-size: 1.0625rem;
+  font-size: 1.0312rem;
   margin-top: 4rem;
 }
 
