@@ -106,14 +106,14 @@ If you already have access to your own resources, whether physical or virtual, y
                 <div class="row horizontal">
                     <div>
                         <p>The playbooks used to provision the virtual hardware for the IDR contain private configuration information which is specific to our OpenStack tenancy.
-                        An example playbook is provided: `os-idr-playbooks/os-idr-create-example.yml`.
-                        Edit the variables in this playbook to correspond to your OpenStack project, and
+                        A generic playbook is provided: `openstack-create-infrastructure.yml`.
+                        Edit the variables in your inventory or the playbook to correspond to your OpenStack project, and
                         <a href="http://docs.openstack.org/user-guide/common/cli_set_environment_variables_using_openstack_rc.html">setup your OpenStack environment variables</a>.</p>
                         <p>
                         Create the IDR resources by running:
                         </p>
                         <pre>
-    ansible-playbook os-idr-playbooks/os-idr-create-example.yml
+    ansible-playbook openstack-create-infrastructure.yml
                         </pre>
                     </div>
                 </div>
