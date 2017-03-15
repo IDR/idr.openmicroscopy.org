@@ -1,0 +1,205 @@
+---
+layout: idr
+title: Experiments
+---
+        <!-- begin marketing header -->
+        <div class="logo"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"/></a></div>
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+                    <h1 class="hero-main-header">Experiments</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    Help for filling out templates for non-High Content Screen submissions
+                    to the Image Data Resource (IDR)
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- begin intro section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2></h2> <!-- This space intentionally left blank -->
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>When submitting data to the IDR, you should provide 3 basic files:<p>
+                        <ol>
+                            <li><b>study file</b> describing the overall study and the experiments that were performed.
+                            An experiment is a considered to be a discrete piece of work, usually with its own set of protocols</li>
+                            <li><b>assay file(s)</b> describing the images in each experiment</li>
+                            <li><b>processed data file(s)</b> containing summary results and/or a ‘hit' list for each experiment</li>
+                        </ol>
+                        <p>All files should be in tab-delimited text format. Templates are provided but can be modified to
+                        suit your experiment.  Add or remove columns from the templates as necessary. The templates can be
+                        opened in Excel, Open Office etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end intro section -->
+
+        <!-- begin study section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>1. Study File</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>
+                            This file should contain a general description of the study, and
+                            then list the experiments(s) performed, along with the protocols describing how
+                            each experiment was set up, imaged and the data analyzed.
+                        </p>
+
+                        <h3>1a. Study description:</h3>
+                        <ul>
+                            <li>Study title (mandatory)</li>
+                            <li>Study description (mandatory)</li>
+                            <li>Experiment publication (PubMed ID, if applicable)</li>
+                            <li>Primary contact information (mandatory</li>
+                        </ul>
+
+                        <h3>1b. Study experiments:</h3>
+                        <p>For each experiment the following information should be included:</p>
+                        <ul>
+                            <li>Experiment description – a brief description of the aims
+                            or contents of the experiment (mandatory)</li>
+                            <li>Protocols –
+                                <ul>
+                                    <li>cell growth</li>
+                                    <li>treatment (if applicable),</li>
+                                    <li>image acquisition and feature extraction</li>
+                                </ul>
+                            </li>
+                            <li>analysis – the analysis pipeline to go from the image data to the results.</li>
+                            <li>Phenotypes identified – list any cellular phenotypes identified
+                                e.g. large nucleus, elongated cell, delay of mitosis, localization of protein</li>
+                            <li>Name of the assay file  (mandatory)</li>
+                            <li>Name of the processed data file (mandatory)</li>
+                            <li>Description of each column in the processed data file (mandatory)</li>
+                        <ul>
+
+                        <p>
+                            If there is more than one experiment in the study, then
+                            copy and past the previous ‘experiment block' of text
+                            so it can be filled in again for the next experiment.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end study section -->
+
+        <!-- begin assay section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>2. Assay Files</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Each experiment should have an assay file describing the samples and the images of them.
+                        In this file, each image should have its own row, and it is almost like a time line,
+                        with the starting sample described first (left hand side of the row) and then moving
+                        through treatments to the sample (referencing the protocol names described in study file),
+                        then the imaging assay, then the data analysis and finally listing the file with the results
+                        in it.  In more detail, working from left to right the row for each image should contain:</p>
+                        <ul>
+                            <li>sample information (e.g. species, cell line, genotype, organism part),</li>
+                            <li>growth, treatment (if applicable), and image acquisition protocols should be listed, </li>
+                            <li>assay name.  Assay names are for each imaging ‘assay' but there may be several images
+                                from an assay, e.g. several images from the same slide or organism part, in which case
+                                they should all be given the same assay name to group them together.  </li>
+                            <li>Experimental conditions.  Experimental conditions are any important variables
+                                in the experiment e.g. were the cells treated with different compounds, the
+                                protein targeted for labeling varies, or the organism part is different in each image. </li>
+                            <li>Dataset name.  This is usually the same as the assay name, but if you want to
+                                give it a different ‘display name' in the image repository you can specify it here.</li>
+                            <li>Image File Path – the path to the file on the file system (starting from the
+                                folder which contains all the image files)</li>
+                            <li>Image File name – the exact name of the image file</li>
+                            <li>Channels – the label and what it targets, separated by a colon. Each pair of labels
+                                and visualized object is separated by a semi-colon. E.g. DAPI:nuclei;TRITC:HA_Flag
+                                tagged protein.</li>
+                            <li>Data processing protocols – list the name of the data analysis protocol described
+                                in the study file.</li>
+                            <li>Processed data – the name of the file containing the processed data/summary results.</li>
+                            <li>Comment[] columns can be added at any point and values in the square brackets
+                                created as needed (although IDR curators may edit the values so that they are similar
+                                across different studies) e.g. Comment [Image File Type] to say if the file is a raw
+                                or derived image file.</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end library section -->
+
+        <!-- begin processed section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>3. Processed Data Files</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Each experiment should have a processed data file that contains summary
+                        information about the results found.  This may be a table from the
+                        associated publication. This file can contain information relating
+                        to each image or be values calculated from several images.</p>
+
+                        <p>The information in the processed data should be linkable to the assay file
+                        in some way e.g. dataset name</p>
+
+                        <p>The contents of each column in the processed file should be described in the
+                        study file so that it is clear what the values are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end processed section -->
+
+        <!-- begin outro section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2></h2> <!-- This space intentionally left blank -->
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+
+                        <p>Lists of terms that can be used in the study and library file can be found in this
+                        <a href="https://docs.google.com/spreadsheets/d/1S9of23dD8vY1QUv90RV_-Ugu0h6yTeNobuj92-OoSl8/edit#gid=0">
+                        google doc</a>.</p>
+
+                        <p>Example files can be found in https://github.com/IDR/idr-metadata.  If you are
+                        not familiar with github, it is a way of storing versions of files. You can
+                        browse the files through the github interface.  If you want to download a file
+                        you can click on the ‘Raw' button on the top right hand side above the file
+                        preview and then do File -&gt; Save Page As  in your browser, or if you are
+                        familiar with github you can clone the repository.  There are files in addition
+                        to the study, library and processed files in the repository but you don't need
+                        to provide these.</p>
+
+                        <p>Examples of non-screen studies are idr0018, idr0021, idr0023, idr0027 and idr0032.</p>
+
+                        <p>Email idr-submission@openmicroscopy.org.uk with any questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end outro section -->
