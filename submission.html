@@ -1,0 +1,317 @@
+---
+layout: idr
+title: Submission
+---
+        <!-- begin marketing header -->
+        <div class="logo"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"/></a></div>
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+                    <h1 class="hero-main-header">Submission of datasets to the IDR</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    The Image Data Resource (IDR) publishes “reference image” datasets supporting conventional peer-reviewed
+                    publications and integrates them with other imaging datasets for cross-dataset querying of metadata
+                    (e.g. genes, phenotypes, small molecules) and re-analysis.
+
+                        <p style="font-size: 0.6em">
+                            Submission Guidelines v1.0 - last modified: March 2017
+                        </p>
+
+                    </p>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- begin guidelines section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>What we are looking for</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>We aim to publish reference image datasets, which have value beyond simply
+                        supporting an original publication according to the
+                        <a href="http://www.eurobioimaging.eu/content-news/euro-bioimaging-elixir-image-data-strategy">
+                            Euro-BioImaging - Elixir Image Data Strategy</a>. This includes:<p>
+                        <ul>
+                            <li>Datasets <b>associated</b> with an existing or upcoming publication</li>
+                            <li><b>Complete</b> datasets - not just images supporting one figure in the publication</li>
+                            <li>Datasets whose metadata can be <b>integrated</b> with other datasets via identifiers
+                            from well-known biomolecular resources (Ensembl, NCBI Entrez Gene, RefSeq, PubChem, ChEBI etc) </li>
+                            <li>Datasets generated using new imaging <b>methods</b> or new analysis methods</li>
+                            <li>Datasets that are likely to be <b>re-analysed or incorporated</b> into other studies
+                            or integrated with other imaging datasets</li>
+                        </ul>
+                        </p>
+                        <p>Image datasets that don't meet the criteria for refrence images may still be published on
+                        <a href="https://www.ebi.ac.uk/biostudies/">BioStudies</a> or
+                        <a href="http://datadryad.org/">Dryad</a>.  Contact these projects for more information.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end guidelines section -->
+
+        <!-- begin size section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Dataset size</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Dataset <b>size</b> is typically <i>not</i> an issue,
+                        but for sizes significantly larger than 1000 GB special planning may be needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end size section -->
+
+        <!-- begin prep section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Preparing metadata</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Metadata describing an imaging study is submitted using template files.
+                        These are available for download from
+                        <a href="https://github.com/IDR/idr0000-lastname-example/archive/master.zip">
+                        https://github.com/IDR/idr0000-lastname-example/archive/master.zip</a>.</p>
+
+
+                        <p>There are template files for two different use cases:</p>
+                        <ol>
+                            <li>Templates for <b>high content screens</b> (HCS),
+                            or imaging studies performed in plates (e.g. 96 or 384 well plates)</li>
+                            <li>Templates for non-screen datasets, or studies which group images
+                            into a number of distinct experiments</li>
+                        </ol>
+
+                        <p>There are help pages to provide more information about filling out the
+                        <a href="screens.html">high content screen</a> and
+                        <a href="experiments.html">non-screen dataset</a> templates.</p>
+
+                        <p>For both types of study three files should be submitted:
+                        <ul>
+                            <li><b>Study file</b> - describing the overall study and the screens or experiments that were performed</li>
+                            <li><b>Library</b> (screens) or <b>assay</b> files (non-screens).  For HCS the library file describes the
+                            plate layout of each screen.  If more than one screen is performed as part of the study there
+                            should be a library file for each screen. For non-screen datasets, the assay file(s) describes
+                            each imaging experiment included in the study.</li>
+                            <li><b>Processed data</b> files - containing summary results and/or a ‘hit' list for each screen
+                            or experiment.  It may include phenotypes observed.</li>
+                        </ul></p>
+
+                        <p>Example files for HCS studies can be found here:
+                        <ul>
+                            <li><a href="/webclient/?show=screen-3">idr0001 - gene deletion screen</a></li>
+                            <li><a href="/webclient/?show=screen-102">idr0002 - RNAi screen</a></li>
+                            <li><a href="/webclient/?show=screen-253">idr0006 - protein localization screen</a></li>
+                            <li><a href="/webclient/?show=screen-251">idr0009 - primary and validation RNAi screens</a></li>
+                            <li><a href="/webclient/?show=screen-1151">idr0017 - small molecule screen</a></li>
+                            <li><a href="/webclient/?show=screen-1203">idr0019 - imaging experiment performed in plates but not a screen</a></li>
+                        </ul></p>
+
+                        <p>Example files for non-screen studies can be found here:
+                        <ul>
+                            <li><a href="/webclient/?show=project-101">idr0018 - histopathology of gene knockouts</a></li>
+                            <li><a href="/webclient/?show=project-51">idr0021 - protein localization using 3D-SIM  </a></li>
+                            <li><a href="/webclient/?show=project-52">idr0023 - protein localization using dSTORM</a></li>
+                            <li><a href="/webclient/?show=project-151">idr0027 - 3D-tracking of tagged chromatin loci</a></li>
+                            <li><a href="/webclient/?show=project-201">idr0032 - in situ hybridzation of RNA</a></li>
+                        </ul></p>
+
+                        <p>Each study is slightly different and advice on how to fill in the template can be given.
+                        Questions should be sent to
+                        <a href="mailto:idr-submission@openmicroscopy.org.uk">idr-submission@openmicroscopy.org.uk</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end prep section -->
+
+        <!-- begin opt section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Optional metadata</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Imaging datasets can be remarkably complex. To the extent that it's well-structured
+                        and reusable by the community, we are interested in enriching your online dataset with
+                        your additional metadata, e.g.:
+                            <ul>
+                                <li>Rendering settings: if you have information on the channel intensities or
+                                mappings that you would like to see displayed in the IDR, please let us know.</li>
+                                <li>Regions of interest: if you have ROIs or masks, whether detected automatically
+                                or hand-annotated, we'd like to make them available in the IDR.</li>
+                                <li>Features: if you've calculated features for your dataset for machine learning,
+                                we'd be interested in sharing those analysis results with others.</li>
+                                <li>Pipelines and workflows: further, if you have a representation of how you ran
+                                the analysis itself, we think that should be included with your features.</li>
+                            </ul>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end opt section -->
+
+        <!-- begin transfer section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>How to transfer images and metadata</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>There are several options for having your image data transferred to the IDR:
+                            <ul>
+                                <li><b>Provide a link</b>: if your data is already
+                                available online (e.g. Dropbox, FTP, etc), a link to the location may be the
+                                easiest option.</li>
+                                <li><b>Shipping disks</b>: Sending hard-drives by mail
+                                remains a reliable way of transferring  your data. We will provide you with
+                                shipping details via email.</li>
+                                <li><b>FTP / Aspera</b>: we are working on a link
+                                between IDR and BioStudies (<a href="https://www.ebi.ac.uk/biostudies/submit.html">
+                                https://www.ebi.ac.uk/biostudies/submit.html</a>).  If
+                                you can upload your image data to BioStudies via FTP or Aspera, IDR may be able
+                                to access your data directly from there.</li>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end transfer section -->
+
+        <!-- begin timeline section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Publication timelines<h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>
+                            A submission is considered complete only after your uploaded metadata and image
+                            data have been validated. Validation may itself take significant time depending
+                            on, e.g., the size of the dataset, the file formats used and the consistency in
+                            naming between files. During validation, frequent consultation with the author
+                            and/or data producer may be necessary.
+                        </p>
+
+                        <p>
+                            Once your data is validated and ready for import, you will be notified that the
+                            publication pipeline can begin.
+                        </p>
+
+                        <ul>
+                            <li>Allow <b>at least</b> 3 weeks before your dataset will be available online</li>
+                            <li><b>No private access</b> is available for reviewers during this period</li>
+                            <li>Minting a DOI requires approximately <b>1 additional week</b>
+                            (Note: if you plan on incorporating a data DOI into
+                            your publication, please allow time for adding this DOI into the final version
+                            of your paper).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end timeline section -->
+
+        <!-- begin cite section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>How to cite a dataset in the IDR</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Your dataset in IDR will be given an accession number (e.g. “idr1234”) which you can use
+                        for informally referring to your entry. For more formal uses such as citing the imaging dataset
+                        in your publication, we suggest using a DOI:<p>
+
+                        <p style="display:inline-block;margin-left:5em;">
+                            <i>
+                                Image files are available in the Image Data Resource (Williams et al 2017)
+                                under DOI <a href="http://dx.doi.org/10.17867/10000105">http://dx.doi.org/10.17867/10000105</a> .
+                            </i>
+                        </p>
+
+                        <p>DOIs can be made available upon request but require an additional depositor agreement and
+                        license form on top of your completed submission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end cite section -->
+
+        <!-- begin paper section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>How to cite the IDR</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>If you want to include a citation to the IDR in a paper or other publication, please use:</p>
+
+                        <p style="display:inline-block;margin-left:5em;">
+                            <i>
+                                Williams et al (2017) The Image Data Resource: A Scalable Platform for Biological Image Data Access,
+                                Integration, and Dissemination <a href="http://biorxiv.org/content/early/2016/11/24/089359">
+                                http://biorxiv.org/content/early/2016/11/24/089359</a> .
+                            </i>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end transfer section -->
+
+        <!-- begin contact section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Contact us if you would like to submit a dataset</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Email
+                        <a href="mailto:idr-submission@openmicroscopy.org.uk">idr-submission@openmicroscopy.org.uk</a>
+                        with some information about your dataset and timeline for publication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end contact section -->
+

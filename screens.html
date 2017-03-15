@@ -1,0 +1,218 @@
+---
+layout: idr
+title: Screens
+---
+        <!-- begin marketing header -->
+        <div class="logo"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"/></a></div>
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+                    <h1 class="hero-main-header">Screens</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    Help for filling out templates for High Content Screen submissions
+                    to the Image Data Resource (IDR)
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- begin intro section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2></h2> <!-- This space intentionally left blank -->
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>When submitting data to the IDR, you should provide 3 basic files:<p>
+                        <ol>
+                            <li><b>study file</b> describing the overall study and the screens that were performed</li>
+                            <li><b>library file(s)</b> describing the plate layout of each screen</li>
+                            <li><b>processed data file(s)</b> containing summary results and/or a ‘hit' list for each screen</li>
+                        </ol>
+                        <p>All files should be in tab-delimited text format. Templates are provided but can be modified to
+                        suit your experiment.  Add or remove columns from the templates as necessary. The templates can be
+                        opened in Excel, Open Office etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end intro section -->
+
+        <!-- begin study section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>1. Study File</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>This file should contain a general description of the study, and then list the screen(s) performed,
+                        along with the protocols describing how each screen was set up, imaged and the data analyzed, including
+                        the criteria used to identify genes of interest.</p>
+
+                        <h3>1a. Study description:</h3>
+                        <ul>
+                            <li>Study title (mandatory)</li>
+                            <li>Study description (mandatory)</li>
+                            <li>Experiment publication (PubMed ID, if applicable)</li>
+                            <li>Primary contact information (mandatory</li>
+                        </ul>
+
+                        <h3>1b. Study screens:</h3>
+                        <p>For each screen the following information should be included:</p>
+                        <ul>
+                            <li>Screen type (primary/validation/secondary/other) (mandatory)</li>
+                            <li>Screen description – a brief description of the aims or contents of the screen (mandatory)</li>
+                            <li>Name of the library file describing the plate layout (mandatory)</li>
+                            <li>Protocols –
+                            <ul>
+                                <li>cell growth</li>
+                                <li>treatment (if applicable)</li>
+                                <li>library selection and construction (mandatory)</li>
+                                <li>image acquisition and feature extraction (mandatory)</li>
+                                <li>data analysis – the analysis pipeline to go from the image
+                                data to any final analysis results such as list of hits and the
+                                associated phenotypes. Please specify the scores and thresholds used to assign phenotypes. (mandatory).</li>
+                            </ul></li>
+                            <li>Phenotypes identified – list any cellular phenotypes identified
+                            e.g. large nucleus, elongated cell, delay of mitosis, localization of protein</li>
+                            <li>Raw Image data – type of files and organization (mandatory)</li>
+                            <li>Name of the processed data file (mandatory)</li>
+                            <li>Description of each column in the processed data file (mandatory)</li>
+                        <ul>
+
+                        <p>If there is more than one screen in the study, then copy and past the previous ‘screen block' of text
+                        so it can be filled in again for the next screen.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end study section -->
+
+        <!-- begin library section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>2. Library File</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                    <p>Each screen should have a library file describing the plates and the cells in each well.
+                    Columns can be added or removed as appropriate but this file should include:</p>
+                    <ul>
+                        <li>plate layouts (plate + well location on the plate), The plate names should correspond to the directory names the images are stored in. (mandatory)</li>
+                        <li>description of the genotype of the cells in each well or the reagents (siRNA, compound etc) applied to each well including:
+                        <ul>
+                            <li>RNAi screens
+                                <ul>
+                                    <li>siRNA identifiers (mandatory) in a column called ‘siRNA Identifier' or ‘siRNA Pool Identifier' as appropriate.</li>
+                                    <li>siRNA sequences (if available)</li>
+                                    <li>target gene identifier and symbol (if available). The gene annotation build the siRNAs were mapped to in this analysis (if available)</li>
+                                </ul>
+                            </li>
+                            <li>gene knockouts
+                                <ul>
+                                    <li>Identifier and symbol of the gene knocked out (mandatory), in columns called ‘Gene Identifier' and ‘Gene Symbol'</li>
+                                </ul>
+                            </li>
+                            <li>tagged proteins and overexpression of genes
+                                <ul>
+                                    <li>The identifier of the tagged/overexpressed ORF. The relevant gene build information should be given in the screens section of the study file. (mandatory)</li>
+                                    <li>The associated gene identifier and symbol (if available) in columns called ‘Gene Identifier' and ‘Gene Symbol'</li>
+                                </ul>
+                            </li>
+                            <li>other systems
+                                <ul>
+                                    <li>An identifier for any reagent used (mandatory) e.g. compound name</li>
+                                    <li>Any associated gene identifiers and gene symbols (if available)</li>
+                                </ul>
+                            </li>
+                            <li>list of control wells (empty well, positive control, negative control) (mandatory)</li>
+                            <li>list of any quality control carried out at the well level
+                            e.g. wells rejected due to too few cells for analysis, or out of focus images.</li>
+                    <p>The Reagent Gene Annotation Build refers to the gene annotation build used to design the reagent
+                    e.g. siRNA.  The Analysis Gene Annotation Build refers to the gene annotation build used in the current analysis.  Sometimes this is the same, in other cases the reagents have been remapped to a more recent build.  The gene annotation build should contain both the genome build and gene build if possible e.g. “GRCh37, Ensembl release 61, Feb 2011” or “NCBI36.3, RefSeq release 27, Jan 2008”.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end library section -->
+
+        <!-- begin processed section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>3. Processed Data Files</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Each screen should have a processed data file that contains summary information
+                        about the results found.  This may be a table from the associated publication.
+                        This file can contain information relating to each well in a screen e.g. the
+                        total number of cells and number of tagged protein foci, or be a list of genes
+                        found to show significant phenotypes.</p>
+
+                        <p>The information in the processed data should be linkable to the library file in
+                        some way e.g. by combination of plate and well, or by identifiers such as siRNA
+                        or gene identifiers</p>
+
+                        <p>The contents of each column in the processed file should be described in the
+                        study file so that is clear what the values are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end processed section -->
+
+        <!-- begin outro section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2></h2> <!-- This space intentionally left blank -->
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Lists of terms that can be used in the study and library file can be found in this
+                        <a href="https://docs.google.com/spreadsheets/d/1S9of23dD8vY1QUv90RV_-Ugu0h6yTeNobuj92-OoSl8/edit#gid=0">
+                        google doc</a>.</p><!-- TODO: move to HTML -->
+
+                        <p>Example files can be found in https://github.com/IDR/idr-metadata.  If you are
+                        not familiar with github, it is a way of storing versions of files. You can
+                        browse the files through the github interface.  If you want to download a file
+                        you can click on the ‘Raw' button on the top right hand side above the file
+                        preview and then do File -&gt; Save Page As  in your browser, or if you are
+                        familiar with github you can clone the repository.  There are files in addition
+                        to the study, library and processed files in the repository but you don't need
+                        to provide these.</p>
+
+                        <p>Examples of HCS studies include:
+                        <ul>
+                            <li><a href="/webclient/?show=screen-3">idr0001 - gene deletion screen</a></li>
+                            <li><a href="/webclient/?show=screen-102">idr0002 - RNAi screen</a></li>
+                            <li><a href="/webclient/?show=screen-253">idr0006 - protein localization screen</a></li>
+                            <li><a href="/webclient/?show=screen-251">idr0009 - primary and validation RNAi screens</a></li>
+                            <li><a href="/webclient/?show=screen-1151">idr0017 - small molecule screen</a></li>
+                            <li><a href="/webclient/?show=screen-1203">idr0019 - imaging experiment performed in plates but not a screen</a></li>
+                        </ul></p>
+
+                        <p>Email <a href="mailto:idr-submission@openmicroscopy.org.uk">idr-submission@openmicroscopy.org.uk</a>
+                        with any questions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end outro section -->
