@@ -1,10 +1,18 @@
 code {
- font-weight: normal;
- color: #0a0a0a ;
- background-color: #f4f5f9;
- border: none;
- padding: 0.125rem 0.3125rem 0.0625rem;
- width: 200px;
+    background-color: transparent;
+    border: none;
+    color: #263238;
+    font-family: Courier, serif;
+    font-weight: normal;
+    padding: 0.125rem 0.3125rem 0.0625rem;
+    width: 200px;
+}
+
+.highlight {
+    background-color: #fff;
+    border-radius: 3px;
+    overflow-x: scroll;
+    padding: 1rem;
 }
 
 body {
