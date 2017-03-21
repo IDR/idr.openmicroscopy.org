@@ -70,17 +70,20 @@ a {
     width: 150px;
 }
 
-.top-bar {
-    height: 100%;    
-}
-
 .menu.documentation {
     background: transparent none repeat scroll 0 0;
     margin-top: 0.5rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
-    
+
+.content {
+    background-color: #fff;
+    border-left: 1px solid #cfd8dc;
+    margin-bottom: -50px;  
+    padding-bottom: 50px;
+}   
+ 
 .marketing-hero {
     background-color: #e8eaf6;
     background-image: url('../img/bg/11001_Well_A07_Field_1.jpg');
@@ -104,5 +107,6 @@ a {
 
 .callout.secondary {
     background-color: #fff;
+    border: 1px solid #cfd8dc;
     color: #90a4ae;
 }

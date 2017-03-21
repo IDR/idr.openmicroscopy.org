@@ -18,8 +18,9 @@
         </div>
         
         <div class="medium-2 columns main-nav-bar top-bar" id="main-menu">
-            <div class="logo"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></div>
+            <div class="show-for-large logo"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></div>
             <ul class="menu vertical documentation">
+                <li class="show-for-small-only"><a href="index.html">Home</a></li>
                 <li><a href="submission.html">Submission</a></li>
                 <li><a href="screens.html">Screens</a></li>
                 <li><a href="experiments.html">Experiments</a></li>
@@ -27,3 +28,7 @@
                 <li><a href="deployment.html">Deployment</a></li>
             </ul>
         </div>
+        
+        <div class="medium-10 columns content">
+        
+        <div class="hide-for-large logo"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></div>
