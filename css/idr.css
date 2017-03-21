@@ -70,6 +70,10 @@ a {
     width: 150px;
 }
 
+.top-bar {
+    height: 100%;    
+}
+
 .menu.documentation {
     background: transparent none repeat scroll 0 0;
     margin-top: 0.5rem;
