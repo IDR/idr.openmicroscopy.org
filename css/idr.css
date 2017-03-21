@@ -109,6 +109,12 @@ a {
     color: #fff;
 }
 
+#page-anchor {
+    font-size: .8rem;
+    margin-top: 50px;
+    text-align: center;   
+}
+
 .callout.secondary {
     background-color: #fff;
     border: 1px solid #cfd8dc;
