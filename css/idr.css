@@ -95,6 +95,10 @@ a {
     color: #fff;
 }
 
+.marketing-hero h1 {
+    font-size: 2rem;
+}
+
 .marketing-hero p > a {
     border-bottom: 1px dashed #fefefe;
     color: #fefefe;
