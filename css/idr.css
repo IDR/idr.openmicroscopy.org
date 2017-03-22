@@ -120,3 +120,7 @@ a {
     border: 1px solid #cfd8dc;
     color: #90a4ae;
 }
+
+.centered {
+    margin: auto;
+}
