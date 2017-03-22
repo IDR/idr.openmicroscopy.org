@@ -1,11 +1,26 @@
 ---
-layout: idr
 title: Demo
 ---
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IDR: {{ page.title }}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ "/img/logos/favicon-idr.ico" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}">
+{% include css.html %}
+    </head>
+
+    <body>
+        
         <!-- begin marketing header -->
+        <div class="logo"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></div>
         <header class="marketing-hero">
             <div class="row homepage text-center">
-
+    
                 <div class="medium-12 columns">
                     <h1 class="hero-main-header">Image Data Resource (IDR)</h1>
                     <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Welcome to the Image Data Resource (IDR). This online, public data repository seeks to store, integrate and serve image datasets from published scientific studies. We have collected and are continuing to receive existing and newly created “reference image" datasets that are valuable resources for a broad community of users, either because they will be frequently accessed and cited or because they can serve as a basis for re-analysis and the development of new computational tools.</p>
@@ -15,7 +30,7 @@ title: Demo
             </div>
         </header>
         <!-- end marketing header -->
-
+    
         <!-- begin Goal section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -31,24 +46,24 @@ title: Demo
                         Sharing data promotes the validation of experimental methods and scientific conclusions, the comparison with
                         new data obtained by the global scientific community, and enables data reuse by developers of new analysis
                         and processing tools.</p>
-
+    
                         <p>You can browse the IDR without any special knowledge, but if you would like to see how the IDR can be used
                         to obtain new biological insights from existing datasets, or a more in-depth explanation of how the IDR is setup,
                         please see the <a href="https://doi.org/10.1101/089359">preprint journal paper</a>.</p>
-
+    
                         <a href="https://doi.org/10.1101/089359"><img src="img/figures/idr-paper-preprint.png" style="width:50%; float:right;" alt="The Image Data Resource: A Scalable Platform for Biological Image Data Access, Integration, and Dissemination" title="The Image Data Resource: A Scalable Platform for Biological Image Data Access, Integration, and Dissemination"/></a>
-
+    
                         <p>IDR datasets are annotated with author-supplied metadata (e.g., annotations, defined regions, feature vectors
                         and ontological annotations) that are all stored and available for browsing. All metadata are also available
                         through the <a href="https://www.openmicroscopy.org/site/support/omero5.2/developers/Modules/Api.html">OMERO API</a>.
-
+    
                         <p>If you are interested in submitting data to the IDR, see <a href="submission.html">our submission guidelines</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Goal section -->
-
+    
         <!-- begin Technology section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -66,17 +81,17 @@ title: Demo
                         metadata associated with <a href="https://github.com/IDR/idr-metadata">each dataset</a> and all scripts
                         used to build the <a href="https://github.com/IDR/infrastructure">infrastructure</a> are maintained
                         and available. A parallel system that enables computational re-analysis of IDR data will be released soon.</p>
-
+    
                         <p>The IDR includes a <a href="/jupyter">virtual analysis environment</a>
                         that provides full access to all data. Please contact us for an account.</p>
-
+    
                         <p>Details on accessing the public IDR API are available under <a href="/about/api.html">about/api.html</a>.
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Technology section -->
-
+    
         <!-- begin Examples section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -108,7 +123,7 @@ title: Demo
             </div>
         </div>
         <!-- end Examples section -->
-
+    
         <!-- begin Funding section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -125,7 +140,7 @@ title: Demo
             </div>
         </div>
         <!-- end Funding section -->
-
+    
         <!-- begin Current Status section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -145,7 +160,7 @@ title: Demo
             </div>
         </div>
         <!-- end Current Status section -->
-
+    
         <!-- begin Deployment section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -162,3 +177,13 @@ title: Demo
             </div>
         </div>
         <!-- end Deployment section -->
+    
+        <hr class="whitespace">
+        
+        {% include footer-idr.html %}
+        
+        {% include scripts.html %}
+            
+    </body>
+
+</html>
