@@ -21,9 +21,11 @@
             <div class="show-for-large logo" style="margin: 20px 0 20px 15px;"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></div>
             <ul class="menu vertical documentation">
                 <li class="show-for-small-only"><a href="index.html">Home</a></li>
-                <li><a href="submission.html">Submission</a></li>
-                <li><a href="screens.html">Screens</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="submission.html">Submission Overview</a></li>
+                    <ul class="nested vertical menu">
+                        <li><a href="screens.html">Screens</a></li>
+                        <li><a href="experiments.html">Experiments</a></li>
+                    </ul>
                 <li><a href="api.html">API</a></li>
                 <li><a href="deployment.html">Deployment</a></li>
             </ul>
