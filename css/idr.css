@@ -90,12 +90,13 @@ a {
     padding: 80px 10px 80px;
 }
 
-.marketing-hero h1, .marketing-hero p {
+.marketing-hero h1, .marketing-hero h2, .marketing-hero p {
     color: #fff;
 }
 
 .marketing-hero h1 {
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .marketing-hero p > a {
