@@ -66,8 +66,7 @@ a {
 }
 
 .logo {
-    margin: 20px auto;
-    width: 150px;
+    max-width: 150px;
 }
 
 .menu.documentation {
