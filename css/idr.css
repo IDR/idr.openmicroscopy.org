@@ -127,7 +127,12 @@ a {
 /* ---------- main navigation ----------*/
 .logo {
     display: inline;
-    width: 150px;
+    width: 120px;
+}
+
+.logo-hero {
+    margin-bottom: 30px;
+    width: 160px;
 }
 
 .top-bar {
