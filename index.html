@@ -2,25 +2,7 @@
 layout: idr
 title: Demo
 ---
-
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IDR: {{ page.title }}</title>
-        <link rel="shortcut icon" type="image/x-icon" href="{{ "/img/logos/favicon-idr.ico" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}">
-{% include css.html %}
-    </head>
-
-    <body>
-        
-        <a name="page-top"></a>
-        
         <!-- begin marketing header -->
-        <div class="logo centered"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></div>
         <header class="marketing-hero">
             <div class="row homepage text-center">    
                 <div class="medium-12 columns">
@@ -99,15 +81,3 @@ title: Demo
             </div>
         </div>
         <!-- end Examples section -->
-        
-        <div id="page-anchor"><a href="#page-top"><i class="fa fa-arrow-up"></i> back to top</a></div>
-    
-        <hr class="whitespace">
-        
-        {% include footer-idr.html %}
-        
-        {% include scripts.html %}
-            
-    </body>
-
-</html>
