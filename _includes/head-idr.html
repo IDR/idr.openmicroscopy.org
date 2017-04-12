@@ -15,25 +15,40 @@
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle></button>
             <div class="title-bar-title">Menu</div>
+        </div>        
+        
+        <div class="nav-secondary">
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#" target="_blank"><i class="fa fa-fw fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-fw fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-fw fa-comments"></i> IRC</a></li>
+                </ul>
+            </div>
         </div>
         
-        <div class="medium-2 columns main-nav-bar top-bar" id="main-menu">
-            <div class="show-for-large logo sidebar"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></div>
-            <ul class="menu vertical documentation">
-                <li class="show-for-small-only"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="submission.html">Submission Overview</a></li>
-                    <ul class="nested vertical menu">
-                        <li><a href="screens.html">Screens</a></li>
-                        <li><a href="experiments.html">Experiments</a></li>
-                    </ul>
-                <li><a href="api.html">API</a></li>
-                <li><a href="deployment.html">Deployment</a></li>
-            </ul>
+        <div class="main-nav-bar top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a class="logo" href="{{ site.baseurl }}/index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="has-submenu"><a href="submission.html">Submission Overview</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="screens.html">Screens</a></li>
+                            <li><a href="experiments.html">Experiments</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html">API</a></li>
+                    <li><a href="deployment.html">Deployment</a></li>
+                </ul>
+            </div>
         </div>
         
-        <div class="medium-10 columns content">
+        <div class="medium-12 columns content">
         
         <a name="page-top"></a>
-        
-        <div class="hide-for-large logo centered"><a href="index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></div>
