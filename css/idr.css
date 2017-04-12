@@ -1,7 +1,7 @@
 code {
     background-color: transparent;
     border: none;
-    color: #263238;
+    color: #1a237e;
     font-family: Courier, serif;
     font-weight: normal;
     padding: 0.125rem 0.3125rem 0.0625rem;
@@ -61,7 +61,7 @@ a.button:hover {
 }
 
 a {
-    color: #9c27b0;
+    color: #3949ab;
     font-weight: bold;
 }
 
@@ -131,12 +131,12 @@ a {
 }
 
 .top-bar {
-    background-color: #263238;
+    background-color: #1a237e;
     border-bottom: 1px solid #000;
 }
 
 .top-bar ul {
-    background-color: #263238;
+    background-color: #1a237e;
 }
 
 .top-bar ul li {
@@ -144,7 +144,7 @@ a {
 }
 
 .nav-secondary, .nav-secondary ul {
-    background-color: #37474f;
+    background-color: #283593;
     border-bottom: 1px solid #000;
     font-size: 0.875em;
     height: 36px;
