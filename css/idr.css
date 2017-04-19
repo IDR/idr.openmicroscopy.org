@@ -86,6 +86,7 @@ a {
 .marketing-hero {
     background-color: #e8eaf6;
     background-image: url('../img/bg/11001_Well_A07_Field_1.jpg');
+    background-position: top left;
     padding: 80px 10px 80px;
 }
 
