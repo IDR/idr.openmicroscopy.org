@@ -11,3 +11,42 @@
     </head>
 
     <body>
+
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium" style="background-color: #283593;">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>        
+        
+        <div class="nav-secondary">
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="http://www.twitter.com/idrnews" target="_blank"><i class="fa fa-fw fa-twitter"></i> @IDRnews</a></li>
+                    <li><a href="http://www.twitter.com/idrstatus" target="_blank"><i class="fa fa-fw fa-twitter"></i> @IDRstatus</a></li>
+                    <li><a href="mailto:idr@openmicroscopy.org" target="_blank"><i class="fa fa-fw fa-envelope"></i> idr@openmicroscopy.org</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-nav-bar top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a class="logo" href="{{ site.baseurl }}/index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="has-submenu"><a href="submission.html">Submissions</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="submission.html">Overview</a></li>
+                            <li><a href="screens.html">Screens</a></li>
+                            <li><a href="experiments.html">Experiments</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html">API</a></li>
+                    <li><a href="deployment.html">Deployment</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <a name="page-top"></a>

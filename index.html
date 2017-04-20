@@ -3,20 +3,19 @@ layout: idr
 title: Demo
 ---
         <!-- begin marketing header -->
-        <div class="logo"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></div>
         <header class="marketing-hero">
-            <div class="row homepage text-center">
-
+            <div class="row homepage text-center">    
                 <div class="medium-12 columns">
-                    <h1 class="hero-main-header">Image Data Resource (IDR)</h1>
-                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Welcome to the Image Data Resource (IDR). This online, public data repository seeks to store, integrate and serve image datasets from published scientific studies. We have collected and are continuing to receive existing and newly created “reference image" datasets that are valuable resources for a broad community of users, either because they will be frequently accessed and cited or because they can serve as a basis for re-analysis and the development of new computational tools.</p>
+                    <img src="{{ "/img/logos/logo-idr-white.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo" class="logo-hero" />
+                    <h1 class="hero-main-header">Image Data Resource</h1>
+                    <h2 class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Welcome to the Image Data Resource (IDR). This online, public data repository seeks to store, integrate and serve image datasets from published scientific studies.</h2>
                     <br>
                     <a href="/webclient/userdata/?experimenter=-1" class="large button sites-button">Take a look at the data</a>
                 </div>
             </div>
         </header>
         <!-- end marketing header -->
-
+    
         <!-- begin Goal section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -32,52 +31,25 @@ title: Demo
                         Sharing data promotes the validation of experimental methods and scientific conclusions, the comparison with
                         new data obtained by the global scientific community, and enables data reuse by developers of new analysis
                         and processing tools.</p>
-
+    
                         <p>You can browse the IDR without any special knowledge, but if you would like to see how the IDR can be used
                         to obtain new biological insights from existing datasets, or a more in-depth explanation of how the IDR is setup,
                         please see the <a href="https://doi.org/10.1101/089359">preprint journal paper</a>.</p>
-
+    
                         <a href="https://doi.org/10.1101/089359"><img src="img/figures/idr-paper-preprint.png" style="width:50%; float:right;" alt="The Image Data Resource: A Scalable Platform for Biological Image Data Access, Integration, and Dissemination" title="The Image Data Resource: A Scalable Platform for Biological Image Data Access, Integration, and Dissemination"/></a>
-
+    
                         <p>IDR datasets are annotated with author-supplied metadata (e.g., annotations, defined regions, feature vectors
                         and ontological annotations) that are all stored and available for browsing. All metadata are also available
                         through the <a href="https://www.openmicroscopy.org/site/support/omero5.2/developers/Modules/Api.html">OMERO API</a>.
-
+    
                         <p>If you are interested in submitting data to the IDR, see <a href="submission.html">our submission guidelines</a>.</p>
+                        <div class="row column text-center"><a href="about.html" class="large button sites-button">More about us</a></div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Goal section -->
-
-        <!-- begin Technology section -->
-        <hr class="whitespace">
-        <div class="row column text-center">
-            <h2>Technology</h2>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="small-10 small-centered medium-10 medium-centered columns">
-                <div class="row horizontal">
-                    <div>
-                        <p>IDR uses OME’s <a href="http://www.openmicroscopy.org/site/products/bio-formats">Bio-Formats</a>
-                        and <a href="http://www.openmicroscopy.org/site/products/omero">OMERO</a> tools to read, manage and
-                        serve data, and provide links to EMBL-EBI’s molecular and structural resources. The resource is built
-                        upon EMBL-EBI’s OpenStack-based Embassy infrastructure. All tools used for reading and converting
-                        metadata associated with <a href="https://github.com/IDR/idr-metadata">each dataset</a> and all scripts
-                        used to build the <a href="https://github.com/IDR/infrastructure">infrastructure</a> are maintained
-                        and available. A parallel system that enables computational re-analysis of IDR data will be released soon.</p>
-
-                        <p>The IDR includes a <a href="/jupyter">virtual analysis environment</a>
-                        that provides full access to all data. Please contact us for an account.</p>
-
-                        <p>Details on accessing the public IDR API are available under <a href="/about/api.html">about/api.html</a>.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end Technology section -->
-
+    
         <!-- begin Examples section -->
         <hr class="whitespace">
         <div class="row column text-center">
@@ -90,78 +62,23 @@ title: Demo
                     <div>
                         <p><a href="/webclient/?show=well-45407">Datasets in human cells</a>, <a href="/webclient/?show=well-547609">Drosophila</a>, and <a href="/webclient/?show=well-590686">fungi</a> are included. The full <a href="/webclient/?show=well-771034">Mitocheck dataset</a> and a comprehensive <a href="/webclient/?show=plate-4101">chemical screen in human cells</a> are included. Imaging data from <a href="/webclient/?show=plate-4751">Tara Oceans</a>, a global survey of plankton and other marine organisms is also included.</p>
                         <p>Wherever possible, functional annotations (e.g., “increased peripheral actin") and experimental components have been converted to defined terms in the <a href="http://www.ebi.ac.uk/ols/ontologies/efo">EFO</a>, <a href="http://www.ebi.ac.uk/ols/ontologies/cmpo">CMPO</a> or other ontologies, always in collaboration with the data submitters (see example). >80% of the functional annotations have links to defined, published controlled vocabularies.</p>
-                    </div>
+                    </div> 
                     <div class="row small-up-2 medium-up-4 large-up-4">
-                        <div class="column"><a href="/webclient/?show=image-122770" target="_blank">
-                          <img class="thumbnail" src="/webgateway/render_thumbnail/122770/192/" alt="idr-0008-B">
+                        <div class="column"><a href="http://idr-demo.openmicroscopy.org/webclient/?show=image-122770" target="_blank">
+                          <img class="thumbnail" src="http://idr-demo.openmicroscopy.org/webgateway/render_thumbnail/122770/192/" alt="idr-0008-B">
                         </a></div>
-                        <div class="column"><a href="/webclient/?show=well-37013" target="_blank">
-                          <img class="thumbnail" alt="idr0007-A" src="/webgateway/render_thumbnail/95543/192/">
+                        <div class="column"><a href="http://idr-demo.openmicroscopy.org/webclient/?show=well-37013" target="_blank">
+                          <img class="thumbnail" alt="idr0007-A" src="http://idr-demo.openmicroscopy.org/webgateway/render_thumbnail/95543/192/">
                         </a></div>
-                        <div class="column"><a href="/webclient/?show=image-1230008" target="_blank">
-                          <img class="thumbnail" src="/webgateway/render_thumbnail/1230008/192/" alt="idr-0001-A">
+                        <div class="column"><a href="http://idr-demo.openmicroscopy.org/webclient/?show=image-1230008" target="_blank">
+                          <img class="thumbnail" src="http://idr-demo.openmicroscopy.org/webgateway/render_thumbnail/1230008/192/" alt="idr-0001-A">
                         </a></div>
-                        <div class="column"><a href="/webclient/?show=image-1484759" target="_blank">
-                          <img class="thumbnail" src="/webgateway/render_thumbnail/1484759/192/" alt="idr-0013-A">
+                        <div class="column"><a href="http://idr-demo.openmicroscopy.org/webclient/?show=image-1484759" target="_blank">
+                          <img class="thumbnail" src="http://idr-demo.openmicroscopy.org/webgateway/render_thumbnail/1484759/192/" alt="idr-0013-A">
                         </a></div>
                     </div>
+                    <div class="row column text-center"><a href="submission.html" class="large button sites-button">Submit your data</a></div>
                 </div>
             </div>
         </div>
         <!-- end Examples section -->
-
-        <!-- begin Funding section -->
-        <hr class="whitespace">
-        <div class="row column text-center">
-            <h2>Funding and Project Participants</h2>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="small-10 small-centered medium-10 medium-centered columns">
-                <div class="row horizontal">
-                    <div>
-                        <p>This project is funded by the BBSRC (BB/M018423/1) and is a collaboration between the OME Consortium at Dundee (www.openmicroscopy.org), EMBL-EBI and the University of Bristol. Further development of the IDR UI is funded by Euro-BioImaging Prep Phase II award (Horizon2020 Ref:688945). The IDR Project PIs are <a href="https://www.openmicroscopy.org/site/about/development-teams/jason">Jason Swedlow (Dundee)</a>, <a href="http://www.ebi.ac.uk/about/people/alvis-brazma">Alvis Brazma (EMBL-EBI)</a> and <a href="http://www.phar.cam.ac.uk/research/StemCell">Rafael Carazo-Salas (Bristol)</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end Funding section -->
-
-        <!-- begin Current Status section -->
-        <hr class="whitespace">
-        <div class="row column text-center">
-            <h2>Current Status</h2>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="small-10 small-centered medium-10 medium-centered columns">
-                <div class="row horizontal">
-                    <div>
-                        <p>Currently, (Mar 2017, version 0.3.4) the IDR contains &gt;42 Tb of multi-dimensional image data consisting of &gt;36 Mio individual planes
-                        from 27 different imaging studies. IDR contains over a million different experiments. Data comes from studies on human, Drosophila,
-                        budding and fission yeast, and mouse cells and tissue. Imaging modalities represented so far include high content screens, time-lapse
-                        imaging, whole slide histopathology, and super-resolution microscopy.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end Current Status section -->
-
-        <!-- begin Deployment section -->
-        <hr class="whitespace">
-        <div class="row column text-center">
-            <h2>The IDR infrastructure</h2>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="small-10 small-centered medium-10 medium-centered columns">
-                <div class="row horizontal">
-                    <div>
-                        <p>Details of the infrastructure underlying the IDR, and instructions for deploying your IDR own version are on the <a href="deployment.html">IDR Deployment page</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end Deployment section -->
-
-        <hr class="whitespace">
