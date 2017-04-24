@@ -8,7 +8,7 @@ First create a HTTP session using the [`requests`](http://docs.python-requests.o
 ```python
 import requests
 
-INDEX_PAGE = "http://idr-demo.openmicroscopy.org/webclient/?experimenter=-1"
+INDEX_PAGE = "http://idr.openmicroscopy.org/webclient/?experimenter=-1"
 
 # create http session
 with requests.Session() as session:
@@ -29,7 +29,7 @@ with requests.Session() as session:
 # initial data
 screen_id = 102
 
-MAP_URL = "http://idr-demo.openmicroscopy.org/webclient/api/annotations/?type=map&{type}={screen_id}"
+MAP_URL = "http://idr.openmicroscopy.org/webclient/api/annotations/?type=map&{type}={screen_id}"
 
 qs = {'type': 'screen', 'screen_id': screen_id}
 url = MAP_URL.format(**qs)
@@ -45,7 +45,7 @@ for a in session.get(url).json()['annotations']:
 
 ### Get Plates in the given Screen:
 ```python
-PLATES_URL = "http://idr-demo.openmicroscopy.org/webclient/api/plates/?id={screen_id}"
+PLATES_URL = "http://idr.openmicroscopy.org/webclient/api/plates/?id={screen_id}"
 
 qs = {'screen_id': screen_id}
 url = PLATES_URL.format(**qs)
@@ -60,7 +60,7 @@ for p in session.get(url).json()['plates']:
 
 ### Get PlateGrid:
 ```python
-WELLS_IMAGES_URL = "http://idr-demo.openmicroscopy.org/webgateway/plate/{plate_id}/{field}/"
+WELLS_IMAGES_URL = "http://idr.openmicroscopy.org/webgateway/plate/{plate_id}/{field}/"
 
 qs = {'plate_id': plate_id, 'field': 0}
 url = WELLS_IMAGES_URL.format(**qs)
@@ -83,7 +83,7 @@ for row in grid['grid']:
 ### Get Image:
 ```python
 qs = {'image_id': image_id}
-IMAGE_DETAILS_URL = "http://idr-demo.openmicroscopy.org/webclient/imgData/{image_id}/"
+IMAGE_DETAILS_URL = "http://idr.openmicroscopy.org/webclient/imgData/{image_id}/"
 url = IMAGE_DETAILS_URL.format(**qs)
 r = session.get(url)
 if r.status_code == 200:
@@ -95,7 +95,7 @@ if r.status_code == 200:
 ----
 ### Get Image map annotation:
 ```python
-MAP_URL = "http://idr-demo.openmicroscopy.org/webclient/api/annotations/?type=map&{type}={image_id}"
+MAP_URL = "http://idr.openmicroscopy.org/webclient/api/annotations/?type=map&{type}={image_id}"
 
 qs = {'type': 'image', 'image_id': image_id}
 url = MAP_URL.format(**qs)
@@ -113,7 +113,7 @@ for a in session.get(url).json()['annotations']:
 
 ### Get Image Thumbnail:
 ```python
-THUMBNAIL_URL = "http://idr-demo.openmicroscopy.org{thumb_url}"
+THUMBNAIL_URL = "http://idr.openmicroscopy.org{thumb_url}"
 
 qs = {'thumb_url': thumb_url}
 url = THUMBNAIL_URL.format(**qs)
@@ -126,7 +126,7 @@ if r.status_code == 200:
 
 # For other images (non-HCS) use:
 
-THUMBNAIL_URL = "http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
+THUMBNAIL_URL = "http://idr.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
 ```
 
 
@@ -135,7 +135,7 @@ THUMBNAIL_URL = "http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/{
 
 ### Get bulk annotation:
 ```python
-BULK_URL = "http://idr-demo.openmicroscopy.org/webgateway/table/Screen.plateLinks.child.wells/{well_id}/query/?query=Well-{well_id}"
+BULK_URL = "http://idr.openmicroscopy.org/webgateway/table/Screen.plateLinks.child.wells/{well_id}/query/?query=Well-{well_id}"
 
 qs = {'well_id': well_id}
 url = BULK_URL.format(**qs)
@@ -145,7 +145,7 @@ print (r.json())
 
 # or download entire bulk_annotation file:
 
-FILEANNOTATION_URL = "http://idr-demo.openmicroscopy.org/webclient/api/annotations/?type=file&screen={screen_id}"
+FILEANNOTATION_URL = "http://idr.openmicroscopy.org/webclient/api/annotations/?type=file&screen={screen_id}"
 DOWNLOAD_URL = "http://idr-clone.openmicroscopy.org/webclient/annotation/{ann_id}"
 
 qs = {'screen_id': screen_id}
@@ -166,7 +166,7 @@ for a in session.get(url).json()['annotations']:
 
 ### Get Screens that are annotated with gene:
 ```python
-SCREENS_PROJECTS_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/?value={value}"
+SCREENS_PROJECTS_URL = "http://idr.openmicroscopy.org/mapr/api/{key}/?value={value}"
 
 qs = {'key': 'gene', 'value': 'CDC20'}
 url = SCREENS_PROJECTS_URL.format(**qs)
@@ -180,7 +180,7 @@ for s in session.get(url).json()['screens']:
 
 ### Get Plates in Screen that are annotated with gene:
 ```python
-PLATES_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/plates/?value={value}&id={screen_id}"
+PLATES_URL = "http://idr.openmicroscopy.org/mapr/api/{key}/plates/?value={value}&id={screen_id}"
 
 qs = {'key': 'gene', 'value': 'CDC20', 'screen_id': screen_id}
 url = PLATES_URL.format(**qs)
@@ -194,12 +194,12 @@ for p in session.get(url).json()['plates']:
 
 ### Get Images in Plate that are annotated with gene:
 ```python
-IMAGES_URL = "http://idr-demo.openmicroscopy.org/mapr/api/{key}/images/?value={value}&node={parent_type}&id={parent_id}"
+IMAGES_URL = "http://idr.openmicroscopy.org/mapr/api/{key}/images/?value={value}&node={parent_type}&id={parent_id}"
 
-IMAGE_URL = "http://idr-demo.openmicroscopy.org/webclient/?show=image-{image_id}"
-IMAGE_VIEWER = "http://idr-demo.openmicroscopy.org/webclient/img_detail/{image_id}/"
-THUMBNAIL_URL = "http://idr-demo.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
-ATTRIBUTES_URL = "http://idr-demo.openmicroscopy.org/webclient/api/annotations/?type=map&image={image_id}"
+IMAGE_URL = "http://idr.openmicroscopy.org/webclient/?show=image-{image_id}"
+IMAGE_VIEWER = "http://idr.openmicroscopy.org/webclient/img_detail/{image_id}/"
+THUMBNAIL_URL = "http://idr.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
+ATTRIBUTES_URL = "http://idr.openmicroscopy.org/webclient/api/annotations/?type=map&image={image_id}"
 
 qs = {'key': 'gene', 'value': 'CDC20', 'parent_type': 'plate', 'parent_id': plate_id}
 url = IMAGES_URL.format(**qs)
