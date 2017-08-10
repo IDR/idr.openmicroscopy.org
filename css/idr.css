@@ -186,3 +186,12 @@ a {
     border-color: #eceff1 transparent transparent;
 }
 
+#version-number { 
+    margin-right: 5px;
+    width: 50px;
+}
+.version-number {
+    font-size: 11px;
+    font-weight: bold;
+}
+
