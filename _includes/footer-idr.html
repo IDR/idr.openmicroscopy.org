@@ -13,7 +13,12 @@
                 </div>
                 <hr class="whitespace">
                 <div class="small-12 columns text-center">
-                    <p class="version-number"><a href="{{ site.baseurl }}/index.html"><img id="version-number" src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a> version: {{ site.idr_deployment_version }}. Last updated: {{ site.idr_deployment_date }}. See <a href="#">release notes.</a></p>
+                    <p class="version-number"><a href="{{ site.baseurl }}/index.html"><img id="version-number" src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a>
+                        version: {{ site.idr_deployment_version }}.
+                    {% if site.idr_deployment_date %}
+                        Last updated: {{ site.idr_deployment_date }}.
+                    {% endif %}
+                        See <a href="#">release notes.</a></p>
                 </div>
             </div>
         </div>
