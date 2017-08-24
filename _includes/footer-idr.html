@@ -18,7 +18,9 @@
                     {% if site.idr_deployment_date %}
                         Last updated: {{ site.idr_deployment_date }}.
                     {% endif %}
-                        See <a href="#">release notes.</a></p>
+                    {% if site.idr_deployment_notes %}
+                        See <a href="{{ site.idr_deployment_notes }}">release notes.</a></p>
+                    {% endif %}
                 </div>
             </div>
         </div>
