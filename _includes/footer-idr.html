@@ -11,5 +11,16 @@
                     <p>&copy; 2016-{{ site.time | date: "%Y" }} University of Dundee &amp; Open Microscopy Environment</p>
                     <p>OMERO is distributed under the terms of the GNU GPL. For more information, visit <a href="http://www.openmicroscopy.org">openmicroscopy.org</a></p>
                 </div>
+                <hr class="whitespace">
+                <div class="small-12 columns text-center">
+                    <p class="version-number"><a href="{{ site.baseurl }}/index.html"><img id="version-number" src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a>
+                        version: {{ site.idr_deployment_version }}.
+                    {% if site.idr_deployment_date %}
+                        Last updated: {{ site.idr_deployment_date }}.
+                    {% endif %}
+                    {% if site.idr_deployment_notes %}
+                        See <a href="{{ site.idr_deployment_notes }}">release notes.</a></p>
+                    {% endif %}
+                </div>
             </div>
         </div>
