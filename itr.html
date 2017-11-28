@@ -1,0 +1,19 @@
+---
+layout: idr
+title: ITR
+---
+
+<script>
+    // const _domains = {{ site.data.domains | jsonify }};
+    // const _tools = {{ site.data.tools | jsonify }};
+    let DOMAINS = {{ site.data.domains | jsonify }};
+    let TAGS = {{ site.data.tags | jsonify }};
+    let TOOLS = {{ site.data.tools | jsonify }};
+</script>
+
+<div class="row itrBody">
+    <div class="small-12 small-centered columns">
+        <table id="tools" class="hover" cellspacing="0" width="100%">
+        </table>
+    </div>
+</div>

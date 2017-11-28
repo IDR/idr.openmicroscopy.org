@@ -1,0 +1,173 @@
+[
+    {
+        "name": "CellProfiler",
+        "biseToolUrl": "http://biii.eu/cellprofiler",
+        "projectUrl": "http://cellprofiler.org",
+        "domains": [
+            "screening",
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "FEATURE_EXTRACTION",
+            "IMAGE_CLASSIFICATION",
+            "AUTOMATED",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "Icy",
+        "biseToolUrl": "http://biii.eu/icy",
+        "projectUrl": "http://icy.bioimageanalysis.org",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "STAND_ALONE",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "ilastik",
+        "biseToolUrl": "http://biii.eu/ilastik",
+        "projectUrl": "http://www.ilastik.org",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "FEATURE_EXTRACTION",
+            "IMAGE_CLASSIFICATION",
+            "AUTOMATED",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "ImageJ",
+        "biseToolUrl": "http://biii.eu/imagej",
+        "projectUrl": "http://imagej.net/",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "STAND_ALONE",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "Fiji",
+        "biseToolUrl": "http://biii.eu/fiji",
+        "projectUrl": "http://fiji.sc",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "STAND_ALONE",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "Knime",
+        "biseToolUrl": "http://biii.eu/knime",
+        "projectUrl": "https://www.knime.com/",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "AUTOMATED",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "Mahotas",
+        "biseToolUrl": "",
+        "projectUrl": "http://mahotas.rtfd.io",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging",
+            "marine"
+        ],
+        "tags": [
+            "FEATURE_EXTRACTION",
+            "WATERSHED"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "OMERO",
+        "biseToolUrl": "http://biii.eu/omero",
+        "projectUrl": "https://www.openmicroscopy.org",
+        "domains": [
+            "screening",
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "STAND_ALONE"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "Osirix",
+        "biseToolUrl": "http://biii.eu/osirix",
+        "projectUrl": "http://www.osirix-viewer.com",
+        "domains": [
+            "medical-imaging"
+        ],
+        "tags": [
+            "VOLUME_RENDERING",
+            "STAND_ALONE"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "TrackMate",
+        "biseToolUrl": "http://biii.eu/trackmate",
+        "projectUrl": "https://imagej.net/TrackMate",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "OBJECT_TRACKING"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "wnd-charm",
+        "biseToolUrl": "",
+        "projectUrl": "https://github.com/wnd-charm/wnd-charm",
+        "domains": [
+            "bio-imaging",
+            "medical-imaging"
+        ],
+        "tags": [
+            "FEATURE_EXTRACTION",
+            "IMAGE_CLASSIFICATION",
+            "AUTOMATED"
+        ],
+        "datasets": []
+    },
+    {
+        "name": "XNAT",
+        "biseToolUrl": "http://biii.eu/xnat",
+        "projectUrl": "https://www.xnat.org/",
+        "domains": [
+            "medical-imaging"
+        ],
+        "tags": [
+            "STAND_ALONE"
+        ],
+        "datasets": []
+    }
+]
