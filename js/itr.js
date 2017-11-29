@@ -22,7 +22,7 @@ $(document).ready(function () {
                 title: "Domains",
                 render: function (data, type, row) {
                     let text = "";
-                    data.forEach(domain => {
+                    data.forEach(function (domain) {
                         text += ('<div>' + domain + '</div>');
                     });
                     return text;
@@ -33,7 +33,7 @@ $(document).ready(function () {
                 title: "Tags",
                 render: function (data, type, row) {
                     let text = "";
-                    data.forEach(tag => {
+                    data.forEach(function (tag) {
                         text += ('<div><a href="' + tag.url + '">' + tag.name + '</a></div>');
                     });
                     return text;
