@@ -8,15 +8,29 @@ $(document).ready(function () {
     $('#tools').DataTable({
         data: TOOLS,
         columns: [
-            { data: "biseToolUrl", visible: false },
             {
                 data: "name",
                 title: "Name",
                 render: function (data, type, row) {
-                    return '<a href="' + row.biseToolUrl + '">' + data + '</a>';
+                    let td = $('td', row).eq(1);
+
+                    let html =
+                    '<div>' +
+                        '<img src="../img/logos/itr/logo_knime.svg" width="50px"></img>' +
+                        '<a href="' + row.projectUrl + '">' + data + '</a>' +
+                    '</div>'
+                    return html;
                 }
             },
-            { data: "projectUrl", title: "Project" },
+            {
+                data: "biseToolUrl",
+                visible: false
+            },
+            {
+                data: "projectUrl",
+                title: "Project",
+                visible: false
+            },
             {
                 data: "domains",
                 title: "Domains",
