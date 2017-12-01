@@ -1,30 +1,34 @@
 $(document).ready(function () {
 
-    TOOLS.forEach(tool => {
+    TOOLS.forEach(function (tool) {
         // Map tag strings to objects
-        tool.tags = mapTags(tool.tags)
+        tool.tags = mapTags(tool.tags);
+        tool.logo = mapLogos(tool.name);
     });
 
     $('#tools').DataTable({
         data: TOOLS,
         columns: [
             {
+                data: "biseToolUrl",
+                visible: false
+            },
+            {
+                data: "logo",
+                visible: false
+            },
+            {
                 data: "name",
                 title: "Name",
                 render: function (data, type, row) {
-                    let td = $('td', row).eq(1);
-
-                    let html =
-                    '<div>' +
-                        '<img src="../img/logos/itr/logo_knime.svg" width="50px"></img>' +
-                        '<a href="' + row.projectUrl + '">' + data + '</a>' +
-                    '</div>'
-                    return html;
+                    let div ='<div>';
+                    if (row.logo) {
+                        div += '<img class="itrLogo" src="' + row.logo + '" width="32px"></img>';
+                    }
+                    div += '<a href="' + row.projectUrl + '">' + data + '</a>';
+                    div += '</div>';
+                    return div;
                 }
-            },
-            {
-                data: "biseToolUrl",
-                visible: false
             },
             {
                 data: "projectUrl",
@@ -63,9 +67,20 @@ $(document).ready(function () {
     function mapTags(tags) {
         let tagObjects = [tags.length];
         for (let i = 0; i < tags.length; ++i) {
-            tagObjects[i] = TAGS.find(tag => tag.code === tags[i]);
+            tagObjects[i] = TAGS.find(function (tag) {
+                return tag.code === tags[i]
+            });
         }
         return tagObjects;
     }
 
+    function mapLogos(toolName) {
+        for (let i = 0; i < LOGOS.length; ++i) {
+            if (LOGOS[i].name.toLowerCase() === toolName.toLowerCase()) {
+                console.log("Found" + toolName);
+                return logo = LOGOS[i].imgUrl;
+            }
+        }
+        return null;
+    }
 });

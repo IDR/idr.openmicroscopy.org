@@ -1,0 +1,46 @@
+[
+    {
+        "name": "icy",
+        "imgUrl": "http://icons.duckduckgo.com/ip2/icy.bioimageanalysis.org.ico"
+    },
+    {
+        "name": "ilastik",
+        "imgUrl": "../img/logos/itr/logo_ilastik.png"
+    },
+    {
+        "name": "imagej",
+        "imgUrl": "../img/logos/itr/logo_imagej.png"
+    },   
+    {
+        "name": "trackmate",
+        "imgUrl": "../img/logos/itr/logo_imagej.png"
+    },
+    {
+        "name": "fiji",
+        "imgUrl": "../img/logos/itr/logo_fiji.png"
+    },
+    {
+        "name": "mahotas",
+        "imgUrl": "../img/logos/itr/logo_github.png"
+    },
+    {
+        "name": "wnd-charm",
+        "imgUrl": "../img/logos/itr/logo_github.png"
+    },
+    {
+        "name": "cellprofiler",
+        "imgUrl": "../img/logos/itr/logo_cellprofiler.svg"
+    },
+    {
+        "name": "knime",
+        "imgUrl": "http://icons.duckduckgo.com/ip2/www.knime.com.ico"
+    },
+    {
+        "name": "omero",
+        "imgUrl": "../img/logos/itr/logo_ome.svg"
+    },
+    {
+        "name": "osirix",
+        "imgUrl": "../img/logos/itr/logo_osirix.svg"
+    }
+]
