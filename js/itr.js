@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     $("#tools tbody").on("click", "td", function () {
         if ($(this).index() !== 3) {
-            // Accept clicks only on the "Datasets" column
+            // Handle clicks only on the "Datasets" column
             return;
         }
 
@@ -77,7 +77,9 @@ $(document).ready(function () {
         if (row.logo) {
             div += `<img class="itrLogo" src="${row.logo}"></img>`;
         }
-        div += `<a href="${row.biseToolUrl}"><img class="itrLogo" src="../img/itr/logo_biis.png"></a>`;
+        if (row.biseToolUrl) {
+            div += `<a href="${row.biseToolUrl}"><img class="itrLogo" src="${BIIS_LOGO_URL}"></a>`;
+        }
         div += `<a href="${row.projectUrl}">${data}</a>`;
         div += '</div>';
         return div;

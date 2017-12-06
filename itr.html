@@ -4,9 +4,10 @@ title: ITR
 ---
 
 <script>
-    let LOGOS = {{ site.data.logos | jsonify }};
-    let TAGS = {{ site.data.tags | jsonify }};
-    let TOOLS = {{ site.data.tools | jsonify }};
+    const LOGOS = {{ site.data.logos | jsonify }};
+    const TAGS = {{ site.data.tags | jsonify }};
+    const TOOLS = {{ site.data.tools | jsonify }};
+    const BIIS_LOGO_URL = "{{ "/img/itr/logo_biis.png" | absolute_url }}";
 </script>
 
 <header class="marketing-hero">
