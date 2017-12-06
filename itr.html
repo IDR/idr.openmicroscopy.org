@@ -7,7 +7,7 @@ title: ITR
     const LOGOS = {{ site.data.logos | jsonify }};
     const TAGS = {{ site.data.tags | jsonify }};
     const TOOLS = {{ site.data.tools | jsonify }};
-    const BIIS_LOGO_URL = "{{ "/img/itr/logo_biis.png" | absolute_url }}";
+    const BIIS_LOGO_URL = "{{"/img/itr/logo_biis.png" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}";
 </script>
 
 <header class="marketing-hero">
