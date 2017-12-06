@@ -21,25 +21,10 @@ tr {
 
 .itrLogo {
     position: relative;
-    height: 32px;
+    height: 25px;
+    width: auto;
     margin-right: 12px;
     fill: #fff;
-}
-
-.itrLogoCellProfiler {
-    background: transparent url(../img/logos/itr/logo_knime.svg) no-repeat left center;
-    background-size: 100px;
-    padding-left: 18px; /* width of feed icon plus 2px spacing */
-}
-
-.itrProfjectCellContainer {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 10px;
 }
 
 .itrLogoContainer {
@@ -56,21 +41,34 @@ tr {
 }
 
 .modal-header {
-    padding: 0.5rem;
 }
 
 .modal-body {
     padding: 1rem;
 }
 
-.modal-title {
+.modal-header__title {
+    color: rgb(0, 0, 0);
+    padding: 18px;
+}
+
+.modal-header__icon {
     color: #fff;
 }
 
-.modal-body__icon {
-    
+.accordion-content dt::before {
+    content: "\A";
+    white-space: pre-wrap;
+    display: block;
+    height: .5em;
 }
 
-.modal-body__item {
+.accordion-content dt, dd {
+    display: inline;
+    margin: 0;
+}
 
+.accordion-content dd {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9em;
 }

@@ -12,35 +12,7 @@ $(document).ready(function () {
         tool.logo = mapLogos(tool.name);
     });
 
-    /**
-     * Callback for 
-     */
-    $("#tools").on("click", "tr .detail a", function () {
-        const toolId = $(this).data('id');
-        const toolModel = TOOLS.find(function (tool) {
-            return tool.name === toolId;
-        })
-
-        // Formulate dataset table
-        var tableOptions = {
-            data: toolModel.datasets,
-            lengthChange: false,
-            searching: false,
-            columns: [
-                { data: "name", title: "Dataset" },
-                { data: "availability", title: "Availability" }
-            ]
-        };
-
-        new ToolModal($('#projectModal'))
-            .title(toolModel.name)
-            .projectUrl(toolModel.projectUrl)
-            .biseToolUrl(toolModel.biseToolUrl)
-            .table(tableOptions)
-            .show();
-    });
-
-    $('#tools').DataTable({
+    const toolsTable = $('#tools').DataTable({
         data: TOOLS,
         columns: [
             { data: "biseToolUrl", visible: false },
@@ -51,6 +23,34 @@ $(document).ready(function () {
             { data: "tags", title: "Tags", render: renderTags },
             { data: "datasets", title: "Datasets", render: renderDatasets }
         ],
+    });
+
+    $("#tools tbody").on("click", "td", function () {
+        if ($(this).index() !== 3) {
+            // Accept clicks only on the "Datasets" column
+            return;
+        }
+
+        // Get data asscociated with selected row
+        const rowData = toolsTable.row(this).data();
+
+        // Formulate dataset table
+        var tableOptions = {
+            data: rowData.datasets,
+            lengthChange: false,
+            searching: false,
+            columns: [
+                { data: "name", title: "Dataset" },
+                { data: "availability", title: "Availability" }
+            ]
+        };
+
+        new ToolModal($('#projectModal'))
+            .title(rowData.name)
+            .projectUrl(rowData.projectUrl)
+            .biseToolUrl(rowData.biseToolUrl)
+            .table(tableOptions)
+            .show();
     });
 
     function mapTags(tags) {
@@ -73,11 +73,11 @@ $(document).ready(function () {
     }
 
     function renderName(data, type, row) {
-        let div = '<div class="detail">';
+        let div = '<div class="nameCell">';
         if (row.logo) {
-            div += `<img class="itrLogo" src="${row.logo}" width="32px"></img>`;
+            div += `<img class="itrLogo" src="${row.logo}"></img>`;
         }
-        // div += `<a href="#" data-id="${row.name}">${data}</a>`;
+        div += `<a href="${row.biseToolUrl}"><img class="itrLogo" src="../img/itr/logo_biis.png"></a>`;
         div += `<a href="${row.projectUrl}">${data}</a>`;
         div += '</div>';
         return div;
@@ -100,7 +100,7 @@ $(document).ready(function () {
     }
 
     function renderDatasets(data, type, row) {
-        let text = "";
+        let text = '';
         let containsFeatures = false;
         let containsRois = false;
         let containsTracks = false;
@@ -136,39 +136,11 @@ $(document).ready(function () {
         if (containsTracks) {
             text += createBadge('T');
         }
-
         return text;
     }
 
     function createBadge(letter) {
         return `<span class='badge secondary'>${letter}</span> `;
     }
-
-
-    // Listen to modal opened events
-    // $('#projectModal').on('open.zf.reveal', function () {
-    //     let toolId = $(this).data('id');
-    //     let toolModel = TOOLS.find(function (tool) {
-    //         return tool.name === toolId;
-    //     })
-
-    //     // Formulate dataset table
-    //     var tableOptions = {
-    //         data: toolModel.datasets,
-    //         lengthChange: false,
-    //         searching: false,
-    //         columns: [
-    //             { data: "name", title: "Dataset" },
-    //             { data: "availability", title: "Availability" }
-    //         ]
-    //     };
-
-    //     new ToolModal(this)
-    //         .title(toolModel.name)
-    //         .projectUrl(toolModel.projectUrl)
-    //         .biseToolUrl(toolModel.biseToolUrl)
-    //         .table(tableOptions);
-    // })
-
 
 });

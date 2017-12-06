@@ -12,41 +12,38 @@ var ToolModal = /** @class */ (function () {
     }
 
     ToolModal.prototype.title = function (title) {
-        if (!title) {
-            return this;
+        if (title) {
+            this.container
+                .find(".modal-header__title")
+                .text(title);
         }
-
-        var header = this.container.find(".modal-header");
-        $(`<h3 class="modal-title">${title}</h3>`)
-            .appendTo(header);
         return this;
     };
 
     ToolModal.prototype.icon = function (url) {
-        var body = this.getBody();
+        if (url) {
+            this.container
+                .find(".modal-header__icon")
+                .attr('src', url);
+        }
+        return this;
     }
 
     ToolModal.prototype.projectUrl = function (url) {
-        if (!url) {
-            return this;
+        if (url) {
+            var itemsContainer = this.container.find('#itemsContainer');
+            $(`<p>Project URL: <a href="${url}">${url}</a></p>`)
+                .appendTo(itemsContainer);
         }
-
-        var itemsContainer = this.container.find('#itemsContainer');
-        $(`<p>Project URL: <a href="${url}">${url}</a></p>`)
-            .appendTo(itemsContainer);
-            
         return this;
     }
 
     ToolModal.prototype.biseToolUrl = function (url) {
         if (!url) {
-            return this;
+            var itemsContainer = this.container.find('#itemsContainer');
+            $(`<p>BISE URL: <a href="${url}">${url}</a></p>`)
+                .appendTo(itemsContainer);
         }
-
-        var itemsContainer = this.container.find('#itemsContainer');
-        $(`<p>BISE URL: <a href="${url}">${url}</a></p>`)
-            .appendTo(itemsContainer);
-
         return this;
     }
 
@@ -139,15 +136,12 @@ var ToolModal = /** @class */ (function () {
         <div id="modalContents">
             <div class="modal-header">
                 <button class="close-button" type="button">
-                     <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
+                <img class="modal-header__icon"><h3 class="modal-header__title"></h3></img>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div id="iconContainer" class="small-2 columns">
-                    </div>
-                    <div id="itemsContainer" class="small-10 columns">
-                    </div>
+                <div id="itemsContainer">
                 </div>
                 <div id="tableContainer" class="row">
                     <table id="datasets" class="display compact" cellspacing="0" width="100%">
