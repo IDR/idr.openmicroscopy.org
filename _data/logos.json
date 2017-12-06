@@ -9,15 +9,15 @@
     },
     {
         "name": "imagej",
-        "imgUrl": "../img/logos/itr/logo_imagej.png"
+        "imgUrl": "http://icons.duckduckgo.com/ip2/imagej.net.ico"
     },   
     {
         "name": "trackmate",
-        "imgUrl": "../img/logos/itr/logo_imagej.png"
+        "imgUrl": "http://icons.duckduckgo.com/ip2/imagej.net.ico"
     },
     {
         "name": "fiji",
-        "imgUrl": "../img/logos/itr/logo_fiji.png"
+        "imgUrl": "http://icons.duckduckgo.com/ip2/fiji.sc.ico"
     },
     {
         "name": "mahotas",
@@ -29,7 +29,7 @@
     },
     {
         "name": "cellprofiler",
-        "imgUrl": "../img/logos/itr/logo_cellprofiler.svg"
+        "imgUrl": "http://icons.duckduckgo.com/ip2/cellprofiler.org.ico"
     },
     {
         "name": "knime",
@@ -37,10 +37,14 @@
     },
     {
         "name": "omero",
-        "imgUrl": "../img/logos/itr/logo_ome.svg"
+        "imgUrl": "http://icons.duckduckgo.com/ip2/www.openmicroscopy.org.ico"
     },
     {
         "name": "osirix",
-        "imgUrl": "../img/logos/itr/logo_osirix.svg"
+        "imgUrl": "http://icons.duckduckgo.com/ip2/www.osirix-viewer.com.ico"
+    },
+    {
+        "name": "xnat",
+        "imgUrl": "http://icons.duckduckgo.com/ip2/xnat.org.ico"
     }
 ]

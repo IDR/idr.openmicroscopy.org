@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    const DataTypes = {
+        ROI: 'ROI',
+        FEATURE: 'FEATURE',
+        TRACK: "TRACK",
+    };
+
     TOOLS.forEach(function (tool) {
         // Map tag strings to objects
         tool.tags = mapTags(tool.tags);
@@ -39,11 +45,11 @@ $(document).ready(function () {
         columns: [
             { data: "biseToolUrl", visible: false },
             { data: "logo", visible: false },
-            { data: "datasets", title: "Datasets", visible: false },
             { data: "projectUrl", title: "Project", visible: false },
             { data: "name", title: "Name", render: renderName },
             { data: "domains", title: "Domains", render: renderDomains },
-            { data: "tags", title: "Tags", render: renderTags }
+            { data: "tags", title: "Tags", render: renderTags },
+            { data: "datasets", title: "Datasets", render: renderDatasets }
         ],
     });
 
@@ -71,7 +77,8 @@ $(document).ready(function () {
         if (row.logo) {
             div += `<img class="itrLogo" src="${row.logo}" width="32px"></img>`;
         }
-        div += `<a href="#" data-id="${row.name}">${data}</a>`;
+        // div += `<a href="#" data-id="${row.name}">${data}</a>`;
+        div += `<a href="${row.projectUrl}">${data}</a>`;
         div += '</div>';
         return div;
     }
@@ -92,17 +99,51 @@ $(document).ready(function () {
         return text;
     }
 
-    function renderDialog(row) {
-        // <div class="reveal" id="exampleModal1" data-reveal>
-        // <h1>Awesome. I Have It.</h1>
-        // <p class="lead">Your couch. It is mine.</p>
-        // <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-        // <button class="close-button" data-close aria-label="Close modal" type="button">
-        //   <span aria-hidden="true">&times;</span>
-        // </button>
-        // </div>
-        return null;
+    function renderDatasets(data, type, row) {
+        let text = "";
+        let containsFeatures = false;
+        let containsRois = false;
+        let containsTracks = false;
+        data.forEach(dataset => {
+            const dataTypes = dataset.dataTypes;
+            if (!containsFeatures) {
+                containsFeatures = dataTypes.find(
+                    (datatype) => datatype === DataTypes.FEATURE
+                );
+            }
+
+            if (!containsRois) {
+                containsRois = dataTypes.find(
+                    (datatype) => datatype === DataTypes.ROI
+                );
+            }
+
+            if (!containsTracks) {
+                containsTracks = dataTypes.find(
+                    (datatype) => datatype === DataTypes.TRACK
+                );
+            }
+        })
+
+        if (containsFeatures) {
+            text += createBadge('F');
+        }
+
+        if (containsRois) {
+            text += createBadge('R');
+        }
+
+        if (containsTracks) {
+            text += createBadge('T');
+        }
+
+        return text;
     }
+
+    function createBadge(letter) {
+        return `<span class='badge secondary'>${letter}</span> `;
+    }
+
 
     // Listen to modal opened events
     // $('#projectModal').on('open.zf.reveal', function () {

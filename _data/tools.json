@@ -17,19 +17,23 @@
         "datasets": [
             {
                 "name": "idr0016/screenA",
-                "availability": "upon request"
+                "availability": "upon request",
+                "dataTypes": ["FEATURE", "ROI"]
             },
             {
                 "name": "idr0025/screenA",
-                "availability": "contact authors"
+                "availability": "contact authors",
+                "dataTypes": ["FEATURE", "ROI"]
             },
             {
                 "name": "idr0033/screenA",
-                "availability": "upon request"
+                "availability": "upon request",
+                "dataTypes": ["FEATURE", "ROI"]
             },
             {
                 "name": "idr0036/screenA",
-                "availability": "upon request"
+                "availability": "upon request",
+                "dataTypes": ["FEATURE"]
             }
         ]
     },
@@ -118,7 +122,13 @@
             "FEATURE_EXTRACTION",
             "WATERSHED"
         ],
-        "datasets": []
+        "datasets": [
+            {
+                "name": "idr0015/screenA",
+                "availability": "upon request",
+                "dataTypes": ["FEATURE", "ROI"]
+            }
+        ]
     },
     {
         "name": "OMERO",

@@ -32,7 +32,7 @@ var ToolModal = /** @class */ (function () {
         }
 
         var itemsContainer = this.container.find('#itemsContainer');
-        $(`<p>Projet URL: <a href="${url}">${url}</a></p>`)
+        $(`<p>Project URL: <a href="${url}">${url}</a></p>`)
             .appendTo(itemsContainer);
             
         return this;
@@ -150,7 +150,7 @@ var ToolModal = /** @class */ (function () {
                     </div>
                 </div>
                 <div id="tableContainer" class="row">
-                    <table id="datasets" class="hover responsive" cellspacing="0" width="100%">
+                    <table id="datasets" class="display compact" cellspacing="0" width="100%">
                     </table>
                 </div>
             </div>
