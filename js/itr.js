@@ -6,6 +6,9 @@ $(document).ready(function () {
         tool.logo = mapLogos(tool.name);
     });
 
+    /**
+     * Callback for 
+     */
     $("#tools").on("click", "tr .detail a", function () {
         const toolId = $(this).data('id');
         const toolModel = TOOLS.find(function (tool) {
@@ -29,8 +32,6 @@ $(document).ready(function () {
             .biseToolUrl(toolModel.biseToolUrl)
             .table(tableOptions)
             .show();
-
-        // $('#projectModal').data("id", attrs).foundation('open');
     });
 
     $('#tools').DataTable({
@@ -38,11 +39,11 @@ $(document).ready(function () {
         columns: [
             { data: "biseToolUrl", visible: false },
             { data: "logo", visible: false },
+            { data: "datasets", title: "Datasets", visible: false },
             { data: "projectUrl", title: "Project", visible: false },
             { data: "name", title: "Name", render: renderName },
             { data: "domains", title: "Domains", render: renderDomains },
-            { data: "tags", title: "Tags", render: renderTags },
-            { data: "datasets", title: "Datasets" }
+            { data: "tags", title: "Tags", render: renderTags }
         ],
     });
 

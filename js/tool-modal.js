@@ -28,7 +28,8 @@ var ToolModal = /** @class */ (function () {
 
         var itemsContainer = this.container.find('#itemsContainer');
         $(`<p>Projet URL: <a href="${url}">${url}</a></p>`)
-            .appendTo(itemsContainer[0]);
+            .appendTo(itemsContainer);
+            
         return this;
     }
 
@@ -37,11 +38,10 @@ var ToolModal = /** @class */ (function () {
             return this;
         }
 
-        this.container
-            .find('#itemsContainer')[0]
-            .append(`<p>BISE URL: <a href="${url}">${url}</a></p>`);
-        // $(`<p>BISE URL: <a href="${url}">${url}</a></p>`)
-        //     .appendTo(itemsContainer[0]);
+        var itemsContainer = this.container.find('#itemsContainer');
+        $(`<p>BISE URL: <a href="${url}">${url}</a></p>`)
+            .appendTo(itemsContainer);
+            
         return this;
     }
 
