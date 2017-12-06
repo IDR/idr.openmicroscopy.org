@@ -4,6 +4,11 @@ var ToolModal = /** @class */ (function () {
         this.root = container;
         this.root.append(ToolModal.modalHtml);
         this.container = this.root.find('#modalContents');
+
+        // Attach click listener to close button
+        this.container.find('.close-button').on('click', () => {
+            this.dismiss();
+        });;
     }
 
     ToolModal.prototype.title = function (title) {
@@ -12,8 +17,8 @@ var ToolModal = /** @class */ (function () {
         }
 
         var header = this.container.find(".modal-header");
-        $(`<h3 class=\"modal-title\">${title}</h3>`)
-            .appendTo(header[0]);
+        $(`<h3 class="modal-title">${title}</h3>`)
+            .appendTo(header);
         return this;
     };
 
@@ -41,7 +46,7 @@ var ToolModal = /** @class */ (function () {
         var itemsContainer = this.container.find('#itemsContainer');
         $(`<p>BISE URL: <a href="${url}">${url}</a></p>`)
             .appendTo(itemsContainer);
-            
+
         return this;
     }
 
@@ -133,7 +138,9 @@ var ToolModal = /** @class */ (function () {
     ToolModal.modalHtml = `
         <div id="modalContents">
             <div class="modal-header">
-                <h3 class="modal-title"></h3>
+                <button class="close-button" type="button">
+                     <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="row">
