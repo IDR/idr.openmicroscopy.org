@@ -2,7 +2,7 @@
 layout: idr
 title: ITR
 ---
-        
+
 <script>
     let LOGOS = {{ site.data.logos | jsonify }};
     let TAGS = {{ site.data.tags | jsonify }};
@@ -14,7 +14,9 @@ title: ITR
         <div class="medium-12 columns">
             <h1 class="hero-main-header">ITR</h1>
             <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
-            Image Tools Resource (ITR)  is an index of suggested open-source analysis software. Though a work-in-progress, the aim is to publish tools that have links to accessible datasets, benchmarking resources, and public workflows to aid in training and reproducibility.
+                Image Tools Resource (ITR) is an index of suggested open-source analysis software. Though a work-in-progress, the aim is
+                to publish tools that have links to accessible datasets, benchmarking resources, and public workflows to
+                aid in training and reproducibility.
             </p>
         </div>
     </div>
@@ -25,16 +27,59 @@ title: ITR
     <div class="small-12 small-centered medium-12 medium-centered columns">
         <div class="row horizontal">
             <div>
-                <p>Below you will find community driven <span class="bold">projects</span>, their entry in the Bio Image Information Index (<a href="http://biii.eu">http://biii.eu</a>), <span class="bold">domains</span> in which the software is applicable, <span class="bold">tags</span> sampling the tasks that the software is useful for, and a list of <span class="bold">datasets</span>, both in the IDR and elsewhere.</p>
-                <p>If you’d like to submit tools or analyzed results to the IDR, please email us at <a href="mailto:idr@openmicroscopy.org">idr@openmicroscopy.org</a>.</p>
+                <p>Below you will find community driven
+                    <span class="bold">projects</span>, their entry in the Bio Image Information Index (
+                    <a href="http://biii.eu">http://biii.eu</a>),
+                    <span class="bold">domains</span> in which the software is applicable,
+                    <span class="bold">tags</span> sampling the tasks that the software is useful for, and a list of
+                    <span class="bold">datasets</span>, both in the IDR and elsewhere.</p>
+                <p>If you’d like to submit tools or analyzed results to the IDR, please email us at
+                    <a href="mailto:idr@openmicroscopy.org">idr@openmicroscopy.org</a>.</p>
             </div>
         </div>
     </div>
 </div>
-        
+
 <div class="row itrBody">
     <div class="small-12 small-centered columns">
         <table id="tools" class="hover responsive" cellspacing="0" width="100%">
         </table>
     </div>
 </div>
+
+<div id="projectModal" class="project-modal reveal" data-reveal></div>
+
+<!-- Modal for displaying row details -->
+<!-- <div class="project-modal reveal" id="projectModal" data-reveal>
+    <div class="modal-header">
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div id="iconContainer" class="small-2 columns">
+                
+            </div>
+            <div id="itemsContainer" class="small-10 columns">
+            </div>
+        </div>
+        <div id="tableContainer" class="row">
+            <table id="datasets" class="hover responsive" cellspacing="0" width="100%">
+            </table>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div id="detailModal" class="reveal-modal large" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h2 id="modalTitle"></h2>
+    <div>
+        <p id="modalProjectUrl"></p>
+        <p id="biseUrl"></p>
+    </div>
+    <div class="row">
+        <div class="small-12 small-centered columns">
+            <table id="datasets" class="hover responsive" cellspacing="0" width="100%">
+            </table>
+        </div>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div> -->

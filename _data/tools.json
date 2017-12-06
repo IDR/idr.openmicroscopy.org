@@ -14,7 +14,24 @@
             "AUTOMATED",
             "MANUAL"
         ],
-        "datasets": []
+        "datasets": [
+            {
+                "name": "idr0016/screenA",
+                "availability": "upon request"
+            },
+            {
+                "name": "idr0025/screenA",
+                "availability": "contact authors"
+            },
+            {
+                "name": "idr0033/screenA",
+                "availability": "upon request"
+            },
+            {
+                "name": "idr0036/screenA",
+                "availability": "upon request"
+            }
+        ]
     },
     {
         "name": "Icy",

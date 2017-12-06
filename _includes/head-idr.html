@@ -32,7 +32,6 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li><a class="logo" href="{{ site.baseurl }}/index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="itr.html">ITR</a></li>
                 </ul>
             </div>
             <div class="top-bar-right">
@@ -44,7 +43,12 @@
                             <li><a href="experiments.html">Experiments</a></li>
                         </ul>
                     </li>
-                    <li><a href="api.html">API</a></li>
+                    <li class="has-submenu"><a>Analysis</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="api.html">API Access</a></li>
+                            <li><a href="itr.html">Image Tools Resource (ITR)</a></li>
+                        </ul>
+                    </li>
                     <li><a href="deployment.html">Deployment</a></li>
                 </ul>
             </div>

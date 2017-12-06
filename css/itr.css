@@ -48,6 +48,31 @@ tr {
     margin-right: 10px;
 }
 
-.itrTextContainer {
+.project-modal {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    border: 0;
+}
+
+.modal-header {
+    background-color: #1976d2;
+    border: 1px solid #1565C0;
+    padding: 0.5rem;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-title {
+    color: #fff;
+}
+
+.modal-body__icon {
+    
+}
+
+.modal-body__item {
 
 }
