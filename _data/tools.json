@@ -57,6 +57,29 @@
         ]
     },
     {
+        "name": "EBImage",
+        "biseToolUrl": "http://biii.eu/ebimage",
+        "projectUrl": "http://bioconductor.org/packages/EBImage",
+        "domains": [
+            "screening"
+        ],
+        "tags": [
+            "TBD"
+        ],
+        "datasets": [
+            {
+                "name": "idr0012/screenA",
+                "availability": "upon request",
+                "dataTypes": ["FEATURE", "ROI"]
+            },
+            {
+                "name": "idr0017/screenA",
+                "availability": "contact authors",
+                "dataTypes": ["FEATURE", "ROI"]
+            }
+        ]
+    },
+    {
         "name": "Icy",
         "biseToolUrl": "http://biii.eu/icy",
         "projectUrl": "http://icy.bioimageanalysis.org",
