@@ -110,7 +110,7 @@
         "datasets": []
     },
     {
-        "name": "ImageJ",
+        "name": "Fiji/ImageJ",
         "biseToolUrl": "http://biii.eu/imagej",
         "projectUrl": "http://imagej.net/",
         "domains": [
@@ -121,21 +121,23 @@
             "STAND_ALONE",
             "MANUAL"
         ],
-        "datasets": []
-    },
-    {
-        "name": "Fiji",
-        "biseToolUrl": "http://biii.eu/fiji",
-        "projectUrl": "http://fiji.sc",
-        "domains": [
-            "bio-imaging",
-            "medical-imaging"
-        ],
-        "tags": [
-            "STAND_ALONE",
-            "MANUAL"
-        ],
-        "datasets": []
+        "datasets": [
+            {
+                "name": "idr0038/experimentA",
+                "availability": "contact author",
+                "dataTypes": ["OTHER"]
+            },
+            {
+                "name": "idr0038/experimentB",
+                "availability": "contact author",
+                "dataTypes": ["OTHER"]
+            },
+            {
+                "name": "idr0010/screenA",
+                "availability": "contact author",
+                "dataTypes": ["ROI"]
+            }
+        ]
     },
     {
         "name": "Knime",
