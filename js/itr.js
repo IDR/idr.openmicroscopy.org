@@ -22,7 +22,7 @@ $(document).ready(function () {
             { data: "name", title: "Name", render: renderName },
             { data: "domains", title: "Domains", render: renderDomains },
             { data: "tags", title: "Tags", render: renderTags },
-            { data: "datasets", title: "Datasets", render: renderDatasets }
+            { data: "datasets", title: "Data and Results", render: renderDatasets }
         ],
     });
 
