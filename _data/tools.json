@@ -15,7 +15,7 @@
                 "name": "idr0002",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-102",
                 "availability": "upon request",
-                "dataTypes": ["TRACK"],
+                "dataTypes": ["TRACK"]
             },
         ],
     },
@@ -133,6 +133,7 @@
                 "name": "idr0038",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=project-354",
                 "availability": "contact author",
+                "mailto": "m.held@liverpool.ac.uk",
                 "dataTypes": ["OTHER"]
             },
             {

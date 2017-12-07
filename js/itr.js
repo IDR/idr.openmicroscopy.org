@@ -46,7 +46,23 @@ $(document).ready(function () {
                                 $(nTd).html("<a href='"+oData.link+"'>"+oData.name+"</a>");
                     }
                 },
-                { data: "availability", title: "Results Availability" }
+                { data: "availability", title: "Results Availability",
+                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                        let html = "";
+                        if (oData.availability == "upon request") {
+                            html = "<a href='mailto:itr@openmicroscopy.org'>";
+                        } else if (oData.mailto) {
+                            html += "<a href='mailto:";
+                            html += oData.mailto;
+                            html += "'>";
+                        }
+                        html += oData.availability;
+                        if (oData.availability == "upon request" || oData.mailto) {
+                            html += "</a>";
+                        }
+                        $(nTd).html(html);
+                    }
+                }
             ]
         };
 
