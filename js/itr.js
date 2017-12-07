@@ -103,7 +103,10 @@ $(document).ready(function () {
     }
 
     function renderDatasets(data, type, row) {
-        let text = '';
+        let rowElement = $('<div class="row"></div>');
+        let colElement = $('<div class="columns"><div>');
+        rowElement.append(colElement);
+
         let containsFeatures = false;
         let containsRois = false;
         let containsTracks = false;
@@ -129,21 +132,22 @@ $(document).ready(function () {
         })
 
         if (containsFeatures) {
-            text += createBadge('F');
+            colElement.append(createBadge('F'));
         }
 
         if (containsRois) {
-            text += createBadge('R');
+            colElement.append(createBadge('R'));
         }
 
         if (containsTracks) {
-            text += createBadge('T');
+            colElement.append(createBadge('T'));
         }
-        return text;
+
+        return rowElement[0].outerHTML;
     }
 
     function createBadge(letter) {
-        return `<span class='dataset-badge badge secondary'>${letter}</span> `;
+        return `<span class='secondary badge dataset'>${letter}</span> `;
     }
 
 });
