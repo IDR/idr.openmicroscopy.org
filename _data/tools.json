@@ -12,7 +12,8 @@
         ],
         "datasets": [
             {
-                "name": "idr0002/screenA",
+                "name": "idr0002",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-102",
                 "availability": "upon request",
                 "dataTypes": ["TRACK"],
             },
@@ -35,22 +36,26 @@
         ],
         "datasets": [
             {
-                "name": "idr0016/screenA",
+                "name": "idr0016",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1251",
                 "availability": "upon request",
                 "dataTypes": ["FEATURE", "ROI"]
             },
             {
-                "name": "idr0025/screenA",
+                "name": "idr0025",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1851",
                 "availability": "contact authors",
                 "dataTypes": ["FEATURE", "ROI"]
             },
             {
-                "name": "idr0033/screenA",
+                "name": "idr0033",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1751",
                 "availability": "upon request",
                 "dataTypes": ["FEATURE", "ROI"]
             },
             {
-                "name": "idr0036/screenA",
+                "name": "idr0036",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1952",
                 "availability": "upon request",
                 "dataTypes": ["FEATURE"]
             }
@@ -68,12 +73,14 @@
         ],
         "datasets": [
             {
-                "name": "idr0012/screenA",
+                "name": "idr0012",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1202",
                 "availability": "upon request",
                 "dataTypes": ["FEATURE", "ROI"]
             },
             {
-                "name": "idr0017/screenA",
+                "name": "idr0017",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1151",
                 "availability": "contact authors",
                 "dataTypes": ["FEATURE", "ROI"]
             }
@@ -123,47 +130,26 @@
         ],
         "datasets": [
             {
-                "name": "idr0038/experimentA",
+                "name": "idr0038",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=project-354",
                 "availability": "contact author",
                 "dataTypes": ["OTHER"]
             },
             {
-                "name": "idr0038/experimentB",
+                "name": "idr0010",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1351",
                 "availability": "contact author",
-                "dataTypes": ["OTHER"]
+                "dataTypes": ["ROI", "FEATURE"]
             },
             {
-                "name": "idr0010/screenA",
-                "availability": "contact author",
-                "dataTypes": ["ROI"]
-            },
-            {
-                "name": "idr0011/screenA",
+                "name": "idr0011",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1501",
                 "availability": "contact author",
                 "dataTypes": ["FEATURE"]
             },
             {
-                "name": "idr0011/screenB",
-                "availability": "contact author",
-                "dataTypes": ["FEATURE"]
-            },
-            {
-                "name": "idr0011/screenC",
-                "availability": "contact author",
-                "dataTypes": ["FEATURE"]
-            },
-            {
-                "name": "idr0011/screenD",
-                "availability": "contact author",
-                "dataTypes": ["FEATURE"]
-            },
-            {
-                "name": "idr0011/screenE",
-                "availability": "contact author",
-                "dataTypes": ["FEATURE"]
-            },
-            {
-                "name": "idr0026/screenA",
+                "name": "idr0026",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=project-301",
                 "availability": "contact author",
                 "dataTypes": ["ROI", "FEATURE"]
             }
@@ -198,7 +184,8 @@
         ],
         "datasets": [
             {
-                "name": "idr0015/screenA",
+                "name": "idr0015",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1201",
                 "availability": "upon request",
                 "dataTypes": ["FEATURE", "ROI"]
             }
@@ -244,7 +231,8 @@
         ],
         "datasets": [
             {
-                "name": "idr0038/experimentC",
+                "name": "idr0038",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=project-354",
                 "availability": "upon request",
                 "dataTypes": ["TRACK"]
             },

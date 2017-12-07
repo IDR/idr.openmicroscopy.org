@@ -41,7 +41,11 @@ $(document).ready(function () {
             lengthChange: false,
             searching: false,
             columns: [
-                { data: "name", title: "Dataset" },
+                { data: "name", title: "Dataset",
+                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                                $(nTd).html("<a href='"+oData.link+"'>"+oData.name+"</a>");
+                    }
+                },
                 { data: "availability", title: "Results Availability" }
             ]
         };
