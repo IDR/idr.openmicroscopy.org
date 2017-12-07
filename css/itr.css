@@ -73,6 +73,10 @@ tr {
     min-height: 18px;
 }
 
+.badge.dataset, .badge.secondary {
+    background: #FF9800;
+}
+
 .accordion-content dt::before {
     content: "\A";
     white-space: pre-wrap;
