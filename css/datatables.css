@@ -95,19 +95,19 @@ table.dataTable thead .sorting_desc_disabled {
   background-position: center right;
 }
 table.dataTable thead .sorting {
-  background-image: url("../img/datatables/sort_both.png");
+  background-image: url("../img/datatables/sort_both.svg");
 }
 table.dataTable thead .sorting_asc {
-  background-image: url("../img/datatables/sort_asc.png");
+  background-image: url("../img/datatables/sort_asc.svg");
 }
 table.dataTable thead .sorting_desc {
-  background-image: url("../img/datatables/sort_desc.png");
+  background-image: url("../img/datatables/sort_desc.svg");
 }
 table.dataTable thead .sorting_asc_disabled {
-  background-image: url("../img/datatables/sort_asc_disabled.png");
+  background-image: url("../img/datatables/sort_asc_disabled.svg");
 }
 table.dataTable thead .sorting_desc_disabled {
-  background-image: url("../img/datatables/sort_desc_disabled.png");
+  background-image: url("../img/datatables/sort_desc_disabled.svg");
 }
 
 div.dataTables_scrollHead table {

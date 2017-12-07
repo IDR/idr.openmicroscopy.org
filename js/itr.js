@@ -81,7 +81,7 @@ $(document).ready(function () {
         }
         div += `<a href="${row.projectUrl}">${data}</a>`;
         if (row.biseToolUrl) {
-            div += `<a href="${row.biseToolUrl}"><img class="itrLogo" src="${BIIS_LOGO_URL}"></a>`;
+            div += `<a href="${row.biseToolUrl}"> <i class="external-link fa fa-external-link"></i></a>`;
         }
         div += '</div>';
         return div;

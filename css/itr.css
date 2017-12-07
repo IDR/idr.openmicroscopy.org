@@ -65,11 +65,16 @@ tr {
 }
 
 .badge.dataset{
+    cursor: pointer;
     font-weight: bold;
     font-size: 11px;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     min-width: 18px;
     min-height: 18px;
+}
+
+.badge.dataset, .badge.secondary {
+    background: #FF9800;
 }
 
 .accordion-content dt::before {
@@ -87,4 +92,8 @@ tr {
 .accordion-content dd {
     font-family: 'Nunito', sans-serif;
     font-size: 0.9em;
+}
+
+.external-link {
+    color: #9C27B0;
 }
