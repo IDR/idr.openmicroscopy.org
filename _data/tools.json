@@ -136,6 +136,36 @@
                 "name": "idr0010/screenA",
                 "availability": "contact author",
                 "dataTypes": ["ROI"]
+            },
+            {
+                "name": "idr0011/screenA",
+                "availability": "contact author",
+                "dataTypes": ["FEATURE"]
+            },
+            {
+                "name": "idr0011/screenB",
+                "availability": "contact author",
+                "dataTypes": ["FEATURE"]
+            },
+            {
+                "name": "idr0011/screenC",
+                "availability": "contact author",
+                "dataTypes": ["FEATURE"]
+            },
+            {
+                "name": "idr0011/screenD",
+                "availability": "contact author",
+                "dataTypes": ["FEATURE"]
+            },
+            {
+                "name": "idr0011/screenE",
+                "availability": "contact author",
+                "dataTypes": ["FEATURE"]
+            },
+            {
+                "name": "idr0026/screenA",
+                "availability": "contact author",
+                "dataTypes": ["ROI", "FEATURE"]
             }
         ]
     },
@@ -212,7 +242,14 @@
         "tags": [
             "OBJECT_TRACKING"
         ],
-        "datasets": []
+        "datasets": [
+            {
+                "name": "idr0038/experimentC",
+                "availability": "upon request",
+                "dataTypes": ["TRACK"]
+            },
+
+        ]
     },
     {
         "name": "wnd-charm",
