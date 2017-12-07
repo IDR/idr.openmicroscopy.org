@@ -4,6 +4,7 @@ $(document).ready(function () {
         ROI: 'ROI',
         FEATURE: 'FEATURE',
         TRACK: "TRACK",
+        OTHER: "OTHER",
     };
 
     TOOLS.forEach(function (tool) {
@@ -110,6 +111,7 @@ $(document).ready(function () {
         let containsFeatures = false;
         let containsRois = false;
         let containsTracks = false;
+        let containsOthers = false;
         data.forEach(dataset => {
             const dataTypes = dataset.dataTypes;
             if (!containsFeatures) {
@@ -129,6 +131,12 @@ $(document).ready(function () {
                     (datatype) => datatype === DataTypes.TRACK
                 );
             }
+
+            if (!containsOthers) {
+                containsOthers = dataTypes.find(
+                    (datatype) => datatype === DataTypes.OTHER
+                );
+            }
         })
 
         if (containsFeatures) {
@@ -141,6 +149,10 @@ $(document).ready(function () {
 
         if (containsTracks) {
             colElement.append(createBadge('T'));
+        }
+
+        if (containsOthers) {
+            colElement.append(createBadge('O'));
         }
 
         return rowElement[0].outerHTML;
