@@ -93,3 +93,7 @@ tr {
     font-family: 'Nunito', sans-serif;
     font-size: 0.9em;
 }
+
+.external-link {
+    color: #9C27B0;
+}
