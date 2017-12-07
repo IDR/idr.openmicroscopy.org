@@ -45,7 +45,7 @@ $(document).ready(function () {
             ]
         };
 
-        new ToolModal($('#projectModal'))            
+        new ToolModal($('#projectModal'))
             .title(rowData.name)
             .icon(rowData.logo)
             .projectUrl(rowData.projectUrl)
@@ -76,12 +76,12 @@ $(document).ready(function () {
     function renderName(data, type, row) {
         let div = '<div class="nameCell">';
         if (row.logo) {
-            div += `<img class="itrLogo" src="${row.logo}"></img>`;
+            // div += `<img class="itrLogo" src="${row.logo}"></img>`;
         }
+        div += `<a href="${row.projectUrl}">${data}</a>`;
         if (row.biseToolUrl) {
             div += `<a href="${row.biseToolUrl}"><img class="itrLogo" src="${BIIS_LOGO_URL}"></a>`;
         }
-        div += `<a href="${row.projectUrl}">${data}</a>`;
         div += '</div>';
         return div;
     }
