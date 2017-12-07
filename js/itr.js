@@ -32,7 +32,7 @@ $(document).ready(function () {
             return;
         }
 
-        // Get data asscociated with selected row
+        // Get data associated with selected row
         const rowData = toolsTable.row(this).data();
 
         // Formulate dataset table
