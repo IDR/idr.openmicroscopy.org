@@ -41,7 +41,7 @@ $(document).ready(function () {
             searching: false,
             columns: [
                 { data: "name", title: "Dataset" },
-                { data: "availability", title: "Availability" }
+                { data: "availability", title: "Results Availability" }
             ]
         };
 
