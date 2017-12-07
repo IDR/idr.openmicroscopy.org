@@ -45,8 +45,9 @@ $(document).ready(function () {
             ]
         };
 
-        new ToolModal($('#projectModal'))
+        new ToolModal($('#projectModal'))            
             .title(rowData.name)
+            .icon(rowData.logo)
             .projectUrl(rowData.projectUrl)
             .biseToolUrl(rowData.biseToolUrl)
             .table(tableOptions)
@@ -142,7 +143,7 @@ $(document).ready(function () {
     }
 
     function createBadge(letter) {
-        return `<span class='badge secondary'>${letter}</span> `;
+        return `<span class='dataset-badge badge secondary'>${letter}</span> `;
     }
 
 });
