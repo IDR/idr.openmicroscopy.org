@@ -10,7 +10,7 @@
     {
         "name": "imagej",
         "imgUrl": "http://icons.duckduckgo.com/ip2/imagej.net.ico"
-    },   
+    },
     {
         "name": "trackmate",
         "imgUrl": "http://icons.duckduckgo.com/ip2/imagej.net.ico"
@@ -29,6 +29,10 @@
     },
     {
         "name": "cellprofiler",
+        "imgUrl": "https://www.cellcognition-project.org/favicon.ico"
+    },
+    {
+        "name": "cellcognition",
         "imgUrl": "http://icons.duckduckgo.com/ip2/cellprofiler.org.ico"
     },
     {

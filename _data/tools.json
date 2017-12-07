@@ -1,5 +1,24 @@
 [
     {
+        "name": "CellCognition",
+        "biseToolUrl": "http://biii.eu/cellcognition",
+        "projectUrl": "https://www.cellcognition-project.org/",
+        "domains": [
+            "screening",
+            "bio-imaging",
+        ],
+        "tags": [
+            "TBD",
+        ],
+        "datasets": [
+            {
+                "name": "idr0002/screenA",
+                "availability": "upon request",
+                "dataTypes": ["TRACK"],
+            },
+        ],
+    },
+    {
         "name": "CellProfiler",
         "biseToolUrl": "http://biii.eu/cellprofiler",
         "projectUrl": "http://cellprofiler.org",
