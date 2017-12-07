@@ -64,9 +64,8 @@ tr {
     fill: #fff;
 }
 
-.badge.dataset{
+.badge.dataset {
     cursor: pointer;
-    font-weight: bold;
     font-size: 11px;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     min-width: 18px;
@@ -75,6 +74,7 @@ tr {
 
 .badge.dataset, .badge.secondary {
     background: #FF9800;
+    font-weight: bold;
 }
 
 .accordion-content dt::before {
@@ -96,4 +96,23 @@ tr {
 
 .external-link {
     color: #9C27B0;
+}
+
+ul#tags-key {
+    float: left;
+    font-size: 0.9em;
+    margin-left: 0px;
+    padding: 0px 10px 5px;
+}
+
+ul#tags-key li {
+    display: inline;
+    margin-left: 45px;
+}
+
+.key-title {
+    color: #2196F3;
+    float: left;
+    font-weight: bold;
+    margin-left: 0px;
 }
