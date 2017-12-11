@@ -98,16 +98,20 @@ tr {
     color: #9C27B0;
 }
 
-ul#tags-key {
+#tags-key-container {
+    margin-top: 20px;
+}
+
+ul#tags-key {   
     float: left;
     font-size: 0.9em;
     margin-left: 0px;
-    padding: 0px 10px 5px;
+    padding: 0px;
 }
 
 ul#tags-key li {
     display: inline;
-    margin-left: 45px;
+    margin-left: 25px;
 }
 
 .key-title {
