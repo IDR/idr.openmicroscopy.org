@@ -41,28 +41,8 @@ $(document).ready(function () {
             lengthChange: false,
             searching: false,
             columns: [
-                { data: "name", title: "Dataset",
-                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-                                $(nTd).html("<a href='"+oData.link+"'>"+oData.name+"</a>");
-                    }
-                },
-                { data: "availability", title: "Results Availability",
-                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-                        let html = "";
-                        if (oData.availability == "upon request") {
-                            html = "<a href='mailto:itr@openmicroscopy.org'>";
-                        } else if (oData.mailto) {
-                            html += "<a href='mailto:";
-                            html += oData.mailto;
-                            html += "'>";
-                        }
-                        html += oData.availability;
-                        if (oData.availability == "upon request" || oData.mailto) {
-                            html += "</a>";
-                        }
-                        $(nTd).html(html);
-                    }
-                }
+                { data: "name", title: "Dataset", render: renderModalDataset },
+                { data: "availability", title: "Results Availability", render: renderModalAvailability }
             ]
         };
 
@@ -180,6 +160,26 @@ $(document).ready(function () {
 
     function createBadge(letter) {
         return `<span class='secondary badge dataset'>${letter}</span> `;
+    }
+
+    function renderModalDataset(data, type, row) {
+        return `<a href="${row.link}">${row.name}</a>`;
+    }
+
+    function renderModalAvailability(data, type, row) {
+        let html = "";
+        if (row.availability == "upon request") {
+            html = "<a href='mailto:itr@openmicroscopy.org'>";
+        } else if (row.mailto) {
+            html += "<a href='mailto:";
+            html += row.mailto;
+            html += "'>";
+        }
+        html += row.availability;
+        if (row.availability == "upon request" || row.mailto) {
+            html += "</a>";
+        }
+        return html;
     }
 
 });

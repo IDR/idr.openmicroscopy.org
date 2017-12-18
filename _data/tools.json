@@ -5,19 +5,21 @@
         "projectUrl": "https://www.cellcognition-project.org/",
         "domains": [
             "screening",
-            "bio-imaging",
+            "bio-imaging"
         ],
         "tags": [
-            "TBD",
+            "TBD"
         ],
         "datasets": [
             {
                 "name": "idr0002",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-102",
                 "availability": "upon request",
-                "dataTypes": ["TRACK"]
-            },
-        ],
+                "dataTypes": [
+                    "TRACK"
+                ]
+            }
+        ]
     },
     {
         "name": "CellProfiler",
@@ -39,25 +41,36 @@
                 "name": "idr0016",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1251",
                 "availability": "upon request",
-                "dataTypes": ["FEATURE", "ROI"]
+                "dataTypes": [
+                    "FEATURE",
+                    "ROI"
+                ]
             },
             {
                 "name": "idr0025",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1851",
                 "availability": "contact authors",
-                "dataTypes": ["FEATURE", "ROI"]
+                "dataTypes": [
+                    "FEATURE",
+                    "ROI"
+                ]
             },
             {
                 "name": "idr0033",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1751",
                 "availability": "upon request",
-                "dataTypes": ["FEATURE", "ROI"]
+                "dataTypes": [
+                    "FEATURE",
+                    "ROI"
+                ]
             },
             {
                 "name": "idr0036",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1952",
                 "availability": "upon request",
-                "dataTypes": ["FEATURE"]
+                "dataTypes": [
+                    "FEATURE"
+                ]
             }
         ]
     },
@@ -76,13 +89,19 @@
                 "name": "idr0012",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1202",
                 "availability": "upon request",
-                "dataTypes": ["FEATURE", "ROI"]
+                "dataTypes": [
+                    "FEATURE",
+                    "ROI"
+                ]
             },
             {
                 "name": "idr0017",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1151",
                 "availability": "contact authors",
-                "dataTypes": ["FEATURE", "ROI"]
+                "dataTypes": [
+                    "FEATURE",
+                    "ROI"
+                ]
             }
         ]
     },
@@ -134,25 +153,35 @@
                 "link": "http://idr.openmicroscopy.org/webclient/?show=project-354",
                 "availability": "contact author",
                 "mailto": "m.held@liverpool.ac.uk",
-                "dataTypes": ["OTHER"]
+                "dataTypes": [
+                    "OTHER"
+                ]
             },
             {
                 "name": "idr0010",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1351",
                 "availability": "contact author",
-                "dataTypes": ["ROI", "FEATURE"]
+                "dataTypes": [
+                    "ROI",
+                    "FEATURE"
+                ]
             },
             {
                 "name": "idr0011",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1501",
                 "availability": "contact author",
-                "dataTypes": ["FEATURE"]
+                "dataTypes": [
+                    "FEATURE"
+                ]
             },
             {
                 "name": "idr0026",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=project-301",
                 "availability": "contact author",
-                "dataTypes": ["ROI", "FEATURE"]
+                "dataTypes": [
+                    "ROI",
+                    "FEATURE"
+                ]
             }
         ]
     },
@@ -188,7 +217,10 @@
                 "name": "idr0015",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=screen-1201",
                 "availability": "upon request",
-                "dataTypes": ["FEATURE", "ROI"]
+                "dataTypes": [
+                    "FEATURE",
+                    "ROI"
+                ]
             }
         ]
     },
@@ -235,9 +267,10 @@
                 "name": "idr0038",
                 "link": "http://idr.openmicroscopy.org/webclient/?show=project-354",
                 "availability": "upon request",
-                "dataTypes": ["TRACK"]
-            },
-
+                "dataTypes": [
+                    "TRACK"
+                ]
+            }
         ]
     },
     {
