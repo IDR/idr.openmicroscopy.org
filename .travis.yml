@@ -1,8 +1,11 @@
-sudo: required
-language: python
-
-services:
-  - docker
-
+language: ruby
+sudo: false
+cache: bundler
+rvm: 2.3.3
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+install: bundle install
 script:
-  - bash test.sh
+    - bundle exec jekyll build
+    - bundle exec htmlproofer ./_site
