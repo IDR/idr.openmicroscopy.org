@@ -56,12 +56,13 @@ $(document).ready(function () {
     });
 
     function mapTags(tags) {
-        let tagObjects = [tags.length];
-        for (let i = 0; i < tags.length; ++i) {
-            tagObjects[i] = TAGS.find(function (tag) {
-                return tag.code === tags[i]
-            });
-        }
+        let tagObjects = [];
+        tags.forEach(tag => {
+            const found = TAGS.find((TAG) => TAG.code === tag);
+            if (found) {
+                tagObjects.push(found);
+            }
+        });
         return tagObjects;
     }
 
@@ -89,16 +90,20 @@ $(document).ready(function () {
 
     function renderDomains(data, type, row) {
         let text = "";
-        data.forEach(function (domain) {
-            text += ('<div>' + domain + '</div>');
+        data.forEach((domain) => {
+            if (domain) {
+                text += (`<div>${domain}</div>`);
+            }
         });
         return text;
     }
 
     function renderTags(data, type, row) {
         let text = "";
-        data.forEach(function (tag) {
-            text += ('<div><a href="' + tag.url + '">' + tag.name + '</a></div>');
+        data.forEach((tag) => {
+            if (tag) {
+                text += (`<div><a href="${tag.url}">${tag.name}</a></div>`);
+            }
         });
         return text;
     }

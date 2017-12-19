@@ -7,8 +7,7 @@
             "screening",
             "bio-imaging"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "datasets": [
             {
                 "name": "idr0002",
@@ -80,8 +79,7 @@
         "domains": [
             "screening"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "datasets": [
             {
                 "name": "idr0012",

@@ -38,10 +38,5 @@
         "name": "object tracking",
         "code": "OBJECT_TRACKING",
         "url": "http://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes&conceptid=http://edamontology.org/operation_Image_tracking"
-    },
-    {
-        "name": "TBD",
-        "code": "TBD",
-        "url": "TBD"
     }
 ]
