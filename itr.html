@@ -1,0 +1,53 @@
+---
+layout: idr
+title: ITR
+---
+
+<script>
+    const LOGOS = {{ site.data.logos | jsonify }};
+    const TAGS = {{ site.data.tags | jsonify }};
+    const TOOLS = {{ site.data.tools | jsonify }};
+    const BIIS_LOGO_URL = "{{"/img/itr/logo_biis.png" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}";
+</script>
+
+<header class="marketing-hero">
+    <div class="row homepage text-center">
+        <div class="medium-12 columns">
+            <h1 class="hero-main-header">ITR</h1>
+            <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                Image Tools Resource (ITR) is an index of suggested open-source
+                analysis software for bioimaging. Though a work-in-progress,
+                the aim is to publish tools that have links to accessible
+                datasets, benchmarking resources, and public workflows to aid
+                in training and reproducibility.
+            </p>
+        </div>
+    </div>
+</header>
+
+<hr class="invisible">
+<div class="row">
+    <div class="small-12 small-centered medium-12 medium-centered columns">
+        <div class="row horizontal">
+            <div>
+                <p>Below you will find community-driven
+                    <span class="bold">projects</span>, their entry in the Bio Image Information Index
+                    (<a href="http://biii.eu">http://biii.eu</a>),
+                    <span class="bold">domains</span> in which the software is applicable,
+                    <span class="bold">tags</span> sampling the tasks that the software is useful for, and a list of
+                    <span class="bold">datasets</span>, both in the IDR and elsewhere.</p>
+                <p>If you’d like to submit tools to the ITR, please email us at
+                    <a href="mailto:itr@openmicroscopy.org">itr@openmicroscopy.org</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row itrBody">
+    <div class="small-12 columns">
+        <table id="tools" class="display unstriped" cellspacing="0" width="100%">
+        </table>
+    </div>
+</div>
+
+<div id="projectModal" class="project-modal large reveal" data-reveal></div>

@@ -1,0 +1,122 @@
+.itrBody {
+    margin-top: 40px;
+}
+
+th {
+    background-color: #1976d2;
+    border: 1px solid #1565C0;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+tbody {
+    borderfont-size: 0.875rem;
+}
+
+tr {
+    border: 1px solid #CFD8DC;
+    margin-top: 8px;
+}
+
+.itrLogo {
+    position: relative;
+    height: 25px;
+    width: auto;
+    margin: 3px;
+    fill: #fff;
+}
+
+.itrLogoContainer {
+    float: left;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.project-modal {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    border: 0;
+}
+
+.modal-header {
+    padding: 8px 16px;
+}
+
+.modal-body {
+    padding: 8px 16px;
+}
+
+.modal-header__title {
+    color: rgb(0, 0, 0);
+    padding: px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.modal-header__icon {
+    position: relative;
+    height: 25px;
+    width: auto;
+    margin: 3px;
+    fill: #fff;
+}
+
+.badge.dataset {
+    cursor: pointer;
+    font-size: 11px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    min-width: 18px;
+    min-height: 18px;
+}
+
+.badge.dataset, .badge.secondary {
+    background: #FF9800;
+    font-weight: bold;
+}
+
+.accordion-content dt::before {
+    content: "\A";
+    white-space: pre-wrap;
+    display: block;
+    height: .5em;
+}
+
+.accordion-content dt, dd {
+    display: inline;
+    margin: 0;
+}
+
+.accordion-content dd {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9em;
+}
+
+.external-link {
+    color: #9C27B0;
+}
+
+#tags-key-container {
+    margin-top: 20px;
+}
+
+ul#tags-key {   
+    float: left;
+    font-size: 0.9em;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+ul#tags-key li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.key-title {
+    color: #2196F3;
+    float: left;
+    font-weight: bold;
+    margin-left: 0px;
+}

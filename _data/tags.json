@@ -1,0 +1,42 @@
+[
+    {
+        "name": "feature extraction",
+        "code": "FEATURE_EXTRACTION",
+        "url": "http://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes&conceptid=http://edamontology.org/operation_Feature_extraction&jump_to_nav=true"
+    },
+    {
+        "name": "image classification",
+        "code": "IMAGE_CLASSIFICATION",
+        "url": "http://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes&conceptid=http://edamontology.org/operation_Image_classification"
+    },
+    {
+        "name": "automated",
+        "code": "AUTOMATED",
+        "url": "http://biii.eu/taxonomy/term/3574"
+    },
+    {
+        "name": "manual",
+        "code": "MANUAL",
+        "url": "http://biii.eu/taxonomy/term/3572"
+    },
+    {
+        "name": "stand-alone",
+        "code": "STAND_ALONE",
+        "url": "http://biii.eu/taxonomy/term/3567"
+    },
+    {
+        "name": "watershed",
+        "code": "WATERSHED",
+        "url": "http://biii.eu/watershed"
+    },
+    {
+        "name": "volume rendering",
+        "code": "VOLUME_RENDERING",
+        "url": "http://biii.eu/watershed"
+    } ,
+    {
+        "name": "object tracking",
+        "code": "OBJECT_TRACKING",
+        "url": "http://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes&conceptid=http://edamontology.org/operation_Image_tracking"
+    }
+]

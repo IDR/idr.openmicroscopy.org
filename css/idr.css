@@ -15,6 +15,11 @@ code {
     padding: 1rem;
 }
 
+.bold {
+    color: #37474F;
+    font-weight: bold;
+}
+
 body {
     background-color: #f4f5f9;
     color: #455a64;
