@@ -178,6 +178,20 @@
                     "ROI",
                     "FEATURE"
                 ]
+            },
+            {
+                "name": "idr0021",
+                "link": "https://idr.openmicroscopy.org/webclient/?show=project-51",
+                "availability": "upon request",
+                "material": [
+                    {
+                        "name": "Notebook",
+                        "link": "https://idr-analysis.openmicroscopy.org",
+                    }
+                ],
+                "dataTypes": [
+                    "MATERIAL"
+                ]
             }
         ]
     },

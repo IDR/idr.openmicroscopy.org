@@ -5,6 +5,7 @@ $(document).ready(function () {
         FEATURE: 'FEATURE',
         TRACK: "TRACK",
         OTHER: "OTHER",
+        MATERIAL: 'MATERIAL',
     };
 
     TOOLS.forEach(function (tool) {
@@ -42,7 +43,8 @@ $(document).ready(function () {
             searching: false,
             columns: [
                 { data: "name", title: "Dataset", render: renderModalDataset },
-                { data: "availability", title: "Results Availability", render: renderModalAvailability }
+                { data: "availability", title: "Results Availability", render: renderModalAvailability },
+                { data: "material", title: "Material", render: renderModalMaterial }
             ]
         };
 
@@ -117,6 +119,7 @@ $(document).ready(function () {
         let containsRois = false;
         let containsTracks = false;
         let containsOthers = false;
+        let containsMaterials = false;
         data.forEach(dataset => {
             const dataTypes = dataset.dataTypes;
             if (!containsFeatures) {
@@ -142,6 +145,12 @@ $(document).ready(function () {
                     (datatype) => datatype === DataTypes.OTHER
                 );
             }
+
+            if (!containsMaterials) {
+                containsMaterials = dataTypes.find(
+                    (datatype) => datatype === DataTypes.MATERIAL
+                );
+            }
         })
 
         if (containsFeatures) {
@@ -158,6 +167,10 @@ $(document).ready(function () {
 
         if (containsOthers) {
             colElement.append(createBadge('O'));
+        }
+        
+        if (containsMaterials) {
+            colElement.append(createBadge('M'));
         }
 
         return rowElement[0].outerHTML;
@@ -186,5 +199,16 @@ $(document).ready(function () {
         }
         return html;
     }
-
+    
+    function renderModalMaterial(data, type, row) {
+        if ('material' in row) {
+            let html = "";
+            row.material.forEach(entry => {
+                html += `<a href="${entry.link}">${entry.name}</a><br>`;
+            })
+            return html
+        } else {
+            return '';
+        }
+    }
 });
