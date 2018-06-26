@@ -98,6 +98,20 @@
                     "FEATURE",
                     "ROI"
                 ]
+            },
+            {
+                "name": "idr0040",
+                "link": "https://idr.openmicroscopy.org/webclient/?show=project-401",
+                "availability": "upon request",
+                "material": [
+                    {
+                        "name": "Notebook",
+                        "link": "https://idr-analysis.openmicroscopy.org",
+                    }
+                ],
+                "dataTypes": [
+                    "MATERIAL"
+                ]
             }
         ]
     },
@@ -246,7 +260,22 @@
         "tags": [
             "STAND_ALONE"
         ],
-        "datasets": []
+        "datasets": [
+            {
+                "name": "idr0040",
+                "link": "https://idr.openmicroscopy.org/webclient/?show=project-401",
+                "availability": "upon request",
+                "material": [
+                    {
+                        "name": "Notebook",
+                        "link": "https://idr-analysis.openmicroscopy.org",
+                    }
+                ],
+                "dataTypes": [
+                    "MATERIAL"
+                ]
+            }
+        ]
     },
     {
         "name": "Osirix",
