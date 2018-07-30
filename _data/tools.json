@@ -69,6 +69,20 @@
                 "dataTypes": [
                     "FEATURE"
                 ]
+            },
+            {
+                "name": "idr0002",
+                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-102",
+                "availability": "upon request",
+                "material": [
+                    {
+                        "name": "Notebook",
+                        "link": "https://idr-analysis.openmicroscopy.org",
+                    }
+                ],
+                "dataTypes": [
+                    "MATERIAL"
+                ]
             }
         ]
     },
