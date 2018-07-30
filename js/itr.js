@@ -44,7 +44,7 @@ $(document).ready(function () {
             columns: [
                 { data: "name", title: "Dataset", render: renderModalDataset },
                 { data: "availability", title: "Results Availability", render: renderModalAvailability },
-                { data: "material", title: "Material", render: renderModalMaterial }
+                { data: "material", title: "Notebooks", render: renderModalMaterial }
             ]
         };
 
@@ -170,7 +170,7 @@ $(document).ready(function () {
         }
         
         if (containsMaterials) {
-            colElement.append(createBadge('M'));
+            colElement.append(createBadge('N'));
         }
 
         return rowElement[0].outerHTML;
