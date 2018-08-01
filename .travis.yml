@@ -5,7 +5,7 @@ services:
   - docker
 
 script:
-  - bash test.sh
+  - bash build.sh
   - tar -zcvf ${TRAVIS_REPO_SLUG#*/}.tar.gz -C _site ./
 
 deploy:
