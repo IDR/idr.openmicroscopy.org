@@ -5,4 +5,13 @@ services:
   - docker
 
 script:
-  - bash test.sh
+  - bash build.sh
+  - tar -zcvf ${TRAVIS_REPO_SLUG#*/}.tar.gz -C _site ./
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  file: ${TRAVIS_REPO_SLUG#*/}.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
