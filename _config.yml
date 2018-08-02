@@ -1,1 +1,3 @@
-baseurl: 'idr.openmicroscopy.org'
+url: ''
+repository: IDR/idr.openmicroscopy.org
+baseurl: /idr.openmicroscopy.org
