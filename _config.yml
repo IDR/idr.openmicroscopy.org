@@ -1,3 +1,5 @@
 url: ''
 repository: IDR/idr.openmicroscopy.org
 baseurl: /idr.openmicroscopy.org
+
+version: 0.5.1
