@@ -15,12 +15,10 @@
                 <hr class="whitespace">
                 <div class="small-12 columns text-center">
                     <p class="version-number"><a href="{{ site.baseurl }}/index.html"><img id="version-number" src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a>
-                        version: {{ site.idr_deployment_version }}.
-                    {% if site.idr_deployment_date %}
-                        Last updated: {{ site.idr_deployment_date }}.
-                    {% endif %}
-                    {% if site.idr_deployment_notes %}
-                        See <a href="{{ site.idr_deployment_notes }}">release notes.</a></p>
+                        version: {{ site.version }}.
+                    Last updated: {{ site.time | date: "%Y-%m-%d" }}.
+                    {% if site.notes %}
+                        See <a href="{{ site.notes }}">release notes.</a></p>
                     {% endif %}
                 </div>
             </div>
