@@ -181,7 +181,7 @@ $(document).ready(function () {
     }
 
     function renderModalDataset(data, type, row) {
-        return `<a href="${row.link}">${row.name}</a>`;
+        return `<a href="${row.link}" target="_blank">${row.name}</a>`;
     }
 
     function renderModalAvailability(data, type, row) {
@@ -204,7 +204,7 @@ $(document).ready(function () {
         if ('material' in row) {
             let html = "";
             row.material.forEach(entry => {
-                html += `<a href="${entry.link}">${entry.name}</a><br>`;
+                html += `<a href="${entry.link}" target="_blank">${entry.name}</a><br>`;
             })
             return html
         } else {
