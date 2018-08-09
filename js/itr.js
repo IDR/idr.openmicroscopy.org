@@ -5,6 +5,7 @@ $(document).ready(function () {
         FEATURE: 'FEATURE',
         TRACK: "TRACK",
         OTHER: "OTHER",
+        MATERIAL: 'MATERIAL',
     };
 
     TOOLS.forEach(function (tool) {
@@ -42,7 +43,8 @@ $(document).ready(function () {
             searching: false,
             columns: [
                 { data: "name", title: "Dataset", render: renderModalDataset },
-                { data: "availability", title: "Results Availability", render: renderModalAvailability }
+                { data: "availability", title: "Results Availability", render: renderModalAvailability },
+                { data: "material", title: "Notebooks", render: renderModalMaterial }
             ]
         };
 
@@ -80,9 +82,9 @@ $(document).ready(function () {
         if (row.logo) {
             // div += `<img class="itrLogo" src="${row.logo}"></img>`;
         }
-        div += `<a href="${row.projectUrl}">${data}</a>`;
+        div += `<a href="${row.projectUrl}" target="_blank">${data}</a>`;
         if (row.biseToolUrl) {
-            div += `<a href="${row.biseToolUrl}"> <i class="external-link fa fa-external-link"></i></a>`;
+            div += `<a href="${row.biseToolUrl}" target="_blank"> <i class="external-link fa fa-external-link"></i></a>`;
         }
         div += '</div>';
         return div;
@@ -102,7 +104,7 @@ $(document).ready(function () {
         let text = "";
         data.forEach((tag) => {
             if (tag) {
-                text += (`<div><a href="${tag.url}">${tag.name}</a></div>`);
+                text += (`<div><a href="${tag.url}" target="_blank">${tag.name}</a></div>`);
             }
         });
         return text;
@@ -117,6 +119,7 @@ $(document).ready(function () {
         let containsRois = false;
         let containsTracks = false;
         let containsOthers = false;
+        let containsMaterials = false;
         data.forEach(dataset => {
             const dataTypes = dataset.dataTypes;
             if (!containsFeatures) {
@@ -142,6 +145,12 @@ $(document).ready(function () {
                     (datatype) => datatype === DataTypes.OTHER
                 );
             }
+
+            if (!containsMaterials) {
+                containsMaterials = dataTypes.find(
+                    (datatype) => datatype === DataTypes.MATERIAL
+                );
+            }
         })
 
         if (containsFeatures) {
@@ -159,6 +168,10 @@ $(document).ready(function () {
         if (containsOthers) {
             colElement.append(createBadge('O'));
         }
+        
+        if (containsMaterials) {
+            colElement.append(createBadge('N'));
+        }
 
         return rowElement[0].outerHTML;
     }
@@ -168,7 +181,7 @@ $(document).ready(function () {
     }
 
     function renderModalDataset(data, type, row) {
-        return `<a href="${row.link}">${row.name}</a>`;
+        return `<a href="${row.link}" target="_blank">${row.name}</a>`;
     }
 
     function renderModalAvailability(data, type, row) {
@@ -186,5 +199,16 @@ $(document).ready(function () {
         }
         return html;
     }
-
+    
+    function renderModalMaterial(data, type, row) {
+        if ('material' in row) {
+            let html = "";
+            row.material.forEach(entry => {
+                html += `<a href="${entry.link}" target="_blank">${entry.name}</a><br>`;
+            })
+            return html
+        } else {
+            return '';
+        }
+    }
 });

@@ -3687,7 +3687,7 @@
 
             if ( cOption == 't' )
             {
-                insert.append('<div id="tags-key-container" class="row"> <div class="small-12 medium-12 column"> <span class="key-title">Tags Key:</span> <ul id="tags-key"> <li><span class="badge secondary">F</span> Feature data</li> <li><span class="badge secondary">R</span> Regions of interest (ROI)</li> <li><span class="badge secondary">T</span> Track data</li> <li><span class="badge secondary">O</span> Other data</li> </ul> </div> </div>');
+                insert.append('<div id="tags-key-container" class="row"> <div class="small-12 medium-12 column"> <span class="key-title">Tags Key:</span> <ul id="tags-key"> <li><span class="badge secondary">F</span> Feature data</li> <li><span class="badge secondary">R</span> Regions of interest (ROI)</li> <li><span class="badge secondary">T</span> Track data</li> <li><span class="badge secondary">N</span> Notebooks</li> <li><span class="badge secondary">O</span> Other data</li> </ul> </div> </div>');
             }
 
 				insert.append( featureNode );
