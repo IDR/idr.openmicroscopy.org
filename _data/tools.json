@@ -1,7 +1,7 @@
 [
     {
         "name": "CellCognition",
-        "biseToolUrl": "http://biii.eu/cellcognition",
+        "biseToolUrl": "https://biii.eu/cellcognition",
         "projectUrl": "https://www.cellcognition-project.org/",
         "domains": [
             "screening",
@@ -21,7 +21,7 @@
     },
     {
         "name": "CellProfiler",
-        "biseToolUrl": "http://biii.eu/cellprofiler",
+        "biseToolUrl": "https://biii.eu/cellprofiler",
         "projectUrl": "http://cellprofiler.org",
         "domains": [
             "screening",
@@ -88,8 +88,8 @@
     },
     {
         "name": "EBImage",
-        "biseToolUrl": "http://biii.eu/ebimage",
-        "projectUrl": "http://bioconductor.org/packages/EBImage",
+        "biseToolUrl": "https://biii.eu/ebimage",
+        "projectUrl": "https://bioconductor.org/packages/EBImage",
         "domains": [
             "screening"
         ],
@@ -131,7 +131,7 @@
     },
     {
         "name": "Icy",
-        "biseToolUrl": "http://biii.eu/icy",
+        "biseToolUrl": "",
         "projectUrl": "http://icy.bioimageanalysis.org",
         "domains": [
             "bio-imaging",
@@ -145,7 +145,7 @@
     },
     {
         "name": "ilastik",
-        "biseToolUrl": "http://biii.eu/ilastik",
+        "biseToolUrl": "https://biii.eu/ilastik",
         "projectUrl": "http://www.ilastik.org",
         "domains": [
             "bio-imaging",
@@ -161,8 +161,8 @@
     },
     {
         "name": "Fiji/ImageJ",
-        "biseToolUrl": "http://biii.eu/imagej",
-        "projectUrl": "http://imagej.net/",
+        "biseToolUrl": "https://biii.eu/imagej",
+        "projectUrl": "https://imagej.net/",
         "domains": [
             "bio-imaging",
             "medical-imaging"
@@ -225,7 +225,7 @@
     },
     {
         "name": "Knime",
-        "biseToolUrl": "http://biii.eu/knime",
+        "biseToolUrl": "https://biii.eu/knime",
         "projectUrl": "https://www.knime.com/",
         "domains": [
             "bio-imaging",
@@ -239,7 +239,7 @@
     },
     {
         "name": "Mahotas",
-        "biseToolUrl": "",
+        "biseToolUrl": "https://biii.eu/mahotas",
         "projectUrl": "http://mahotas.rtfd.io",
         "domains": [
             "bio-imaging",
@@ -264,7 +264,7 @@
     },
     {
         "name": "OMERO",
-        "biseToolUrl": "http://biii.eu/omero",
+        "biseToolUrl": "https://biii.eu/omero",
         "projectUrl": "https://www.openmicroscopy.org",
         "domains": [
             "screening",
@@ -293,8 +293,8 @@
     },
     {
         "name": "Osirix",
-        "biseToolUrl": "http://biii.eu/osirix",
-        "projectUrl": "http://www.osirix-viewer.com",
+        "biseToolUrl": "",
+        "projectUrl": "https://www.osirix-viewer.com",
         "domains": [
             "medical-imaging"
         ],
@@ -306,7 +306,7 @@
     },
     {
         "name": "TrackMate",
-        "biseToolUrl": "http://biii.eu/trackmate",
+        "biseToolUrl": "https://biii.eu/trackmate",
         "projectUrl": "https://imagej.net/TrackMate",
         "domains": [
             "bio-imaging",
@@ -343,7 +343,7 @@
     },
     {
         "name": "XNAT",
-        "biseToolUrl": "http://biii.eu/xnat",
+        "biseToolUrl": "",
         "projectUrl": "https://www.xnat.org/",
         "domains": [
             "medical-imaging"
