@@ -82,9 +82,9 @@ $(document).ready(function () {
         if (row.logo) {
             // div += `<img class="itrLogo" src="${row.logo}"></img>`;
         }
-        div += `<a href="${row.projectUrl}">${data}</a>`;
+        div += `<a href="${row.projectUrl}" target="_blank">${data}</a>`;
         if (row.biseToolUrl) {
-            div += `<a href="${row.biseToolUrl}"> <i class="external-link fa fa-external-link"></i></a>`;
+            div += `<a href="${row.biseToolUrl}" target="_blank"> <i class="external-link fa fa-external-link"></i></a>`;
         }
         div += '</div>';
         return div;

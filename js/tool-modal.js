@@ -34,7 +34,7 @@ var ToolModal = /** @class */ (function () {
     ToolModal.prototype.projectUrl = function (url) {
         if (url) {
             var itemsContainer = this.container.find('#itemsContainer');
-            $(`<p>Project URL: <a href="${url}">${url}</a></p>`)
+            $(`<p>Project URL: <a href="${url}" target="_blank">${url}</a></p>`)
                 .appendTo(itemsContainer);
         }
         return this;
