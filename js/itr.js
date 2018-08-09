@@ -104,7 +104,7 @@ $(document).ready(function () {
         let text = "";
         data.forEach((tag) => {
             if (tag) {
-                text += (`<div><a href="${tag.url}">${tag.name}</a></div>`);
+                text += (`<div><a href="${tag.url}" target="_blank">${tag.name}</a></div>`);
             }
         });
         return text;
