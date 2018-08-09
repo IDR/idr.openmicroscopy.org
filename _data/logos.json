@@ -1,31 +1,31 @@
 [
     {
         "name": "icy",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/icy.bioimageanalysis.org.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/icy.bioimageanalysis.org.ico"
     },
     {
         "name": "ilastik",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/ilastik.org.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/ilastik.org.ico"
     },
     {
         "name": "imagej",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/imagej.net.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/imagej.net.ico"
     },
     {
         "name": "trackmate",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/imagej.net.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/imagej.net.ico"
     },
     {
         "name": "fiji",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/fiji.sc.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/fiji.sc.ico"
     },
     {
         "name": "mahotas",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/github.com.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/github.com.ico"
     },
     {
         "name": "wnd-charm",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/github.com.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/github.com.ico"
     },
     {
         "name": "cellprofiler",
@@ -33,22 +33,22 @@
     },
     {
         "name": "cellcognition",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/cellprofiler.org.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/cellprofiler.org.ico"
     },
     {
         "name": "knime",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/www.knime.com.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/www.knime.com.ico"
     },
     {
         "name": "omero",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/www.openmicroscopy.org.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/www.openmicroscopy.org.ico"
     },
     {
         "name": "osirix",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/www.osirix-viewer.com.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/www.osirix-viewer.com.ico"
     },
     {
         "name": "xnat",
-        "imgUrl": "http://icons.duckduckgo.com/ip2/xnat.org.ico"
+        "imgUrl": "https://icons.duckduckgo.com/ip2/xnat.org.ico"
     }
 ]
