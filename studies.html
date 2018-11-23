@@ -1,0 +1,48 @@
+---
+layout: idr
+title: Studies
+---
+<!-- begin marketing header -->
+<header class="marketing-hero">
+    <div class="row homepage text-center">
+
+        <div class="medium-12 columns">
+            <img src="{{ "/img/logos/logo-idr-white.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo" class="logo-hero" />
+            <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Image Data Resource (IDR) is an online, public data repository seeks to store, integrate and serve image datasets from published scientific studies. We have collected and are continuing to receive existing and newly created “reference image" datasets that are valuable resources for a broad community of users, either because they will be frequently accessed and cited or because they can serve as a basis for re-analysis and the development of new computational tools.</p>
+            <br>
+            <a href="/webclient/userdata/?experimenter=-1" class="large button sites-button">Take a look at the data</a>
+        </div>
+    </div>
+</header>
+<!-- end marketing header -->
+
+    <hr class="whitespace">
+    <div class="row column text-center">
+        <h2>Studies</h2>
+    </div>
+    <hr>
+
+{% assign studies=site.data.studies %}
+<div class="row">
+    <div class="small-12 small-centered medium-12 medium-centered columns">
+        <div class="row horizontal">
+<table>
+    <thead>
+        <th>Study</th>
+        <th>Images</th>
+        <th>Size (TB)</th>
+    </thead>
+    <tbody>
+    {% for row in studies %}
+        <tr>
+            <td>{{ row.Study }}/{{ row.Container }} </td>
+            <td>{{ row.Images }} </td>
+            <td>{{ row.Size_TB }} </td>
+            <td></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+</div>
+</div>

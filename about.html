@@ -60,6 +60,8 @@ title: About
             </div>
         </div>
         <!-- end Funding section -->
+        
+{% assign releases=site.data.releases %}
 
         <!-- begin Current Status section -->
         <hr class="whitespace">
@@ -71,10 +73,15 @@ title: About
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>Currently, (Mar 2017, version 0.3.4) the IDR contains &gt;42 Tb of multi-dimensional image data consisting of &gt;36 Mio individual planes
-                        from 27 different imaging studies. IDR contains over a million different experiments. Data comes from studies on human, Drosophila,
-                        budding and fission yeast, and mouse cells and tissue. Imaging modalities represented so far include high content screens, time-lapse
-                        imaging, whole slide histopathology, and super-resolution microscopy.</p>
+                        <p>Currently, the IDR (version {{ releases.last.Version }}, released on
+                        {{ releases.last.Date }}) contains {{ releases.last.Size_TB }} Tb of
+                        multi-dimensional image data consisting of {{ releases.last.Planes }}
+                        Mio individual planes. IDR contains over a million different experiments.
+                        Data comes from studies on human, Drosophila, budding and fission yeast,
+                        and mouse cells and tissue. Imaging modalities represented so far include
+                        high content screens, time-lapse imaging, whole slide histopathology,
+                        and super-resolution microscopy. See <a href="studies.html">the full list
+                        of published studies</a> for more details.</p>
                     </div>
                 </div>
             </div>
