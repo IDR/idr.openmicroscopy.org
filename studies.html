@@ -22,7 +22,6 @@ title: Studies
     </div>
     <hr>
 
-{% assign studies=site.data.studies %}
 <div class="row">
     <div class="small-12 small-centered medium-12 medium-centered columns">
         <div class="row horizontal">
@@ -33,13 +32,21 @@ title: Studies
         <th>Size (TB)</th>
     </thead>
     <tbody>
-    {% for row in studies %}
+    {% for row in site.data.studies %}
+      {% if row.Container == "landing page" %}
+        {% continue %}
+      {% else %}
         <tr>
-            <td>{{ row.Study }}/{{ row.Container }} </td>
-            <td>{{ row.Images }} </td>
-            <td>{{ row.Size_TB }} </td>
+            {% if row.Container contains "screen" %}
+              <td><a href="https://idr.openmicroscopy.org/webclient/?show=screen-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
+            {% else %}
+              <td><a href="https://idr.openmicroscopy.org/webclient/?show=project-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
+            {% endif %}
+            <td>{{ row["5D Images"] }} </td>
+            <td>{{ row["Size (TB)"] }} </td>
             <td></td>
         </tr>
+      {% endif %}
     {% endfor %}
     </tbody>
 </table>
