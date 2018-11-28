@@ -40,9 +40,9 @@ redirect_from:
       {% else %}
         <tr>
             {% if row.Container contains "screen" %}
-              <td><a href="https://idr.openmicroscopy.org/webclient/?show=screen-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
+              <td><a href="/webclient/?show=screen-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
             {% else %}
-              <td><a href="https://idr.openmicroscopy.org/webclient/?show=project-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
+              <td><a href="/webclient/?show=project-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
             {% endif %}
             <td>{{ row["5D Images"] }} </td>
             <td>{{ row["Size (TB)"] }} </td>
