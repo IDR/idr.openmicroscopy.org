@@ -81,8 +81,8 @@ title: About
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>Currently, the IDR (version {{ releases.last.Version }}, released on
-                        {{ releases.last.Date }}) contains {{ releases.last.Size_TB }} Tb of
+                        <p>Currently, the IDR (version {{ releases.last["Code version"] }}, released on
+                        {{ releases.last.Date }}) contains {{ releases.last["Size (TB)"] }} Tb of
                         multi-dimensional image data consisting of {{ releases.last.Planes }}
                         Mio individual planes. IDR contains over a million different experiments.
                         Data comes from studies on human, Drosophila, budding and fission yeast,
