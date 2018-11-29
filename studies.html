@@ -45,7 +45,7 @@ redirect_from:
               <td><a href="/webclient/?show=project-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
             {% endif %}
             <td>{{ row["5D Images"] }} </td>
-            <td>{{ row["Size (TB)"] }} </td>
+            <td>{{ row["Size (TB)"] | round: 2 }} </td>
             <td></td>
         </tr>
       {% endif %}
