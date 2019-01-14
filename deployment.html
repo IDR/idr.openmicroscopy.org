@@ -28,26 +28,39 @@ title: Deployment
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>The main <a href="/webclient/userdata/?experimenter=-1">production IDR</a> consists of three servers:</p>
+                        <p>The main <a href="/webclient/userdata/?experimenter=-1">production IDR</a> consists of 7 servers:</p>
                         <ul>
                             <li>Database: A dedicated <a href="https://www.postgresql.org/">PostgreSQL</a> server.</li>
-                            <li>OMERO: <a href="https://www.openmicroscopy.org/">OMERO.server and OMERO.web</a> with a highly customised configuration optimised for the data access patterns of the IDR.</li>
-                            <li>Web proxy: Front-end <a href="https://nginx.org/">Nginx</a> proxy that mediates all public access to the IDR. It incorporates an aggressive caching configuration to reduce the load on OMERO.</li>
-                        </ul>
-                        <p>In addition to the production IDR we also have a virtual analysis platform based around
-                        <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> and
-                        <a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a>.
-                        This uses a separate copy of the IDR to ensure that heavy access loads resulting from analysis workflows do not have a detrimental impact on the production server, and requires three or more servers:</p>
-                        <ul>
-                            <li>Database</li>
-                            <li>OMERO: API access only, OMERO.web is currently installed by default but is not required</li>
-                            <li>Docker manager: The central controlling node for a Docker Swarm running JupyterHub.</li>
-                            <li>Docker workers: In addition to the Docker manager zero or more Docker workers can be included in the analysis platform. If multiple users are logged on to JupyterHub they should be automatically spread amongst all Docker servers.</li>
+                            <li>OMERO read-write: Internal <a href="https://www.openmicroscopy.org/">OMERO.server and OMERO.web</a> with a highly customised configuration optimised for the data access patterns of the IDR.</li>
+                            <li>OMERO read-only: 4 public read-only <a href="https://www.openmicroscopy.org/">OMERO.server and OMERO.web</a> with a highly customised configuration optimised for the data access patterns of the IDR.</li>
+                            <li>Proxy: Front-end proxies that manage all public access to the IDR.
+                            <a href="https://nginx.org/">Nginx</a> load-balances all public web access and incorporates an aggressive caching configuration to reduce the load on OMERO.
+                            <a href="https://www.haproxy.org/">Haproxy</a> load-balances access to the OMERO API.</li>
                         </ul>
                         <p>The <a href="https://github.com/IDR/deployment/">IDR deployment GitHub repository</a> contains Ansible playbooks and full instructions for <a href="https://github.com/IDR/deployment/blob/master/docs/provisioning.md">provisioning resources</a> and <a href="https://github.com/IDR/deployment/blob/master/docs/deployment.md">deploying the IDR</a>, as well as our <a href="https://github.com/IDR/deployment/blob/master/docs/operating-procedures.md">internal operating procedures</a>.</p>
-
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Virtual Analysis Environment</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>The IDR includes the Virtual Analysis Environment based around
+                        <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> and
+                        <a href="https://kubernetes.io/">Kubernetes</a>.
+                        See the <a href="https://idr-analysis.openmicroscopy.org/deployment.html">VAE deployment page</a> for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- end Background section -->
