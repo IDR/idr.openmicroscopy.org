@@ -12,19 +12,20 @@ accession number e.g. `idr0001`.
 
 ## Manual instructions
 
-The Aspera command line client can be downloaded  [here](http://www.asperasoft.com/downloads/connect). The following command
+The Aspera command line client can be downloaded
+[here](http://www.asperasoft.com/downloads/connect). The following command
 will download all the raw data associated with the `idr0008` submission:
 
     $ ascp -TQ -l40m -P 33001 -i "path/to/asperaweb_id_dsa.openssh" idr0008@fasp.ebi.ac.uk:. /tmp/data/idr0008/
 
 Refer to the [Aspera documentation](https://downloads.asperasoft.com/documentation/)
-for more details about the command line options.
+for more details about the command-line options.
 
 ## Docker instructions
 
 For convenience, a
 [Docker image](https://hub.docker.com/r/imagedata/download)
-iis available with the IDR download options. You can use it as follows:
+is available with the IDR download options. You can use it as follows:
 
     $ docker run -ti --rm -v /tmp/data/idr0008:/data imagedata/download idr0008 . /data
 
