@@ -1,0 +1,39 @@
+---
+layout: idr
+title: Download
+---
+
+        <!-- begin marketing header -->
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+
+                    <h1 class="hero-main-header">Data download</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    The raw imaging data for all studies published in the
+                    Image Data Resource (IDR) is available for download using
+                    the Aspera protocol.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- begin Example section -->
+
+        <hr class="whitespace">
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        
+                        {% capture my-include %}{% include aspera.md %}{% endcapture %}
+                        {{ my-include | markdownify }}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="whitespace">
+        <!-- end Images section -->
