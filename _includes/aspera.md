@@ -10,6 +10,28 @@ Aspera server is available using the following details:
 Each published study has an associated passwordless username matching the IDR
 accession number e.g. `idr0001`.
 
+## Desktop client
+
+The Aspera desktop client can be downloaded from: https://downloads.asperasoft.com/en/downloads/2
+
+You will need to configure the Aspera public key [`asperaweb_id_dsa.openssh`](img/aspera/asperaweb_id_dsa.openssh) to connect to the server.
+[The key can be downloaded here](img/aspera/asperaweb_id_dsa.openssh).
+
+Click on `Connections` to open the connection manager and add the following:
+
+- Host: `fasp.ebi.ac.uk`
+- User: `idrNNNN` where `NNNN` is the IDR study identifier, e.g. `idr0047`
+- Authentication: `Public Key`
+- `Manage Keys` → `Import a key from the filesystem` → select `asperaweb_id_dsa.openssh` (this only needs to be done if you haven't previously imported this key)
+- Select `asperaweb_id_dsa.openssh`
+- `Test Connection`
+
+You should now be able to connect to the Aspera server and see the raw data for your chosen IDR study.
+
+<img src="img/aspera/aspera-desktop-connection-manager.png" alt="Aspera Desktop connection manager" width="50%" />
+<img src="img/aspera/aspera-desktop-ssh-keys.png" alt="Aspera Desktop SSH keys" width="25%" />
+
+
 ## Manual instructions
 
 The Aspera command line client can be downloaded
