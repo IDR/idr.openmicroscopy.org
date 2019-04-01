@@ -12,10 +12,9 @@ accession number e.g. `idr0001`.
 
 ## Desktop client
 
-The Aspera desktop client can be downloaded from: https://downloads.asperasoft.com/en/downloads/2
+Download and install the [Aspera desktop client](https://downloads.asperasoft.com/en/downloads/2).
 
-You will need to configure the Aspera public key [`asperaweb_id_dsa.openssh`](img/aspera/asperaweb_id_dsa.openssh) to connect to the server.
-[The key can be downloaded here](img/aspera/asperaweb_id_dsa.openssh).
+You must also download and configure the [Aspera public key `asperaweb_id_dsa.openssh`](img/aspera/asperaweb_id_dsa.openssh) to connect to the server.
 
 Click on `Connections` to open the connection manager and add the following:
 
