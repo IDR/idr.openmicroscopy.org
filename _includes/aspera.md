@@ -31,7 +31,7 @@ You should now be able to connect to the Aspera server and see the raw data for 
 <img src="img/aspera/aspera-desktop-ssh-keys.png" alt="Aspera Desktop SSH keys" width="25%" />
 
 
-## Manual instructions
+## Command-line instructions
 
 The Aspera command line client can be downloaded
 [here](http://www.asperasoft.com/downloads/connect). The following command
