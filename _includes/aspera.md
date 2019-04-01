@@ -4,8 +4,8 @@ The raw data of all studies published in IDR can be downloaded using the
 [Aspera protocol](https://asperasoft.com/technology/transport/fasp/). The
 Aspera server is available using the following details:
 
-- server: fasp.ebi.ac.uk
-- port: 33001
+- server: `fasp.ebi.ac.uk`
+- port: `33001`
 
 Each published study has an associated passwordless username matching the IDR
 accession number e.g. `idr0001`.
