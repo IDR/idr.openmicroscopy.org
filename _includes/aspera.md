@@ -4,13 +4,34 @@ The raw data of all studies published in IDR can be downloaded using the
 [Aspera protocol](https://asperasoft.com/technology/transport/fasp/). The
 Aspera server is available using the following details:
 
-- server: fasp.ebi.ac.uk
-- port: 33001
+- server: `fasp.ebi.ac.uk`
+- port: `33001`
 
 Each published study has an associated passwordless username matching the IDR
 accession number e.g. `idr0001`.
 
-## Manual instructions
+## Desktop client
+
+Download and install the [Aspera desktop client](https://downloads.asperasoft.com/en/downloads/2).
+
+You must also download and configure the [Aspera public key `asperaweb_id_dsa.openssh`](img/aspera/asperaweb_id_dsa.openssh) to connect to the server.
+
+Click on `Connections` to open the connection manager and add the following:
+
+- Host: `fasp.ebi.ac.uk`
+- User: `idrNNNN` where `NNNN` is the IDR study identifier, e.g. `idr0047`
+- Authentication: `Public Key`
+- `Manage Keys` → `Import a key from the filesystem` → select `asperaweb_id_dsa.openssh` (this only needs to be done if you haven't previously imported this key)
+- Select `asperaweb_id_dsa.openssh`
+- `Test Connection`
+
+You should now be able to connect to the Aspera server and see the raw data for your chosen IDR study.
+
+<img src="img/aspera/aspera-desktop-connection-manager.png" alt="Aspera Desktop connection manager" width="50%" />
+<img src="img/aspera/aspera-desktop-ssh-keys.png" alt="Aspera Desktop SSH keys" width="25%" />
+
+
+## Command-line instructions
 
 The Aspera command line client can be downloaded
 [here](http://www.asperasoft.com/downloads/connect). The following command
