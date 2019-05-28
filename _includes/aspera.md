@@ -34,7 +34,7 @@ You should now be able to connect to the Aspera server and see the raw data for 
 ## Command-line instructions
 
 The Aspera command line client can be downloaded
-[here](http://www.asperasoft.com/downloads/connect). The following command
+[here](https://downloads.asperasoft.com/en/downloads/2). The following command
 will download all the raw data associated with the `idr0008` submission:
 
     $ ascp -TQ -l40m -P 33001 -i "path/to/asperaweb_id_dsa.openssh" idr0008@fasp.ebi.ac.uk:. /tmp/data/idr0008/
