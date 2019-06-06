@@ -10,7 +10,7 @@ title: Image Data Resource
                     <h1 class="hero-main-header">Image Data Resource</h1>
                     <h2 class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">Welcome to the Image Data Resource (IDR). This online, public data repository seeks to store, integrate and serve image datasets from published scientific studies.</h2>
                     <br>
-                    <a href="/webclient/userdata/?experimenter=-1" class="large button sites-button">Take a look at the data</a>
+                    <a href="/gallery/" class="large button sites-button">Take a look at the data</a>
                 </div>
             </div>
         </header>
@@ -45,7 +45,6 @@ title: Image Data Resource
                         through the <a href="https://www.openmicroscopy.org/site/support/omero5.2/developers/Modules/Api.html">OMERO API</a>.
     
                         <p>If you are interested in submitting data to the IDR, see <a href="submission.html">our submission guidelines</a>.</p>
-                        <div class="row column text-center"><a href="about.html" class="large button sites-button">More about us</a></div>
                     </div>
                 </div>
             </div>
@@ -84,3 +83,113 @@ title: Image Data Resource
             </div>
         </div>
         <!-- end Examples section -->
+
+
+        <!-- begin Technology section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Technology</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>IDR uses OME’s <a href="https://www.openmicroscopy.org/site/products/bio-formats">Bio-Formats</a>
+                        and <a href="https://www.openmicroscopy.org/site/products/omero">OMERO</a> tools to read, manage and
+                        serve data, and provide links to EMBL-EBI’s molecular and structural resources. The resource is built
+                        upon EMBL-EBI’s OpenStack-based Embassy infrastructure. All tools used for reading and converting
+                        metadata associated with <a href="https://github.com/IDR/idr-metadata">each dataset</a> and all scripts
+                        used to build the <a href="https://github.com/IDR/infrastructure">infrastructure</a> are maintained
+                        and available. A parallel system that enables computational re-analysis of IDR data will be released soon.</p>
+
+                        <p>The IDR includes a <a href="/jupyter">virtual analysis environment</a>
+                        that provides full access to all data. Please contact us for an account.</p>
+
+                        <p>Details on accessing the public IDR API are available under <a href="api.html">about/api.html</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Technology section -->
+
+        <!-- begin Funding section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2><a class="anchor" id="funding"></a>Funding and Project Participants</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>The IDR Project PIs are
+                        <a href="https://www.openmicroscopy.org/site/about/development-teams/jason">Jason Swedlow (Dundee)</a>,
+                        <a href="https://www.ebi.ac.uk/about/people/alvis-brazma">Alvis Brazma (EMBL-EBI)</a> and
+                        <a href="https://research-information.bristol.ac.uk/en/persons/rafael-e-carazo-salas(a7638b29-53e4-49ba-82b5-98b21d82f41f).html">Rafael Carazo Salas</a>.
+                        Construction of the IDR project was funded by the BBSRC
+                        (Ref: <a href="https://bbsrc.ukri.org/research/grants/grants/AwardDetails.aspx?FundingReference=BB/M018423/1">BB/M018423/1</a>)
+                        as a collaboration between the
+                        <a href="https://www.openmicroscopy.org">OME Consortium</a> at Dundee
+                        and EMBL-EBI.  The IDR is part of several projects that have received
+                        funding from the European Union's Horizon 2020 research and innovation
+                        programme under grant agreements
+                        <a href="https://cordis.europa.eu/project/rcn/198825_en.html">688945</a>
+                        (<a href="http://www.eurobioimaging.eu/">Euro-BioImaging</a> Prep Phase II),
+                        <a href="https://cordis.europa.eu/project/rcn/198649_en.html">653493</a>
+                        (<a href="https://globalbioimaging.org/">Global BioImaging</a> Project) and
+                        <a href="https://www.cordis.europa.eu/project/rcn/197885_en.html">654248</a>
+                        (<a href="https://www.corbel-project.eu/home.html">CORBEL</a>). For 2018-2021, dataset
+                        submission and publication is funded by the Wellcome Trust (Ref: 212962/Z/18/Z)
+                        and integration with EMBL-EBI's BioStudies and other resources is funded by the
+                        BBSRC (Ref: <a href="https://bbsrc.ukri.org/research/grants/grants/AwardDetails.aspx?FundingReference=BB/R015384/1">BB/R015384/1</a>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Funding section -->
+
+{% assign releases=site.data.releases %}
+
+        <!-- begin Current Status section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Current Status</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Currently, the IDR (version {{ releases.last["Code version"] }}, released on
+                        {{ releases.last.Date }}) contains {{ releases.last["Size (TB)"] }} Tb of
+                        multi-dimensional image data consisting of {{ releases.last.Planes | divided_by: 1000000 }} millions of
+                        individual 2D planes. IDR contains over a million different experiments.
+                        Data comes from studies on human, Drosophila, budding and fission yeast,
+                        and mouse cells and tissue. Imaging modalities represented so far include
+                        high content screens, time-lapse imaging, whole slide histopathology,
+                        and super-resolution microscopy. See <a href="studies.html">the full list
+                        of published studies</a> for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Current Status section -->
+
+        <!-- begin Deployment section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>The IDR infrastructure</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>Details of the infrastructure underlying the IDR, and instructions for deploying your IDR own version are on the <a href="deployment.html">IDR Deployment page</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Deployment section -->

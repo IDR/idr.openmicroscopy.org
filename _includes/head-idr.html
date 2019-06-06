@@ -31,15 +31,32 @@
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li><a class="logo" href="{{ site.baseurl }}/index.html"><img src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a></li>
-                    <li class="has-submenu"><a href="about.html">About Us</a>
-                    <ul class="submenu menu vertical" data-submenu>
-                        <li><a href="about.html">Overview</a></li>
-                        <li><a href="studies.html">Published studies</a></li>
-                    </ul>
+
+                    <li>
+                        <a href="/gallery/cell/">
+                          Cell - IDR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/gallery/tissue/">
+                          Tissue - IDR
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="has-submenu"><a href="index.html">About</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="studies.html">Published studies</a></li>
+                            <li><a href="api.html">API Access</a></li>
+                            <li><a href="download.html">Data download</a></li>
+                            <li><a href="itr.html">Image Tools Resource (ITR)</a></li>
+                            <li><a href="/jupyter">Virtual Analysis Environment (VAE)</a></li>
+                            <li><a href="deployment.html">Deployment</a></li>
+                        </ul>
+                    </li>
                     <li class="has-submenu"><a href="submission.html">Submissions</a>
                         <ul class="submenu menu vertical" data-submenu>
                             <li><a href="submission.html">Overview</a></li>
@@ -47,15 +64,6 @@
                             <li><a href="experiments.html">Experiments</a></li>
                         </ul>
                     </li>
-                    <li class="has-submenu"><a>Analysis</a>
-                        <ul class="submenu menu vertical" data-submenu>
-                            <li><a href="api.html">API Access</a></li>
-                            <li><a href="download.html">Data download</a></li>
-                            <li><a href="itr.html">Image Tools Resource (ITR)</a></li>
-                            <li><a href="/jupyter">Virtual Analysis Environment (VAE)</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="deployment.html">Deployment</a></li>
                 </ul>
             </div>
         </div>
