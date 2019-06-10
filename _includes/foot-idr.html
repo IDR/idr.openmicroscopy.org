@@ -17,13 +17,19 @@
                     <p>OMERO is distributed under the terms of the GNU GPL. For more information, visit <a href="https://www.openmicroscopy.org">openmicroscopy.org</a></p>
                 </div>
                 <hr class="whitespace">
-                <div class="small-12 columns text-center">
-                    <p class="version-number"><a href="{{ site.baseurl }}/index.html"><img id="version-number" src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a>
+                <div>
+                    <div class="version-number float-left">
+                        <a href="{{ site.baseurl }}/index.html"><img id="version-number" src="{{ "/img/logos/logo-idr.svg" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" alt="IDR logo"></a>
                         version: <span id="version-number-display">{{ site.version }}</span>.
-                    Last updated: {{ site.time | date: "%Y-%m-%d" }}.
-                    {% if site.notes %}
-                        See <a href="{{ site.notes }}">release notes.</a></p>
-                    {% endif %}
+                        Last updated: {{ site.time | date: "%Y-%m-%d" }}.
+                        {% if site.notes %}
+                            See <a href="{{ site.notes }}">release notes.</a>
+                        {% endif %}
+                    </div>
+                    <div class="float-right">
+                        <a href="https://www.twitter.com/idrnews" target="_blank"><i class="fa fa-fw fa-twitter"></i> @IDRnews</a></li>
+                        <a href="https://www.twitter.com/idrstatus" target="_blank"><i class="fa fa-fw fa-twitter"></i> @IDRstatus</a></li>
+                    </div>
                 </div>
             </div>
         </div>
