@@ -31,7 +31,9 @@ redirect_from:
     <thead>
         <th>Study</th>
         <th>5D Images</th>
+        <th>2D Planes</th>
         <th>Size (TB)</th>
+        <th>Average dimensions (XYZCT)</th>
     </thead>
     <tbody>
     {% for row in site.data.studies %}
@@ -45,7 +47,9 @@ redirect_from:
               <td><a href="/webclient/?show=project-{{ row["Internal ID"] }}">{{ row.Study }}/{{ row.Container }}</a></td>
             {% endif %}
             <td>{{ row["5D Images"] }} </td>
+            <td>{{ row["Planes"] }} </td>
             <td>{{ row["Size (TB)"] | round: 2 }} </td>
+            <td>{{ row["Avg. Image Dim (XYZCT)"] }} </td>
             <td></td>
         </tr>
       {% endif %}
