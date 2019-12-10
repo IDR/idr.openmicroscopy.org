@@ -33,7 +33,7 @@ You should now be able to connect to the Aspera server and see the raw data for 
 
 ## Command-line instructions
 
-The Aspera command line client `aspera.cli` can be downloaded from the `CLIENT SOFTWARE` section of [Aspera downloads site](https://downloads.asperasoft.com/).
+The Aspera command line client `aspera.cli` can be downloaded from the `CLIENT SOFTWARE` section of the [Aspera downloads site](https://downloads.asperasoft.com/).
 
 You must also download and configure the [Aspera public key `asperaweb_id_dsa.openssh`](img/aspera/asperaweb_id_dsa.openssh) to connect to the server.
 
