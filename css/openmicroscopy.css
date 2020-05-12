@@ -6,7 +6,7 @@
     background-repeat: repeat;
     background-position: center center;
     background-attachment: scroll;
-    background-size: cover;  
+    background-size: cover;
 }
 
 hr.whitespace {
@@ -53,13 +53,13 @@ p.link {
     padding-bottom: 20px; }
     span.institution  {
     font-size: 90%;
-    padding-left: 5px;       
+    padding-left: 5px;
 }
 
 .contributors-list div {
     padding-bottom: 20px; }
     .contributors-list a {
     font-size: 90%;
-    padding-left: 5px;       
+    padding-left: 5px;
 }
-    
+
