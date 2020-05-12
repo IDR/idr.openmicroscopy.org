@@ -1,3 +1,18 @@
+/* ========== banner announcement ==========*/
+section.announcement {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center; }
+section.announcement a.styled-link {
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
 .menu > li > a.logo { padding: 0 1rem; }
 
 .marketing-hero {
