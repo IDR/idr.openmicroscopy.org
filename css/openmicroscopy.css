@@ -1,3 +1,16 @@
+/* ========== brand colors ==========*/
+.idr-blue { color: #1976d2; }
+.idr-purple { color: #9c27b0; }
+.idr-red { color: #f44336; }
+.idr-orange { color: #ff9800; }
+.idr-yellow { color: #ffc107; }
+
+.bg-idr-blue { background-color: #1976d2; }
+.bg-idr-purple { background-color: #9c27b0; }
+.bg-idr-red { background-color: #f44336; }
+.bg-idr-orange { background-color: #ff9800; }
+.bg-idr-yellow { background-color: #ffc107; }
+
 /* ========== banner announcement ==========*/
 section.announcement {
     color: #fff;
