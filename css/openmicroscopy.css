@@ -1,3 +1,31 @@
+/* ========== brand colors ==========*/
+.idr-blue { color: #1976d2; }
+.idr-purple { color: #9c27b0; }
+.idr-red { color: #f44336; }
+.idr-orange { color: #ff9800; }
+.idr-yellow { color: #ffc107; }
+
+.bg-idr-blue { background-color: #1976d2; }
+.bg-idr-purple { background-color: #9c27b0; }
+.bg-idr-red { background-color: #f44336; }
+.bg-idr-orange { background-color: #ff9800; }
+.bg-idr-yellow { background-color: #ffc107; }
+
+/* ========== banner announcement ==========*/
+section.announcement {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center; }
+section.announcement a.styled-link {
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
 .menu > li > a.logo { padding: 0 1rem; }
 
 .marketing-hero {
@@ -6,7 +34,7 @@
     background-repeat: repeat;
     background-position: center center;
     background-attachment: scroll;
-    background-size: cover;  
+    background-size: cover;
 }
 
 hr.whitespace {
@@ -53,13 +81,13 @@ p.link {
     padding-bottom: 20px; }
     span.institution  {
     font-size: 90%;
-    padding-left: 5px;       
+    padding-left: 5px;
 }
 
 .contributors-list div {
     padding-bottom: 20px; }
     .contributors-list a {
     font-size: 90%;
-    padding-left: 5px;       
+    padding-left: 5px;
 }
-    
+
