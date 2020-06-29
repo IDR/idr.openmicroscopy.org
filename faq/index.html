@@ -1,0 +1,135 @@
+---
+layout: idr
+title: Image Data Resource
+redirect_from:
+  - faq.html
+faqs:
+  - question: What are the file formats accepted?
+    answer: >
+      The IDR uses the Bio-Formats library for reading imaging data.
+      Bio-Formats supports over 150 proprietary and open file formats (see the
+      <a href="https://docs.openmicroscopy.org/bio-formats/latest/supported-formats.html">full list</a>).
+      At a minimum, your data should be readable by an up-to-date version of
+      Bio-Formats e.g. using the <a href="https://docs.openmicroscopy.org/bio-formats/latest/users/comlinetools/display.html">showinf utility</a>
+      or the Image/Fiji plugin.
+  - question: What are the preferred formats for submission?
+    answer: >
+      We strongly encourage imaging data deposition using open file formats
+      such as OME-TIFF. Where possible the original raw data should be
+      submitted, though you can also submit analyzed or processed data if you
+      think it is more usable.
+  - question: Is there a size limit for data deposition?
+    answer: >
+      There is no size limit to the data that can be published in IDR. However
+      for very large depositions (>10TB), please contact us as early as
+      possible as special arrangements may be needed for data transfer.
+  - question: >
+      Is it possible to restrict access to the data for some period? For 
+      example, is it possible for data to be embargoed until publication of
+      the manuscript?
+    answer: >
+      IDR holds and serves public data. IDR cannot take data that will remain
+      private indefinitely, e.g. data that can only be shared with a specific
+      set of collaborators. Please see info on OME’s
+      <a href="https://www.openmicroscopy.org/omero/">OMERO</a> if you require
+      project-specific, controlled data access.
+      </br>
+      IDR can embargo data for a defined period of time, usually so that data
+      publication is coordinated with the publication of the associated
+      peer-reviewed paper. <a href="mailto:idr@openmicroscopy.org">Contact the
+      IDR team</a> for more info.
+  - question: Is it possible to schedule a release date? 
+    answer: >
+      Scheduling a release date is possible, but will often be provisional.
+      However, advance notice is required as we will only schedule a release
+      date once all data has been submitted, validated, and all our data
+      integrity and consistency checks are satisfied.  The amount of work and
+      time this requires and our ability to honor an agreed publication date
+      depends on the complexity of the datasets and, in many cases, how
+      quickly authors respond to requests for clarifications, missing data
+      etc. We’re happy to discuss all aspects of data submission at
+      <a href="mailto:idr@openmicroscopy.org">idr [at] openmicroscopy.org</a>.
+  - question: >
+      Is it possible to give access to embargoed data to authorized persons
+      only?
+    answer: >
+      At the moment we do not provide any private access to embargoed data.
+  - question: Do authors retain the rights to their data?
+    answer: >
+      The authors of an IDR study retain copyright.  IDR receives a license to 
+      publish the data on behalf of the authors. Every study in IDR is
+      published using a permissive public license allowing to share and re-use
+      the data, usually <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>
+      or <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+  - question: How much does it cost to publish data in IDR?
+    answer: >
+      Data deposition and publication is free-of-charge to the authors and is
+      supported by grants from the BBSRC, Wellcome Trust  and the European
+      Commission.
+  - question: Does the repository have a long-term data preservation plan?
+    answer: >
+      IDR is currently funded by BBSRC and Wellcome as a collaboration between
+      the OME Consortium and EMBL-EBI. It is a central component of
+      EMBL-EBI’s open data mission in the domain of biological images (see
+      <a href="https://www.nature.com/articles/s41592-018-0195-8">https://www.nature.com/articles/s41592-018-0195-8</a> and
+      <a href="https://www.ebi.ac.uk/bioimage-archive/our-roadmap/">https://www.ebi.ac.uk/bioimage-archive/our-roadmap/</a> for more
+      information).
+  - question: >
+      Has the repository implemented a security policy regarding its
+      information system?
+    answer: >
+      The repository is hosted on EMBL-EBI infrastructure and as such a large
+      portion of the security policy comes from EBI’s own policies. The IDR
+      team has its own internal security policy which includes the protection
+      of sensitive data such as embargoed submissions.
+  - question: >
+      How does IDR handle private health identifiers (PHI) or personal
+      identifying information (PII) that may be included in the data or
+      metadata?
+    answer: >
+      IDR publishes fully anonymized data. We require that the submitters
+      transfer to us data fully de-identified from PHI and PII. This is
+      definitely the submitters' responsibility, since only the submitter will
+      have sufficient knowledge of the data type to fully guarantee
+      de-identification.
+  - question: When can I get an IDR accession number?
+    answer: >
+      An IDR accession number can be provided when we receive all image data
+      along with completed metadata templates.
+  - question: When can I get a DOI?
+    answer: >
+      A Data DOI will be minted following the public release of the data in
+      IDR. A DOI cannot be provided before the data is publicly available in
+      IDR.
+---
+        <!-- begin marketing header -->
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+                    <h1 class="hero-main-header">FAQ</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    Frequently asked questions
+                    </p>
+                </div>
+            </div>
+        </header>
+        <!-- end marketing header -->
+
+        <!-- begin FQA section -->
+        <hr class="whitespace">
+        {% for faq in page.faqs %}
+        <div class="row small-10 small-centered medium-10 medium-centered">
+            <h2>{{ faq.question }}</h2>
+        </div>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>{{faq.answer}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- end Goal section -->
