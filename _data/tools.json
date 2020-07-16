@@ -11,7 +11,7 @@
         "datasets": [
             {
                 "name": "idr0002",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-102",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0002",
                 "availability": "upon request",
                 "dataTypes": [
                     "TRACK"
@@ -37,7 +37,7 @@
         "datasets": [
             {
                 "name": "idr0016",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1251",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0016",
                 "availability": "upon request",
                 "dataTypes": [
                     "FEATURE",
@@ -46,7 +46,7 @@
             },
             {
                 "name": "idr0025",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1851",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0025",
                 "availability": "contact authors",
                 "dataTypes": [
                     "FEATURE",
@@ -55,7 +55,7 @@
             },
             {
                 "name": "idr0033",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1751",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0033",
                 "availability": "upon request",
                 "dataTypes": [
                     "FEATURE",
@@ -64,7 +64,7 @@
             },
             {
                 "name": "idr0036",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1952",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0036",
                 "availability": "upon request",
                 "dataTypes": [
                     "FEATURE"
@@ -72,7 +72,7 @@
             },
             {
                 "name": "idr0002",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-102",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0002",
                 "availability": "upon request",
                 "material": [
                     {
@@ -97,7 +97,7 @@
         "datasets": [
             {
                 "name": "idr0012",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1202",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0012",
                 "availability": "upon request",
                 "dataTypes": [
                     "FEATURE",
@@ -106,7 +106,7 @@
             },
             {
                 "name": "idr0017",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1151",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0017",
                 "availability": "contact authors",
                 "dataTypes": [
                     "FEATURE",
@@ -115,7 +115,7 @@
             },
             {
                 "name": "idr0040",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=project-401",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0040",
                 "availability": "upon request",
                 "material": [
                     {
@@ -189,7 +189,7 @@
         "datasets": [
             {
                 "name": "idr0038",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=project-354",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0038",
                 "availability": "contact author",
                 "mailto": "m.held@liverpool.ac.uk",
                 "dataTypes": [
@@ -198,7 +198,7 @@
             },
             {
                 "name": "idr0010",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1351",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0010",
                 "availability": "contact author",
                 "dataTypes": [
                     "ROI",
@@ -207,7 +207,7 @@
             },
             {
                 "name": "idr0011",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1501",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0011",
                 "availability": "contact author",
                 "dataTypes": [
                     "FEATURE"
@@ -215,7 +215,7 @@
             },
             {
                 "name": "idr0026",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=project-301",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0026",
                 "availability": "contact author",
                 "dataTypes": [
                     "ROI",
@@ -224,7 +224,7 @@
             },
             {
                 "name": "idr0021",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=project-51",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0021",
                 "availability": "upon request",
                 "material": [
                     {
@@ -268,7 +268,7 @@
         "datasets": [
             {
                 "name": "idr0015",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=screen-1201",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0015",
                 "availability": "upon request",
                 "dataTypes": [
                     "FEATURE",
@@ -292,7 +292,7 @@
         "datasets": [
             {
                 "name": "idr0040",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=project-401",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0040",
                 "availability": "upon request",
                 "material": [
                     {
@@ -333,7 +333,7 @@
         "datasets": [
             {
                 "name": "idr0038",
-                "link": "https://idr.openmicroscopy.org/webclient/?show=project-354",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0038",
                 "availability": "upon request",
                 "dataTypes": [
                     "TRACK"
