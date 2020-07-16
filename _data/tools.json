@@ -160,7 +160,7 @@
         "datasets": [
             {
                 "name": "idr0062",
-                "link": "http://idr.openmicroscopy.org/webclient/?show=project-801",
+                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0062",
                 "availability": "upon request",
                 "material": [
                     {
