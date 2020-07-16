@@ -77,7 +77,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://idr-analysis.openmicroscopy.org/itr-public/user-redirect/notebooks/notebooks/idr0002.ipynb",
+                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-cellprofiler/master?filepath=notebooks/idr0002.ipynb",
                     }
                 ],
                 "dataTypes": [
@@ -120,7 +120,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://idr-analysis.openmicroscopy.org/itr-public/user-redirect/notebooks/notebooks/Yeast_cell_growth.ipynb",
+                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-r/master?filepath=notebooks/idr0040_Yeast_cell_growth.ipynb",
                     }
                 ],
                 "dataTypes": [
@@ -157,7 +157,22 @@
             "AUTOMATED",
             "MANUAL"
         ],
-        "datasets": []
+        "datasets": [
+            {
+                "name": "idr0062",
+                "link": "http://idr.openmicroscopy.org/webclient/?show=project-801",
+                "availability": "upon request",
+                "material": [
+                    {
+                        "name": "Notebook",
+                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-ilastik/master?filepath=notebooks/pixel_classification_zarr_idr.ipynb",
+                    }
+                ],
+                "dataTypes": [
+                    "MATERIAL"
+                ]
+            }
+        ]
     },
     {
         "name": "Fiji/ImageJ",
@@ -214,7 +229,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://idr-analysis.openmicroscopy.org/itr-public/user-redirect/notebooks/notebooks/idr0021.ipynb",
+                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-fiji/master?filepath=notebooks/idr0021.ipynb",
                     }
                 ],
                 "dataTypes": [
@@ -282,7 +297,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://idr-analysis.openmicroscopy.org/itr-public/user-redirect/notebooks/notebooks/Yeast_cell_growth.ipynb",
+                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-r/master?filepath=notebooks/idr0040_Yeast_cell_growth.ipynb",
                     }
                 ],
                 "dataTypes": [
