@@ -36,7 +36,8 @@ redirect_from:
         <th>Average dimensions (XYZCT)</th>
     </thead>
     <tbody>
-    {% for row in site.data.studies %}
+    {% assign sorted_studies = site.data.studies | sort: 'Study' %}
+    {% for row in sorted_studies %}
       {% if row.Container == "landing page" %}
         {% continue %}
       {% else %}
