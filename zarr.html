@@ -49,6 +49,8 @@ redirect_from:
                             <th>Z</th>
                             <th>C</th>
                             <th>T</th>
+                            <th title="Link to the data in ome-zarr format">ome-zarr</th>
+                            <th title="Available in all older versions since the listed version">Since</th>
                         </thead>
                         <tbody>
                         {% for row in site.data.zarr %}
@@ -61,6 +63,8 @@ redirect_from:
                                 <td>{{ row.Z }} </td>
                                 <td>{{ row.C }} </td>
                                 <td>{{ row.T }} </td>
+                                <td><a href="https://s3.embassy.ebi.ac.uk/idr/zarr/v{% include zarr_version.md %}/{{ row.Image }}.zarr">{% include zarr_version.md %}</a></td>
+                                <td><a href="https://s3.embassy.ebi.ac.uk/idr/zarr/v{{ row.version }}/{{ row.Image }}.zarr">{{ row.first_version }}</a></td>
                             </tr>
                         {% endfor %}
                         </tbody>
