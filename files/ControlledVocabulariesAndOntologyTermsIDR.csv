@@ -1,0 +1,85 @@
+This document is a work in progress,,,,
+,,,,
+File,Tag,Possible Values,Ontology Accession,Notes
+Study,Study Type,high content screen,EFO_0007550,
+,,high content analysis of cells,EFO_0005397,(if HCA of cells in plates but no library of reagents)
+,,histology,,
+,,protein localization using 3D-SIM,,
+,,protein localization using dSTORM,,
+,,4D timelapse of in vivo cells,,
+,,3D-tracking of tagged chromatin loci,,
+,,in situ hybridization,OBI_0001686,
+,,,,
+,,,,
+Study,Screen Technology Type,gene deletion screen,EFO_0007552,
+,,RNAi screen,EFO_0007551,
+,,protein screen,EFO_0005398,
+,,compound screen,EFO_0007553,
+,,antibody screen,,
+,,ORF overexpression screen,,
+,,,,
+Study,Screen Type,primary screen,EFO_0007556,
+,,secondary screen,EFO_0007557,
+,,validation screen,EFO_0007558,
+,,,,
+Study,Library Type,siRNA library,EFO_0007564,
+,,diploid homozygous deletion library,EFO_0007562,
+,,haploid deletion library,EFO_0007561,
+,,compound library,EFO_0007569,
+,,tag protein fusion library,EFO_0007565,
+,,GFP protein fusion library,EFO_0007566,
+,,YFP protein fusion library,EFO_0007567,
+,,HA­-Flag protein fusion library,EFO_0007568,
+,,ORF library,,
+,,antibody library,,
+,,none,,
+,,,,
+Study,Cell Line or Strain,Values from EFO,,
+,,,,
+Study,Library Experimental Conditions,"Values from EFO e.g. compound, environmental stress, media",,
+,,,,
+Study,Protocol Type,growth protocol,EFO_0003789,
+,,treatment protocol,EFO_0003969,
+,,HCS library protocol,EFO_0007571,
+,,HCS image acquistion and feature extraction protocol,EFO_0007572,
+,,HCS data analysis protocol,EFO_0007573,
+,,image acquisition and feature extraction protocol,,(not HCS)
+,,data analysis protocol,,(not HCS)
+,,,,
+Study,Phenotype Score Type,automated,,
+,,manual,,
+,,automated then manual,,"e.g. first automated to identify nuclear foci, then manual to identify subcompartment"
+,,,,
+Study,Processed Data Column Type,location,,"e.g. plate name, well name"
+,,quality control,,
+,,reagent identifier,,"The siRNA, ORF, compound etc used to perturb the cells"
+,,reagent description,,
+,,gene identifier,,"The target gene for siRNAs, the gene which has been knocked out or mutated, or the gene targeted for creating a tagged protein."
+,,gene symbol,,The symbol of the targeted gene. Can have the name of the genome build in parentheses e.g Gene Symbol (Ensembl 81)
+,,gene description,,More information about the target gene.
+,,experimental condition,,"The column containing information about any experimental variables e.g. media, environmental stress"
+,,data,,e.g. median GPF intensity for a GFP-tagged protein
+,,phenotype,,Phenotypes observed.
+,,other,,"E.g. ""Replicate Number"", or ""Has Phenotype"", or ""Phenotype Annotation Level"""
+,,,,
+,,,,
+Study,Processed Data Column Annotation Level,well,,For results/phenotypes at the well level. 
+,"(for ""data"" or ""phenotype"" columns)",single replicate of reagent,,"A result/phenotype determined at the level of a single replicate of a reagent (siRNA, gene knock out, tagged protein, test chemical etc)."
+,,multiple replicates of reagent,,"A result/phenotype determined at the level of multiple replicates of the same reagent (siRNA, gene knock out, tagged protein, compound etc)."
+,,gene,,A result/phenotype determined at the gene level (e.g. after taking into account the results from several siRNAs targetting the same genes)
+,,experimental condition,,A result determined by grouping together results based on one or more experimental condition values. 
+,,experimental condition and gene,,A result/phenotype determined from a combination of the gene and experimental condition 
+,,experimental condition and reagent,,A result/phenotype determined from a combination of the reagent and experimental condition 
+,,phenotype,,A result determined from the analysis of the phenotypes e.g. grouping of phenotypes into groups like 'shape hits'
+,,multiple reagents,,A result determined by  grouping together of the results of multiple reagents e.g. classification of clusters of phenotypes
+,,image,,Annotation is linked to an individual 5D image
+,,protein,,A result/phenotype determined at the protein level (e.g. after taking into account the results from images of the same protein)
+,,,,
+Library,Control Type,empty well,,
+,,positive control,,"e.g. transfection control, or gene knock down that gives a known phenotype"
+,,negative control,,"e.g. scrambled siRNA, DMSO, cells but no treatment.  Expected to have no effect on cells"
+,,technical control,,
+,,unknown control,,
+,,,,
+,,,,
+Processed Data,Phenotype,use CMPO terms where possible,,

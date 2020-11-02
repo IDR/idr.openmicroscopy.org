@@ -88,7 +88,7 @@ See the suggested instructions to be sent to submitters.
 The FTP server can be accessed via
 SSH, all data is available under /data/idrftp-incoming/
 
-![](media/image14.png)
+![](img/curation-workflow/image14.png)
 
 For bigger imports or when FTP is not a possibility, it is possible to
 mail a hard drive to the submitters.
@@ -238,7 +238,7 @@ yet.
 
 #### Figure 2 Example of studies with high content screens and experiments in IDR
 
-![Slide4.png](media/image3.png)
+![Slide4.png](img/curation-workflow/image3.png)
 
 We don’t yet have landing pages for studies so some of the study level
 metadata just gets repeated for each screen or experiment in IDR e.g.
@@ -255,7 +255,7 @@ dataset (Figure
 
 #### Figure 3 The three metadata files that are collected about a HCS or non-screen study. 
 
-![Slide3.png](media/image4.png)
+![Slide3.png](img/curation-workflow/image4.png)
 
 You can see lots of examples of these files in our github repository
 [<span class="underline">https://github.com/IDR/idr-metadata</span>](https://github.com/IDR/idr-metadata).
@@ -308,7 +308,7 @@ The first section contains the:
 **Study Type** - for HCS this is always ‘High Content Screen’ for
 non-screen experiments I tend to try and make something up that sounds
 appropriate - see this [<span class="underline">controlled vocabulary
-gdoc</span>](media/ControlledVocabulariesAndOntologyTermsIDR.csv)
+gdoc</span>](files/ControlledVocabulariesAndOntologyTermsIDR.csv)
 for values used. In hindsight I think most of the non-screen Study Types
 should be put at the Experiment level. Not sure what I would put at the
 Study level.
@@ -335,7 +335,7 @@ UK style but am changing to USA style as so many web sites such as
 Creative Commons use this. There may still be a mixture in the
 files/IDR.
 
-![Slide5.png](media/image6.png)
+![Slide5.png](img/curation-workflow/image6.png)
 
 The next section contains the information about each screen or
 experiment. The entire next block is repeated for each
@@ -368,12 +368,12 @@ which covers most terms.
 
 **Screen Technology Type** - e.g. RNAi screen. See the
 [<span class="underline">controlled vocabularly
-gdoc</span>](media/ControlledVocabulariesAndOntologyTermsIDR.csv)
+gdoc</span>](files/ControlledVocabulariesAndOntologyTermsIDR.csv)
 for terms I have used. New ones can be created.
 
 **Screen Type** - e.g. primary screen. See the
 [<span class="underline">controlled vocabularly
-gdoc</span>](media/ControlledVocabulariesAndOntologyTermsIDR.csv)
+gdoc</span>](files/ControlledVocabulariesAndOntologyTermsIDR.csv)
 for terms I have used. New ones can be created.
 
 **Screen Comments** - free text for anything you want to say about the
@@ -386,7 +386,7 @@ create.
 
 **Library Type** - e.g. siRNA library. See the
 [<span class="underline">controlled vocabularly
-gdoc</span>](media/ControlledVocabulariesAndOntologyTermsIDR.csv)
+gdoc</span>](files/ControlledVocabulariesAndOntologyTermsIDR.csv)
 for terms I have used. New ones can be created.
 
 **Library Manufacturer and Version** - Enter if known.
@@ -451,11 +451,11 @@ all the data into one file for importing into Omero. This can be
 something like a combination of ‘Plate\_Well’ or something like ‘Gene
 Identifier’. The column in common should be listed here.
 
-![Slide6.png](media/image11.png)
+![Slide6.png](img/curation-workflow/image11.png)
 
-![Slide7.png](media/image5.png)
+![Slide7.png](img/curation-workflow/image5.png)
 
-![Slide8.png](media/image10.png)
+![Slide8.png](img/curation-workflow/image10.png)
 
 ##### Library or Assay File
 
@@ -464,7 +464,7 @@ and what has been imaged in each well e.g. the cells and any treatments
 done to them, or the time point the image was taken at. A simplified
 version would be (from idr0013-screenA)
 
-![](media/image2.png)
+![](img/curation-workflow/image2.png)
 
 Each row in the file gives information about one well on a plate.
 
@@ -472,7 +472,7 @@ The assay file is similar in that it lists all the images in a
 experiment and gives information about that image e.g. the cells and any
 treatments done to them, or the time point the image was taken at.
 
-![](media/image8.png)
+![](img/curation-workflow/image8.png)
 
 Each row in the files gives information about the sample, treatment,
 channels etc associated with one image.
@@ -543,7 +543,7 @@ Then we add columns to say which ontology term these attribute values
 (e.g. brain, eye, kidney) could be mapped to; “Term Source REF” and
 “Term Source Accession” columns.
 
-![](media/image12.png)
+![](img/curation-workflow/image12.png)
 
 Look for the term in the [<span class="underline">Ontology lookup
 service</span>](https://www.ebi.ac.uk/ols/index) which lists lots of
@@ -613,7 +613,7 @@ information to the main things that vary. E.g the siRNA sequences, which
 gene they are targeting, more information about compounds. These can be
 added as additional columns. E.g. in idr0013-screenA.
 
-![](media/image24.png)
+![](img/curation-workflow/image24.png)
 
 Try to keep the value types in each column the same e.g. in the siRNA
 Identifier column don’t have things like “empty well”, remove these and
@@ -629,7 +629,7 @@ siRNAs are often applied to cells in pools where there is more than one
 siRNA designed to knockdown the expression of mRNA from a gene. In this
 case you can have the values listed separated by semi-colons e.g.
 
-![](media/image18.png)
+![](img/curation-workflow/image18.png)
 
 We later split these values when we import into IDR.
 
@@ -641,12 +641,12 @@ reliable result for any one of the listed genes. So instead of
 separating the values by semi-colon, it better to move these values to
 the Gene Annotation Comments column e.g. in idr0012-screenA
 
-![](media/image17.png)
+![](img/curation-workflow/image17.png)
 
 In idr0013-screenA, didn’t have a list of all the genes the siRNA
 matched so just put a comment
 
-![](media/image25.png)
+![](img/curation-workflow/image25.png)
 
 There is a balance to be struck between keeping the submitters original
 column names for similar things and standardizing them, so I tend to
@@ -666,20 +666,20 @@ the build of the reference sequence AND the gene annotation build (i.e.
 the release of gene information against that reference sequence). E.g.
 in idr0013-screenA we have
 
-![](media/image13.png)
+![](img/curation-workflow/image13.png)
 
 Ifyou (as a curator) add some missing information then note it somewhere
 e.g. if a few Gene Symbols are missing then you might add them as IDR
 users probably search by these but add a note in the Gene Annotation
 Comments e.g. idr0009-screenA
 
-![](media/image16.png)
+![](img/curation-workflow/image16.png)
 
 Examples of “treatment” columns other than siRNA identifiers and Genes
 
 idr0016-screenA - chemical compounds
 
-![](media/image20.png)
+![](img/curation-workflow/image20.png)
 
 Always have a Compound Name column and a Dose column if you can. Spell
 out the unit e.g. micromolar in full. Include the InChiKey if you can.
@@ -689,7 +689,7 @@ treated with an siRNA and were staining using an antibody against a
 protein. The gene related to the localized protein was also included in
 the library file.
 
-![](media/image21.png)
+![](img/curation-workflow/image21.png)
 
 If the treatments are outside of what can be considered a ‘library’ of
 reagents then I usually put them in the column heading of Experimental
@@ -723,7 +723,7 @@ Next in the screen files usually come the columns describing what the
 control treatments, or untreated wells. There are two columns Control
 Type and Control Comments. The values in Control Type should come from
 the [<span class="underline">controlled vocabulary
-list</span>](media/ControlledVocabulariesAndOntologyTermsIDR.csv).
+list</span>](files/ControlledVocabulariesAndOntologyTermsIDR.csv).
 The 2 most commonly used are positive controls (expect to see an effect)
 and negative controls (expect to see no effect compared to untreated
 cells). I often find the positive controls out from reading the papers
@@ -742,7 +742,7 @@ no effect on the cells.
 The Control Comments list can give more information about the controls.
 E.g. in idr0028-screenB we have:
 
-![](media/image19.png)
+![](img/curation-workflow/image19.png)
 
 **Quality Control**
 
@@ -751,7 +751,7 @@ some quality control checks have been done. Sometimes this is just a
 pass/fail value e.g. in idr0013-screenA they have put TRUE or FALSE,
 sometimes there is more information e.g. in idr0028-screenB
 
-![](media/image15.png)
+![](img/curation-workflow/image15.png)
 
 You can put a more detailed description of what was done for quality
 control in the study file. There is a ‘Quality Control Description’
@@ -848,7 +848,7 @@ compound etc) the phenotype is annotated at though.
 
 idr0002-screenA-processed.txt
 
-![](media/image9.png)
+![](img/curation-workflow/image9.png)
 
 (see
 [<span class="underline">https://github.com/IDR/idr-metadata/blob/master/idr0002-heriche-condensation/screenA/idr0002-screenA-processed.txt</span>](https://github.com/IDR/idr-metadata/blob/master/idr0002-heriche-condensation/screenA/idr0002-screenA-processed.txt)
@@ -856,14 +856,14 @@ to see this better).
 
 Idr0002-study.txt
 
-![](media/image22.png)
+![](img/curation-workflow/image22.png)
 
 Here you can see that each of the columns in the processed file have
 been listed in the study file. There is a description of what the data
 in each column is, and a “Processed Data Annotation Level” for each of
 the columns containing data. I try to use values from the
 [<span class="underline">controlled vocabulary
-gdoc</span>](media/ControlledVocabulariesAndOntologyTermsIDR.csv)
+gdoc</span>](files/ControlledVocabulariesAndOntologyTermsIDR.csv)
 for the Column Type and Column Annotation Level.
 
 There also needs to be some column in common between the library file
@@ -1320,7 +1320,7 @@ alongside the publication).
 
 #### Figure 4 Summary of the idr-testing/idr-next/idr workflow
 
-![Slide2.png](media/image1.png)
+![Slide2.png](img/curation-workflow/image1.png)
 
 Steps of the import process:
 
@@ -2042,7 +2042,7 @@ anyone does use Excel here are some things to watch out for.
     > becomes SEP-01. To prevent this you can say that the columns are
     > all “text” format rather than “general format”
 
-![](media/image23.png)
+![](img/curation-workflow/image23.png)
 
 You CAN’T do this with .csv files so if you have to work on a csv file
 in Excel copy the file as .txt first (you can keep the comma separators)
