@@ -1,0 +1,35 @@
+---
+layout: idr
+title: Curation Workflow
+---
+
+        <!-- begin marketing header -->
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+
+                    <h1 class="hero-main-header">Curation Workflow</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                    The publication of a dataset in the IDR requires a lot of careful curation work. These steps are regularly updated in response to new data submissions. To help others develop their own curation processes we have included a version of our current workflows.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <hr class="whitespace">
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        
+                        {% capture my-include %}{% include curation-workflow.md %}{% endcapture %}
+                        {{ my-include | markdownify }}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="whitespace">
+        <!-- end Images section -->
