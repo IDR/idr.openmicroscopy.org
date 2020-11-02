@@ -47,7 +47,7 @@
    into other studies or integrated with other imaging datasets
 
 Use the `Response to initial enquiry` template to try and find out more.
-The response can be discussed at the Monday IDR meetings to decide whether we want to include the dataset or not.
+The response can be discussed at the weekly IDR meetings to decide whether we want to include the dataset or not.
 
 4. **Create Redmine issue.** Once a submitter has provided enough information for their dataset to be reviewed create a Redmine issue.
    Use the submitter's name and optionally a brief summary as the title, and copy the submitter's answers into the issue description.
@@ -160,7 +160,7 @@ need an account there.
 
 
 **Create directory for notes files, paper drafts, temporary files etc.**
-I usually create another directory to store notes I make about a
+Usually,  another directory is created to store notes made about a
 submission, the paper drafts and any other files they might send by
 email etc. Something like
 /uod/idr/filesets/idr0038-held-kidneylightsheet/2017-notes-extras
@@ -496,7 +496,7 @@ For well number I always convert to A1, A2, A3 etc because this is how
 it was in the first screens I did but I suspect its ok to keep them as
 A01, A02, A03 etc if that is how they are in the files you receive.
 
-I usually add a ‘well number’ for nice sorting by Plate then Well Number
+A ‘well number’ is usually added for nice sorting by Plate then Well Number
 rather than Plate then Well (e.g. A1, A2, A3) because Excel will sort it
 to be A1, A10, A2 etc). I add the well number using a
 [<span class="underline">lookup</span>](https://www.gcflearnfree.org/excel-tips/how-to-use-excels-vlookup-function/1/)
@@ -692,7 +692,7 @@ the library file.
 ![](img/curation-workflow/image21.png)
 
 If the treatments are outside of what can be considered a ‘library’ of
-reagents then I usually put them in the column heading of Experimental
+reagents then they are usually put in the column heading of Experimental
 Condition \[attribute\]
 
 E.g. in idr0003-screenA there is Experimental Condition \[Environmental
@@ -1011,7 +1011,7 @@ should be fixed in the files used to create the annotation.csv.
 IDR/idr-metadata/scripts/check\_utf8.py - checks whether a file contains
 valid UTF-8. Often the study file doesn’t with characters like degrees
 (º), pi (π), mu (µ) and beta (ß) in the protocols causing problems.
-This is not the best way to do it, but I usually just replace them with
+The following is not the best way to do it, but they are usually just replaced with
 the closest “normal” character or word (o, pi, u and beta etc.) or
 remove them if it’s just something that has come out strangely.
 
@@ -1173,8 +1173,8 @@ prodXX\_input.txt in idr-metadata/scripts/reannotate. Then this PR is
 included in the merge build and the files will be included in the clone
 on the server (omeroreadwrite etc).
 
-I usually test out the contents of prodXX\_input\_bulk.txt and
-prodXX\_input.txt line by line in idr-testing so that they can be run as
+The contents of prodXX\_input\_bulk.txt and prodXX\_input.txt  are usually tested out
+line by line in idr-testing so that they can be run as
 a whole in idr-next. To test line by line, copy each line to a new file
 and run the shell script on that file e.g.
 prod44\_input\_bulk\_idr0038A.txt.
@@ -1407,8 +1407,7 @@ To import Experiments:
     omero import --bulk idr0048-abdeladim-chroms/experimentA/idr0048-experimentA-bulk.yml --file /tmp/idr0048.log  --errs /tmp/idr0048.err
 
 The whole output will go into the ``idr0048.err`` file (even when no errors are detected). Depending on your ``filePaths.tsv`` file, the import command will create the datasets with files inside them or a new Project with Datasets and Images in them. You might need to log in
-to the WebUI and move the datasets into the right project. See [Editing in the Web
-UI](#editing-in-the-web-ui) for more information.
+to the WebUI and move the datasets into the right project. See [Editing in the Web UI](#editing-in-the-web-ui) for more information.
 
 To import Screens:
 
@@ -1815,7 +1814,7 @@ we know what the URL will be in production IDR (i.e. once it’s in
 idr-next or idr).
 
 An Excel spreadsheet is filled out with details about the study
-including. I usually fill out as much as I can and then send to the
+including. The IDR Team members fill out as much as possible and then send to the
 authors for finishing/checking.
 
 This spreadsheet is then sent to the Research Support Officer in the library and
@@ -2029,7 +2028,6 @@ not cc’d to idr-submissions.
 
 ##### Excel gotchas and useful things
 
-I’m sure you guys will be doing something better than using Excel but if
 anyone does use Excel here are some things to watch out for.
 
 1.  > If your on a mac and save a file using Excel you will get “mac”
