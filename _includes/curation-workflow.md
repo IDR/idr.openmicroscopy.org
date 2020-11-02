@@ -2028,7 +2028,7 @@ not cc’d to idr-submissions.
 
 ##### Excel gotchas and useful things
 
-anyone does use Excel here are some things to watch out for.
+Here are some things to watch out for.
 
 1.  > If your on a mac and save a file using Excel you will get “mac”
     > line endings. I have a perl script I run on the files to fix this
