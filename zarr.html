@@ -41,7 +41,6 @@ redirect_from:
                 <div class="row horizontal">
                     <table>
                         <thead>
-                            <th>Image</th>
                             <th>Name</th>
                             <th>Study</th>
                             <th>X</th>
@@ -55,7 +54,6 @@ redirect_from:
                         <tbody>
                         {% for row in site.data.zarr %}
                             <tr>
-                                <td><a href="/webclient/?show=image-{{ row.Image }}">{{ row.Image }}</a></td>
                                 <td><a href="/webclient/?show=image-{{ row.Image }}">{{ row.Name }}</a></td>
                                 <td>{{ row.Study }} </td>
                                 <td>{{ row.X }} </td>
@@ -63,8 +61,8 @@ redirect_from:
                                 <td>{{ row.Z }} </td>
                                 <td>{{ row.C }} </td>
                                 <td>{{ row.T }} </td>
-                                <td><a href="https://s3.embassy.ebi.ac.uk/idr/zarr/v{% include zarr_version.md %}/{{ row.Image }}.zarr">{% include zarr_version.md %}</a></td>
-                                <td><a href="https://s3.embassy.ebi.ac.uk/idr/zarr/v{{ row.version }}/{{ row.Image }}.zarr">{{ row.first_version }}</a></td>
+                                <td><a href="https://s3.embassy.ebi.ac.uk/idr/zarr/v{% include zarr_version.md %}/{{ row.Image }}.zarr">{{ row.Image }}</a></td>
+                                <td><a href="https://s3.embassy.ebi.ac.uk/idr/zarr/v{{ row.first_version }}/{{ row.Image }}.zarr">{{ row.first_version }}</a></td>
                             </tr>
                         {% endfor %}
                         </tbody>
