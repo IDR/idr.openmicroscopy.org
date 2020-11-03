@@ -851,7 +851,7 @@ idr0002-screenA-processed.txt
 ![](img/curation-workflow/image9.png)
 
 (see
-https://github.com/IDR/idr0002-heriche-condensation/blob/master/screenA/idr0002-screenA-processed.txt)
+[https://github.com/IDR/idr0002-heriche-condensation/blob/master/screenA/idr0002-screenA-processed.txt](https://github.com/IDR/idr0002-heriche-condensation/blob/master/screenA/idr0002-screenA-processed.txt))
 to see this better).
 
 Idr0002-study.txt
