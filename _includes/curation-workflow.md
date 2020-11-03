@@ -851,7 +851,7 @@ idr0002-screenA-processed.txt
 ![](img/curation-workflow/image9.png)
 
 (see
-[<span class="underline">https://github.com/IDR/idr-metadata/blob/master/idr0002-heriche-condensation/screenA/idr0002-screenA-processed.txt</span>](https://github.com/IDR/idr-metadata/blob/master/idr0002-heriche-condensation/screenA/idr0002-screenA-processed.txt)
+https://github.com/IDR/idr0002-heriche-condensation/blob/master/screenA/idr0002-screenA-processed.txt)
 to see this better).
 
 Idr0002-study.txt
@@ -1073,8 +1073,6 @@ each release and to speed up the process of applying all the changes in
 idr-next Ola developed a method for adding bulk annotation files and the
 bulk-map annotation code using input files and shell scripts.
 
-The shell scripts themselves live in
-[<span class="underline">https://github.com/IDR/idr-metadata/tree/master/scripts/reannotate</span>](https://github.com/IDR/idr-metadata/tree/master/scripts/reannotate).
 There are 3 scripts:
 
 bulk.sh - adds annotation.csvs to a screen or project
