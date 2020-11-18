@@ -165,7 +165,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-ilastik/v0.2.1?filepath=notebooks/idr0062_pixel_classification_zarr.ipynb",
+                        "link": "https://mybinder.org/v2/gh/ome/omero-guide-ilastik/v0.2.2?filepath=notebooks/idr0062_pixel_classification_zarr.ipynb",
                     }
                 ],
                 "dataTypes": [
