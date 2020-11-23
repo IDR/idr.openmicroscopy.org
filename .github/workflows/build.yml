@@ -1,0 +1,64 @@
+---
+name: Build
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build static website
+        run: docker run --rm -v $PWD:/srv/jekyll -eJEKYLL_UID=$UID jekyll/builder:pages jekyll build --config _config.yml,_prod.yml
+      - name: Run htmlproofer
+        run: docker run --rm -v $PWD/_site:/site/about jekyll/builder:pages /usr/gem/bin/htmlproofer /site --url-ignore "/jupyter,/webclient/,/cell/,/tissue/,/,"
+      - name: Create website archive
+        run: tar -zcvf idr.openmicroscopy.org.tar.gz -C _site ./
+      - name: Upload website archive as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: IDR website
+          path: idr.openmicroscopy.org.tar.gz
+  release:
+    if: startsWith(github.ref, 'refs/tags')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download website archive
+        uses: actions/download-artifact@v2
+        with:
+          name: IDR website
+      - name: Create checksum
+        run: sha256sum --tag idr.openmicroscopy.org.tar.gz > SHASUMS
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload website as release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./idr.openmicroscopy.org.tar.gz
+          asset_name: idr.openmicroscopy.org.tar.gz
+          asset_content_type: application/gzip
+      - name: Upload checksum as release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./SHASUMS
+          asset_name: SHASUMS
+          asset_content_type: text/plain
