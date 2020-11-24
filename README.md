@@ -1,6 +1,6 @@
-# IDR website
+[![Build Status](https://github.com/IDR/idr.openmicroscopy.org/workflows/Build/badge.svg)](https://github.com/IDR/idr.openmicroscopy.org/actions)
 
-[![Build Status](https://travis-ci.org/IDR/idr.openmicroscopy.org.svg?branch=master)](https://travis-ci.org/IDR/idr.openmicroscopy.org)
+# IDR website
 
 This repository contains the source code for the IDR Website hosted at
 https://idr.openmicroscopy.org.
