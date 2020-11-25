@@ -31,25 +31,26 @@
    page](http://idr.openmicroscopy.org/about/submission.html))
    are:
 
-  - Datasets **associated** with an existing or upcoming publication
+     - Datasets **associated** with an existing or upcoming publication
 
-  - **Complete** datasets - not just images supporting one figure in
-   the publication
+     - **Complete** datasets - not just images supporting one figure in
+       the publication
 
-  - Datasets whose metadata can be **integrated** with other datasets
-   via identifiers from well-known biomolecular resources (Ensembl,
-   NCBI Entrez Gene, RefSeq, PubChem, ChEBI etc)
+     - Datasets whose metadata can be **integrated** with other datasets
+       via identifiers from well-known biomolecular resources (Ensembl,
+       NCBI Entrez Gene, RefSeq, PubChem, ChEBI etc)
 
-  - Datasets generated using new imaging **methods** or new analysis
-   methods
+     - Datasets generated using new imaging **methods** or new analysis
+       methods
 
-  - Datasets that are likely to be **re-analysed or incorporated**
-   into other studies or integrated with other imaging datasets
+     - Datasets that are likely to be **re-analysed or incorporated**
+       into other studies or integrated with other imaging datasets
 
-Use the `Response to initial enquiry` template to try and find out more.
-The response can be discussed at the weekly IDR meetings to decide whether we want to include the dataset or not.
+   Use the `Response to initial enquiry` template to try and find out more.
+   The response can be discussed at the weekly IDR meetings to decide whether we want to include the dataset or not.
 
-4. **Create Redmine issue.** Once a submitter has provided enough information for their dataset to be reviewed create a Redmine issue.
+4. **Create Redmine issue.** Once a submitter has provided enough information for their dataset to be reviewed create a
+   Redmine issue.
    Use the submitter's name and optionally a brief summary as the title, and copy the submitter's answers into the issue description.
    Assign the issue to Jason for review.
 
@@ -76,6 +77,7 @@ instead until it is known. Put `idr00XX` as the accession number for
 now. We used to assign an accession number at this stage but have found
 that sometimes the study doesn’t make it to IDR even when we think we
 want to have it so better to hold off before assigning.
+
 
 ## Obtain raw images and copy to our system
 
@@ -160,7 +162,7 @@ need an account there.
 
 
 **Create directory for notes files, paper drafts, temporary files etc.**
-Usually,  another directory is created to store notes made about a
+Usually, another directory is created to store notes made about a
 submission, the paper drafts and any other files they might send by
 email etc. Something like
 /uod/idr/filesets/idr0038-held-kidneylightsheet/2017-notes-extras
@@ -182,12 +184,11 @@ been given the following steps are possible.
 Remember to cc `idr@openmicroscopy.org` in all emails.
 
   - Request a FTP user named after the accession number e.g. `idr0038`.
-    To do so, email the user creation sponsor.
-    When created, update
+    To do so, email the user creation sponsor. When created, update
     the Redmine issue by checking the FTP user checkbox
 
   - Email The EBI Aspera contact to associate the study folder
-    under \`/nfs/bioimage/drop\` with the created FTP user and make it
+    under `/nfs/bioimage/drop` with the created FTP user and make it
     publicly downloadable via Aspera
 
   - Test the data is publicly downloadable using the instructions
@@ -219,6 +220,7 @@ be used for the minting of a data DOI during the publication phase - see
 Alternative workflows may be useful for dealing with large or complex data such as
 HPA datasets.
 
+
 Warning: the behaviour of `openmicroscopy/aspera-client` Docker is different from rsync, a directory
 20200623-fixes will be copied to \<destination\>/20200623-fixes
 regardless of whether you have a trailing /
@@ -226,6 +228,7 @@ regardless of whether you have a trailing /
 If a fileset is present in EBI and Dundee the EBI copy is the reference
 copy. Any discrepancies should be resolved by overwriting the Dundee
 copy with the EBI copy.
+
 
 ## Get metadata
 
@@ -1066,166 +1069,21 @@ gene identifier, in two different studies you’ll end up with two
 different map annotations so you need to be careful about what has been
 used previously by checking through other bulkmap-config files.
 
-#### prodNN\_idr00XX\_input\_bulk.txt and prodNN\_idr00XX\_input.txt
-
-So that we can record what was annotated, and what was re-annotated in
-each release and to speed up the process of applying all the changes in
-idr-next Ola developed a method for adding bulk annotation files and the
-bulk-map annotation code using input files and shell scripts.
-
-There are 3 scripts:
-
-bulk.sh - adds annotation.csvs to a screen or project
-
-delete.sh - deletes either all the map annotations for a screen/project
-or a certain mapr group
-
-annotate.sh - adds either all the map annotations for a screen/project
-or a certain mapr group
-
-2 input files are needed, one for adding the annotation.csv files and
-one for creating the map annotations. The name of them reflects the
-number of the release. E.g. prod44\_input\_bulk.txt was for the 0.4.4
-release
-
-First the one for adding the annotation.csv as bulk\_annotations is run:
-
-Previously we used a single annotation file for bulk and then map
-annotation for each release which listed all the annotations we are
-doing in the release. For prod45 we are moving to having a separate file
-for each.
-
-Example of a combine file is demo35\_input\_bulk.txt (called demo before
-we switched to prod) for adding the annotation.csv files for a number of
-screens and projects
-
-Screen:1751 idr0033-rohban-pathways/screenA/idr0033-screenA
-
-Screen:1202 idr0012-fuchs-cellmorph/screenA/idr0012-screenA
-
-Screen:253 idr0006-fong-nuclearbodies/screenA/idr0006-screenA
-
-Screen:1851 idr0025-stadler-proteinatlas/screenA/idr0025-screenA
-
-Project:301
-idr0026-weigelin-immunotherapy/experimentA/idr0026-experimentA
-
-An example of single file is prod45\_idr0030\_input\_bulk.txt.
-
-The first part is the object to add the bulk annotation file, the second
-part is the path to the annotation.csv file. The shell script will run
-through line and use the contents of the line to run the following code
-
-/opt/omero/server/OMERO.server/bin/omero metadata populate --file
-$path-annotation.csv $object
-
-E.g. for the first line
-
-/opt/omero/server/OMERO.server/bin/omero metadata populate --file
-/tmp/idr-metadata/idr0033-rohban-pathways/screenA/idr0033-screenA-annotation.csv
-Screen:1751
-
-Then we need to convert the bulk annotations to map annotations. In this
-case there are 3 parts. 1. Screen or project identifier, 2. Path to the
-bulkmap-config file and 3. Which mapr groups to delete or reannotate.
-For example demo35\_input.txt contains:
-
-Screen:1751 idr0033-rohban-pathways/screenA/idr0033-screenA
-openmicroscopy.org/omero/bulk\_annotations
-
-Screen:1751 idr0033-rohban-pathways/screenA/idr0033-screenA
-openmicroscopy.org/mapr/orf/supplementary
-
-Screen:253 idr0006-fong-nuclearbodies/screenA/idr0006-screenA
-openmicroscopy.org/mapr/gene/supplementary
-
-Screen:253 idr0006-fong-nuclearbodies/screenA/idr0006-screenA
-openmicroscopy.org/mapr/orf
-
-Screen:253 idr0006-fong-nuclearbodies/screenA/idr0006-screenA
-openmicroscopy.org/mapr/orf/supplementary
-
-Screen:1851 idr0025-stadler-proteinatlas/screenA/idr0025-screenA
-
-Project:301
-idr0026-weigelin-immunotherapy/experimentA/idr0026-experimentA
-
-The last two Screen:1851 and Project:301 convert all the bulk
-annotations into map annotations according to whatever is in
-bulkmap-config.yml.
-
-The other ones affect particular mapr groups. E.g. for Screen:1751 we
-are moving some annotations from the ‘other’ category
-(==bulk\_annotations group) to the ‘orf/supplementary’ group. We have
-created a new version of the bulkmap-config file with some annotations
-moved from being in no mapr category to the new ‘orf/supplementary mapr
-category. We first run delete.sh to delete all the annotations from the
-‘others’ group and from ‘orf/supplementary’ (although none exist in
-this group yet). Then we run annotate.sh and this adds annotations from
-the bulk\_annotations file to the ‘other’ mapr group and the
-‘orf/supplementary’ mapr group depending on what is in the new
-bulkmap-config.yml file.
-
-I create a separate PR for the two files prodXX\_input\_bulk.txt and
-prodXX\_input.txt in idr-metadata/scripts/reannotate. Then this PR is
-included in the merge build and the files will be included in the clone
-on the server (omeroreadwrite etc).
-
-The contents of prodXX\_input\_bulk.txt and prodXX\_input.txt  are usually tested out
-line by line in idr-testing so that they can be run as
-a whole in idr-next. To test line by line, copy each line to a new file
-and run the shell script on that file e.g.
-prod44\_input\_bulk\_idr0038A.txt.
-
-Things to watch out for
-
-1.  > The screen or project ID might not be the same in idr-testing and
-    > idr-next so watch out the ID is correct in the
-    > prodXX\_input\_bulk.txt and prodXX\_input.txt files.
-
-2.  > Bulk annotation files cannot be deleted using the shell scripts.
-    > They need to be first deleted using omero delete
-    > OriginalFile:nnnnnn where nnnnnn is the ID of the annotation.csv
-    > file in the IDR. Get the ID by rolling the mouse over the
-    > bulk\_annotations file in the Attachments section in the right
-    > hand panel and getting the File ID.
-
-3.  > The input files for the shell scripts must end in an empty line.
-
-4.  > You don’t always need to add a new annotation.csv file, you could
-    > just be moving values into a new mapr category that you didn’t
-    > have before. We did this when we created the new cell line mapr
-    > category. The annotation.csv files didn’t change, but the
-    > bulkmap-config.yml files changed to create the new cell mapr
-    > category. Then we had to move the cellline map annotations into
-    > this new category but first deleting all the values in the ‘other’
-    > mapr group, then reannotating - some things went back into the
-    > same ‘other’ mapr group (e.g. Channels) but the cellline values
-    > went into the new mapr category of Cellline. See
-    > prod40\_input.txt.
 
 
 ## Prepare a study repository
 
 Metadata for individual studies are maintained as standalone study Git
-repositories. These repositories are first created under the IDR Gitlab
-project
-[https://gitlab.com/idr](https://gitlab.com/idr),
-so that work happens on a study while keeping it private.
+repositories. These repositories are first created as private repositories on
+the [IDR GitHub organization](https://github.com/IDR/), so that work happens
+on a study while keeping it private.
 
-Once published, the GitLab repository is publicly promoted to GitHub
-([https://github.com/IDR/](https://github.com/IDR/)),
-and archived on GitLab. The study repository should also be integrated
-into the top-level IDR metadata repositories
-[https://github.com/IDR/idr-metadata](https://github.com/IDR/idr-metadata)
-as a submodule.
+Once published, the GitHub repository is made visible. The study repository should also be integrated into the top-level
+[IDR metadata repository](https://github.com/IDR/idr-metadata) as a submodule.
 
 The study repository should contain the following elements:
 
   - [README.md](https://github.com/IDR/idr0000-lastname-example/blob/master/README.txt) (optional)
-
-  - [.travis.yml](https://github.com/IDR/idr0054-segura-tonsilhyperion/blob/1d17d297f5f62af5400ec373264eac9561456d11/.travis.yml): (optional, especially not recommended when working in a GitLab repo) a Travis file performing minimally yaml and flake8 checks on the data.
-  **TODO:** Create a travis.yml inside the [idr0000](https://github.com/IDR/idr0000-lastname-example) and point this document to it.
 
   - [bulk.yml](https://github.com/IDR/idr0065-camsund-crispri/blob/d01e1d417ec3cf949d721cea82ec934139580ee5/bulk.yml): (optional, consider addition only in cases of multi-screen/experiments studies) a top-level bulk file containing the common options for bulk import. If creating a top-level bulk.yml, the corresponding per-experiment bulk files must match the syntax, see [idr0065-experimentA-bulk.yml example](https://github.com/IDR/idr0065-camsund-crispri/blob/d01e1d417ec3cf949d721cea82ec934139580ee5/experimentA/idr0065-experimentA-bulk.yml).
   **TODO:** Create a bulk.yml inside the [idr0000](https://github.com/IDR/idr0000-lastname-example) and point this document to it.
@@ -1320,15 +1178,17 @@ alongside the publication).
 
 ![Slide2.png](img/curation-workflow/image1.png)
 
+
 Steps of the import process:
 
   - Set up connection to idr-testing/idr-next
 
-  - Get the files needed for import (``plates.tsv`` or ``filePaths.tsv`` and ``bulk.yml``) onto the server by cloning the github or gitlab repo
+  - Get the files needed for import (``plates.tsv`` or ``filePaths.tsv`` and ``bulk.yml``) onto the server by cloning the GitHub repo
 
   - Prepare environment inside the server terminal which allows in-place import to work
 
   - Do the import on the command line
+
 
 #### Setting JVM options
 
@@ -1343,7 +1203,7 @@ For import of some studies, JVM options need to be configured as shown below. Pl
 A necessary prerequisite is to have a study repository ready.
 See [Prepare a study
 repository](#prepare-a-study-repository) for more information on
-how to create a GitHub or GitLab (if the data are confidential) repository.
+how to create a GitHub repository.
 
 The original data uploaded by the submitter **must** be available under
 `/uod/idr/filesets`. If not, the
@@ -1374,7 +1234,7 @@ Shell into the server you intend to import. See above for details on how to shel
 Clone the study repository. To make sure that cases where the study contains additional metadata files required for the import, typically [patterns](https://github.com/IDR/idr0051-fulton-tailbudlightsheet/tree/master/patterns), [screens](https://github.com/IDR/idr0064-goglia-erkdynamics/tree/master/screens) or [companion files](https://github.com/IDR/idr0052-walther-condensinmap/tree/master/experimentA/companions), are taken care of, please always clone into the `/uod/idr/metadata`. This is a recomended "good practice" for all other cases as well:
 
     cd /uod/idr/metadata/
-    sudo -Es git clone git@gitlab.com:idr/idr0092-ostrop-organoid.git
+    sudo -Es git clone git@github.com:IDR/idr0092-ostrop-organoid.git
     sudo -Es git pull origin master
 
 Sudo as the ``omero-server`` user. This is necessary for in-place import and for in-place upload of File Attachments.
@@ -1459,6 +1319,7 @@ To view the images after import, clear the cache (see
 [Clearing the cache](#clearing-the-cache)
 for instructions)
 
+
 #### Clearing the cache
 
 The IDR makes extensive use of nginx caching for performance reasons.
@@ -1497,6 +1358,8 @@ work better in Chrome than Firefox.
 Prior to annotating, check the completeness of the `idr00XX-XXXXX-annotation.csv` file using the [`check_annotations.py` script](https://github.com/IDR/idr-utils/blob/master/scripts/annotate/check_annotations.py). Pass the path to your `idr00XX-XXXXX-annotation.csv` file as shown below, and the script will check that all images have a corresponding entry in the annotation file.
 
     /opt/omero/server/venv3/bin/python /uod/idr/metadata/idr-utils/scripts/annotate/check_annotations.py Project:[Project ID] /path/to/idr00XX-XXXXX-annotation.csv
+
+If this produces error messages, more detail can be found using the `--output errors.csv` option to create a new csv file with an extra column that contains the errors for each row.
 
 Add the bulk annotation file to the screen or project
 
@@ -1641,7 +1504,7 @@ scripts using
 
   - > [https://github.com/IDR/idr0062-blin-nuclearsegmentation/blob/master/experimentA/upload\_features\_rois.py](https://github.com/IDR/idr0062-blin-nuclearsegmentation/blob/master/experimentA/upload_features_rois.py)
 
-  - > [https://gitlab.com/idr/idr0082-pennycuick-lesions](https://gitlab.com/idr/idr0082-pennycuick-lesions)
+  - > [https://github.com/IDR/idr0082-pennycuick-lesions](https://github.com/IDR/idr0082-pennycuick-lesions)
 
 More generally
 [https://github.com/ome/omero-upload/network/dependents](https://github.com/ome/omero-upload/network/dependents)
@@ -1716,7 +1579,7 @@ annotated correctly
 
 ### Add the study metadata repository to the public IDR/metadata as a submodule
 
-First transfer the private GitLab study repository to the public IDR GitHub organisation.
+First make the private GitHub study repository visible.
 Add it to the https://github.com/IDR/idr-metadata as a submodule.
 Assuming you already have a local up-to-date checkout of `idr-metadata` run:
 
@@ -1742,7 +1605,8 @@ When the PR is merged update the `idr-next` `omeroreadwrite` clone of `idr-metad
 There are two places that need to be updated every time a study is ready
 for publication in the next IDR release
 
-  - The two first tabs of the IDR dataset map spreadsheet,
+  - The two first tabs of the IDR
+    dataset map spreadsheet,
     studies and releases
 
   - Data files in the
@@ -1763,7 +1627,7 @@ Either copy the output of the script and paste it as a new line into `studies.ts
 It is also possible to run the script without the idrNNNN-new-study being under the `/uod/idr/metadata` yet. For this, do:
 
     cd /tmp
-    git clone git@gitlab.com:idr/idrNNNN-new-study
+    git clone git@github.com:IDR/idrNNNN-new-study
     /opt/omero/server/venv3/bin/omero login
     /opt/omero/server/venv3/bin/python /path/to/idr-utils/scripts/stats.py --release prodNN idrNNNN-new-study -vv >> your-file.tsv
 
@@ -1838,6 +1702,8 @@ a parent DOI for a study ‘landing page’ e.g.
 and then child DOIs for each of the screens or projects. The author can
 then just put the ‘landing page’ DOI into their paper instead of listing
 all the child DOIs in the paper.
+
+
 
 ## Converting selected images to Zarr
 
@@ -1938,7 +1804,7 @@ need to provide a map from Zarr group name to labeled image. e.g.:
 
 ```
 omero hql --style=plain "select distinct s.textValue, s.roi.id from Shape s where s.roi.image.id = 5514375" --limit=-1 | tee rois.csv
-omero zarr masks Image:5514375 --mask-map=rois.csv
+omero zarr masks Image:5514375 --label-map=rois.csv
 ```
 
 ### Submit for review
@@ -1989,6 +1855,7 @@ or for a set of directories:
 time for x in $(seq 9836831 9836838); do docker-compose run --rm transfer cp --acl public-read --recursive \
     /uod/idr/objectstore/minio/idr/zarr/v0.1/$x.zarr/ s3://idr/zarr/v0.1/$x.zarr; done
 ```
+
 
 ## Miscellaneous
 
@@ -2158,3 +2025,4 @@ Sheets of the IDR Dataset Map that need updating for every new
     > Various queries need to be updated as well as the graphs to take
     > new values into account. This is the last sheet that needs regular
     > updating.
+
