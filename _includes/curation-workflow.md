@@ -1021,30 +1021,31 @@ remove them if it’s just something that has come out strangely.
 ##### Bulkmap config file
 
 To create this file we need to go through every column in the
-annotation.csv and decide which ones should go into map annotations.
+`annotation.csv` and decide which ones should go into map annotations.
 Generally we want values in the map annotations that are searchable so
 we don’t include results values such as z-scores etc.
 
-There is both a “name” and “client name” e.g.
+There is both a `name` and `clientname` e.g.
 
-\- name: Characteristics \[Strain\]
+```yaml
+- name: Characteristics [Strain]
+  clientname: Strain
+  include: yes
+```
 
-clientname: Strain
+The `name` is the name of the column in the `annotation.csv` file.
 
-include: yes
-
-The “name” is the name of the column in the annotation.csv file.
-
-The “clientname” is the name you want it to have in the IDR map
+The `clientname` is the name you want it to have in the IDR map
 annotations.
 
-Some columns are put into particular mapr groups such as ‘organism’,
-‘gene’, ‘siRNA’. These ones are listed under particular mapr groups
+Some columns are put into particular mapr groups such as `organism`,
+`gene`, `siRNA`. These ones are listed under particular mapr groups
 e.g.
 
-\- group:
-
-namespace: openmicroscopy.org/mapr/organism
+```yaml
+- group:
+    namespace: openmicroscopy.org/mapr/organism
+```
 
 All the others are just listed but not under a mapr group (usually we
 list them first) and they appear in the ‘Others’ group in the Attributes
@@ -1056,13 +1057,12 @@ should be.
 If you want to add an external link for the value in another database
 add an extra line
 
-\- name: Gene Identifier
-
-clientname: Gene Identifier URL
-
-clientvalue: http://www.ncbi.nlm.nih.gov/gene/{{ value|urlencode }}
-
-include: yes
+```yaml
+- name: Gene Identifier
+  clientname: Gene Identifier URL
+  clientvalue: http://www.ncbi.nlm.nih.gov/gene/{{ value|urlencode }}
+  include: yes
+```
 
 Note that if you put a different URL for the same thing e.g. the same
 gene identifier, in two different studies you’ll end up with two
