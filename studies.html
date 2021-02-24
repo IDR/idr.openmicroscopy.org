@@ -18,6 +18,35 @@ redirect_from:
 </header>
 <!-- end marketing header -->
 
+{% assign releases=site.data.releases %}
+{% assign sorted_studies = site.data.studies | sort: 'Study' %}
+{% assign unique_studies = site.data.studies | map: 'Study' | uniq %}
+
+<!-- begin Current Status section -->
+<hr class="whitespace">
+<div class="row column text-center">
+    <h2>Current Status</h2>
+</div>
+<hr>
+<div class="row">
+    <div class="small-10 small-centered medium-10 medium-centered columns">
+        <div class="row horizontal">
+            <div>
+<p>Currently, the IDR (version {{ releases.last["Code version"] }}, released on
+
+{{ releases.last.Date }}) contains {{ releases.last["Size (TB)"] | round }} TB
+of multi-dimensional images consisting of
+{{ releases.last.Images | divided_by: 1000000 }} millions of multi-dimensional
+images or {{ releases.last.Planes | divided_by: 1000000 }} millions of
+individual 2D planes. IDR contains over a million different experiments.
+Data comes from {{ unique_studies | size }} studies on human, Drosophila,
+budding and fission yeast, and mouse cells and tissue. Imaging modalities represented so far include high content screens, time-lapse imaging, whole slide histopathology, and super-resolution microscopy.
+The resource receives over 2500 unique visits per week.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
     <hr class="whitespace">
     <div class="row column text-center">
         <h2>Studies</h2>
@@ -36,7 +65,6 @@ redirect_from:
         <th>Average dimensions (XYZCT)</th>
     </thead>
     <tbody>
-    {% assign sorted_studies = site.data.studies | sort: 'Study' %}
     {% for row in sorted_studies %}
       {% if row.Container == "landing page" %}
         {% continue %}
