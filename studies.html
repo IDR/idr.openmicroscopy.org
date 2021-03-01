@@ -34,14 +34,15 @@ redirect_from:
             <div>
 <p>Currently, the IDR (version {{ releases.last["Code version"] }}, released on
 
-{{ releases.last.Date }}) contains {{ releases.last["Size (TB)"] | round }} TB
+{{ releases.last.Date }}) contains
+<b>{{ releases.last["Size (TB)"] | round }}</b> TB
 of multi-dimensional images consisting of
-{{ releases.last.Images | divided_by: 1000000 }} millions of multi-dimensional
-images or {{ releases.last.Planes | divided_by: 1000000 }} millions of
-individual 2D planes. IDR contains over a million different experiments.
-Data comes from {{ unique_studies | size }} studies on human, Drosophila,
+<b>{{ releases.last.Images | divided_by: 1000000 }} M</b> multi-dimensional 
+images or
+<b>{{ releases.last.Planes | divided_by: 1000000 }} M</b> individual 2D planes. IDR contains <b> 1 M</b> different experiments.
+Data comes from <b>{{ unique_studies | size }}</b> studies on human, Drosophila,
 budding and fission yeast, and mouse cells and tissue. Imaging modalities represented so far include high content screens, time-lapse imaging, whole slide histopathology, and super-resolution microscopy.
-The resource receives over 2500 unique visits per week.</p>
+The resource receives over <b>2500</b> unique visits per week.</p>
             </div>
         </div>
     </div>
