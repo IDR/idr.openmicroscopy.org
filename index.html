@@ -144,7 +144,7 @@ redirect_from:
                         <a href="https://cordis.europa.eu/project/rcn/198649_en.html">653493</a>
                         (<a href="https://globalbioimaging.org/">Global BioImaging</a> Project) and
                         <a href="https://www.cordis.europa.eu/project/rcn/197885_en.html">654248</a>
-                        (<a href="https://www.corbel-project.eu/home.html">CORBEL</a>). For 2018-2021, dataset
+                        (<a href="https://www.corbel-project.eu/home.html">CORBEL</a>). For 2018-2022, dataset
                         submission and publication is funded by the Wellcome Trust (Ref: 212962/Z/18/Z)
                         and integration with EMBL-EBI's BioStudies and other resources is funded by the
                         BBSRC (Ref: <a href="https://bbsrc.ukri.org/research/grants/grants/AwardDetails.aspx?FundingReference=BB/R015384/1">BB/R015384/1</a>).
@@ -155,7 +155,7 @@ redirect_from:
         </div>
         <!-- end Funding section -->
 
-{% assign releases=site.data.releases %}
+
 
         <!-- begin Current Status section -->
         <hr class="whitespace">
@@ -167,14 +167,7 @@ redirect_from:
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>Currently, the IDR (version {{ releases.last["Code version"] }}, released on
-                        {{ releases.last.Date }}) contains {{ releases.last["Size (TB)"] | round }} Tb of
-                        multi-dimensional image data consisting of {{ releases.last.Planes | divided_by: 1000000 }} millions of
-                        individual 2D planes. IDR contains over a million different experiments.
-                        Data comes from studies on human, Drosophila, budding and fission yeast,
-                        and mouse cells and tissue. Imaging modalities represented so far include
-                        high content screens, time-lapse imaging, whole slide histopathology,
-                        and super-resolution microscopy. See <a href="studies.html">the full list
+                        <p>See <a href="studies.html">the full list
                         of published studies</a> for more details.</p>
                     </div>
                 </div>
