@@ -90,7 +90,7 @@ See the suggested instructions to be sent to submitters.
 The FTP server can be accessed via
 SSH, all data is available under /data/idrftp-incoming/
 
-![](img/curation-workflow/image14.png)
+![image14.png](img/curation-workflow/image14.png)
 
 For bigger imports or when FTP is not a possibility, it is possible to
 mail a hard drive to the submitters.
@@ -467,7 +467,7 @@ and what has been imaged in each well e.g. the cells and any treatments
 done to them, or the time point the image was taken at. A simplified
 version would be (from idr0013-screenA)
 
-![](img/curation-workflow/image2.png)
+![image2.png](img/curation-workflow/image2.png)
 
 Each row in the file gives information about one well on a plate.
 
@@ -475,7 +475,7 @@ The assay file is similar in that it lists all the images in a
 experiment and gives information about that image e.g. the cells and any
 treatments done to them, or the time point the image was taken at.
 
-![](img/curation-workflow/image8.png)
+![image8.png](img/curation-workflow/image8.png)
 
 Each row in the files gives information about the sample, treatment,
 channels etc associated with one image.
@@ -546,7 +546,7 @@ Then we add columns to say which ontology term these attribute values
 (e.g. brain, eye, kidney) could be mapped to; “Term Source REF” and
 “Term Source Accession” columns.
 
-![](img/curation-workflow/image12.png)
+![image12.png](img/curation-workflow/image12.png)
 
 Look for the term in the [<span class="underline">Ontology lookup
 service</span>](https://www.ebi.ac.uk/ols/index) which lists lots of
@@ -616,7 +616,7 @@ information to the main things that vary. E.g the siRNA sequences, which
 gene they are targeting, more information about compounds. These can be
 added as additional columns. E.g. in idr0013-screenA.
 
-![](img/curation-workflow/image24.png)
+![image24.png](img/curation-workflow/image24.png)
 
 Try to keep the value types in each column the same e.g. in the siRNA
 Identifier column don’t have things like “empty well”, remove these and
@@ -632,7 +632,7 @@ siRNAs are often applied to cells in pools where there is more than one
 siRNA designed to knockdown the expression of mRNA from a gene. In this
 case you can have the values listed separated by semi-colons e.g.
 
-![](img/curation-workflow/image18.png)
+![image18.png](img/curation-workflow/image18.png)
 
 We later split these values when we import into IDR.
 
@@ -644,12 +644,12 @@ reliable result for any one of the listed genes. So instead of
 separating the values by semi-colon, it better to move these values to
 the Gene Annotation Comments column e.g. in idr0012-screenA
 
-![](img/curation-workflow/image17.png)
+![image17.png](img/curation-workflow/image17.png)
 
 In idr0013-screenA, didn’t have a list of all the genes the siRNA
 matched so just put a comment
 
-![](img/curation-workflow/image25.png)
+![image25.png](img/curation-workflow/image25.png)
 
 There is a balance to be struck between keeping the submitters original
 column names for similar things and standardizing them, so I tend to
@@ -669,20 +669,20 @@ the build of the reference sequence AND the gene annotation build (i.e.
 the release of gene information against that reference sequence). E.g.
 in idr0013-screenA we have
 
-![](img/curation-workflow/image13.png)
+![image13.png](img/curation-workflow/image13.png)
 
 Ifyou (as a curator) add some missing information then note it somewhere
 e.g. if a few Gene Symbols are missing then you might add them as IDR
 users probably search by these but add a note in the Gene Annotation
 Comments e.g. idr0009-screenA
 
-![](img/curation-workflow/image16.png)
+![image16.png](img/curation-workflow/image16.png)
 
 Examples of “treatment” columns other than siRNA identifiers and Genes
 
 idr0016-screenA - chemical compounds
 
-![](img/curation-workflow/image20.png)
+![image20.png](img/curation-workflow/image20.png)
 
 Always have a Compound Name column and a Dose column if you can. Spell
 out the unit e.g. micromolar in full. Include the InChiKey if you can.
@@ -692,7 +692,7 @@ treated with an siRNA and were staining using an antibody against a
 protein. The gene related to the localized protein was also included in
 the library file.
 
-![](img/curation-workflow/image21.png)
+![image21.png](img/curation-workflow/image21.png)
 
 If the treatments are outside of what can be considered a ‘library’ of
 reagents then they are usually put in the column heading of Experimental
@@ -745,7 +745,7 @@ no effect on the cells.
 The Control Comments list can give more information about the controls.
 E.g. in idr0028-screenB we have:
 
-![](img/curation-workflow/image19.png)
+![image19.png](img/curation-workflow/image19.png)
 
 **Quality Control**
 
@@ -754,7 +754,7 @@ some quality control checks have been done. Sometimes this is just a
 pass/fail value e.g. in idr0013-screenA they have put TRUE or FALSE,
 sometimes there is more information e.g. in idr0028-screenB
 
-![](img/curation-workflow/image15.png)
+![image15.png](img/curation-workflow/image15.png)
 
 You can put a more detailed description of what was done for quality
 control in the study file. There is a ‘Quality Control Description’
@@ -851,7 +851,7 @@ compound etc) the phenotype is annotated at though.
 
 idr0002-screenA-processed.txt
 
-![](img/curation-workflow/image9.png)
+![image9.png](img/curation-workflow/image9.png)
 
 (see
 [https://github.com/IDR/idr0002-heriche-condensation/blob/master/screenA/idr0002-screenA-processed.txt](https://github.com/IDR/idr0002-heriche-condensation/blob/master/screenA/idr0002-screenA-processed.txt))
@@ -859,7 +859,7 @@ to see this better).
 
 Idr0002-study.txt
 
-![](img/curation-workflow/image22.png)
+![image22.png](img/curation-workflow/image22.png)
 
 Here you can see that each of the columns in the processed file have
 been listed in the study file. There is a description of what the data
@@ -1900,7 +1900,7 @@ Here are some things to watch out for.
     > becomes SEP-01. To prevent this you can say that the columns are
     > all “text” format rather than “general format”
 
-![](img/curation-workflow/image23.png)
+![image23.png](img/curation-workflow/image23.png)
 
 You CAN’T do this with .csv files so if you have to work on a csv file
 in Excel copy the file as .txt first (you can keep the comma separators)
