@@ -1205,11 +1205,6 @@ See [Prepare a study
 repository](#prepare-a-study-repository) for more information on
 how to create a GitHub repository.
 
-The original data uploaded by the submitter **must** be available under
-`/uod/idr/filesets`. If not, the
-[https://github.com/openmicroscopy/management\_tools/blob/master/idr/playbooks/idr-links.yml](https://github.com/openmicroscopy/management_tools/blob/master/idr/playbooks/idr-links.yml)
-playbook was incorrectly run during deployment, or the data was incorrectly copied.
-
 Do not import from any other location on the server (i.e. for example no `/nfs...` paths should be in your `xxxfilePaths.tsv` file).
 
 Study your ``filePaths.tsv`` file in order to understand whether or not you need to pre-create the Datasets (in case same named Datasets already exist). Also, you want to know if both the Projects and Datasets will be created at import, or just Datasets.
@@ -1265,7 +1260,7 @@ To import Experiments:
     omero import --bulk idr0048-abdeladim-chroms/experimentA/idr0048-experimentA-bulk.yml --file /tmp/idr0048.log  --errs /tmp/idr0048.err
 
 The whole output will go into the ``idr0048.err`` file (even when no errors are detected). Depending on your ``filePaths.tsv`` file, the import command will create the datasets with files inside them or a new Project with Datasets and Images in them. You might need to log in
-to the WebUI and move the datasets into the right project. See [Editing in the Web UI](#editing-in-the-web-ui) for more information.
+to the WebUI and move the datasets into the right project.
 
 To import Screens:
 
@@ -1464,7 +1459,7 @@ Examples:
 
 [https://github.com/IDR/idr-metadata/blob/master/idr0030-sero-yap/screenA/idr0030-screenA-renderdef.yml](https://github.com/IDR/idr-metadata/blob/master/idr0030-sero-yap/screenA/idr0030-screenA-renderdef.yml)
 
-[https://github.com/IDR/idr-metadata/blob/master/idr0034-kilpinen-hipsci/screenA/idr0034-screenA-renderdef.yml](https://github.com/IDR/idr-metadata/blob/master/idr0034-kilpinen-hipsci/screenA/idr0034-screenA-renderdef.yml)
+[https://github.com/IDR/idr0034-kilpinen-hipsci/blob/HEAD/screenA/idr0034-screenA-renderdef.yml](https://github.com/IDR/idr0034-kilpinen-hipsci/blob/HEAD/screenA/idr0034-screenA-renderdef.yml)
 
 Apply the settings as follows:
 
