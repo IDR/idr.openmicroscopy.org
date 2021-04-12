@@ -83,7 +83,7 @@ want to have it so better to hold off before assigning.
 
 ### Obtain raw image files from authors
 
-For smaller datasets (\< 10TB), we have our own FTP service that you can
+For datasets smaller than 15TB, we have our own FTP service that you can
 use for the raw data transfer.
 See the suggested instructions to be sent to submitters.
 
@@ -92,8 +92,9 @@ SSH, all data is available under /data/idrftp-incoming/
 
 ![image14.png](img/curation-workflow/image14.png)
 
-For bigger imports or when FTP is not a possibility, it is possible to
-mail a hard drive to the submitters.
+It is also possible to upload data to the S3 `idr-upload` bucket.
+
+See the suggested instructions to be sent to submitters.
 
 ### Assign accession
 
@@ -159,6 +160,8 @@ See the **Advanced** section below for other data migration workflows.
 
 In the unlikely event that you need direct access to the data at EBI you
 need an account there.
+
+
 
 
 **Create directory for notes files, paper drafts, temporary files etc.**
@@ -1078,6 +1081,9 @@ repositories. These repositories are first created as private repositories on
 the [IDR GitHub organization](https://github.com/IDR/), so that work happens
 on a study while keeping it private.
 
+Start by creating the repository at https://github.com/organizations/IDR/repositories/new, ensuring
+that it is private and the owner is IDR.
+
 Once published, the GitHub repository is made visible. The study repository should also be integrated into the top-level
 [IDR metadata repository](https://github.com/IDR/idr-metadata) as a submodule.
 
@@ -1165,23 +1171,23 @@ Example is
 If .screen files are used to group the images into plates then these are
 listed instead
 
-## Load images into idr-testing or idr-next
+## Load images into idr-pilot, then idr-next
 
-We have 3 IDR environments idr-testing, idr-next and the
-production/public idr. With a new dataset we first test import the
-images and annotations into idr-testing. Then if that is ok, we do the
+With a new dataset we first test import the
+images and annotations into idr-pilot. A new idr-pilot is created for each
+study. Then if that is ok, we do the
 same again in the staging server, idr-next. Idr-next is then switched to
 become the next production idr when the data is ready for release (often
 alongside the publication).
 
-#### Figure 4 Summary of the idr-testing/idr-next/idr workflow
+#### Figure 4 Summary of the idr-pilot/idr-next/idr workflow
 
 ![Slide2.png](img/curation-workflow/image1.png)
 
 
 Steps of the import process:
 
-  - Set up connection to idr-testing/idr-next
+  - Set up connection to idr-pilot/idr-next
 
   - Get the files needed for import (``plates.tsv`` or ``filePaths.tsv`` and ``bulk.yml``) onto the server by cloning the GitHub repo
 
@@ -1196,7 +1202,7 @@ For import of some studies, JVM options need to be configured as shown below. Pl
 
     export JAVA_OPTS=-Xmx4G
 
-## Load the data into idr-testing/idr-next
+## Load the data into idr-pilot/idr-next
 
 ### Prepare study repo and check data
 
@@ -1220,11 +1226,7 @@ In case there are Datasets of the same name in different Projects (Experiments) 
 
 ### Do the import on the command line
 
-Shell into the server you intend to import. See above for details on how to shell (ssh) into idr servers. Note that the commands below assume config edits.
-
-    ssh idr-testing-omero
-
-    ssh idr-next-omero
+Shell into the server you intend to import (pilot-idr****). Note that the commands below assume config edits.
 
 Clone the study repository. To make sure that cases where the study contains additional metadata files required for the import, typically [patterns](https://github.com/IDR/idr0051-fulton-tailbudlightsheet/tree/master/patterns), [screens](https://github.com/IDR/idr0064-goglia-erkdynamics/tree/master/screens) or [companion files](https://github.com/IDR/idr0052-walther-condensinmap/tree/master/experimentA/companions), are taken care of, please always clone into the `/uod/idr/metadata`. This is a recomended "good practice" for all other cases as well:
 
@@ -1285,12 +1287,15 @@ comment out the `exclude: "clientpath"` line.
 
 You can import an image file or plate directly but make sure you use the
 ``--transfer=ln_s`` flag as we want to always use ``in-place`` import to spare space.
+You may want to use a screen for long-running imports. For large imports you may also
+wish to skip thumbnails and min/max calculation with ``--skip=all``.
 
     sudo -u omero-server -s
+    screen -S idr0038
     source /opt/omero/server/venv3/bin/activate
     export OMERODIR=/opt/omero/server/OMERO.server
     omero login demo@localhost
-    omero import -d 710 --transfer=ln_s "/uod/idr/filesets/idr0038-held-kidneylightsheet/20170905-original/disk2/time
+    omero import -d 710 --transfer=ln_s --skip=all "/uod/idr/filesets/idr0038-held-kidneylightsheet/20170905-original/disk2/time
 series data/Time-PNA-rh-vital-test.czi"
 
 If you forget to use the ``--transfer=ln_s`` flag then you can delete the
@@ -1318,17 +1323,13 @@ for instructions)
 #### Clearing the cache
 
 The IDR makes extensive use of nginx caching for performance reasons.
-When looking at idr-testing, idr-next or idr via the main Web UI, you
+When looking at idr-next or idr via the main Web UI, you
 are primarily using the cache. This means that after each operation
 modifying one of the Web panels (import, annotation, deletion…), the
-cache needs to be cleared.
+cache needs to be cleared. You don't need to clear the cache on idr-pilot.
 
 To do this you need to look at the screen or project in the WebUI using
 the special port 9000. First of all in a terminal window type
-
-    ssh idr-testing.openmicroscopy.org -L 9000:localhost:9000
-
-or
 
     ssh idr-next.openmicroscopy.org -L 9000:localhost:9000
 
@@ -1341,7 +1342,7 @@ Then navigate to the screen or project you have annotated and open some
 of the wells or images.
 
 Also browse from the front page [http://localhost:9000/](http://localhost:9000/)
-by clicking on any study. Then try browsing from [idr-testing.openmicroscopy.org/](http://idr-testing.openmicroscopy.org/) in your incognito browser window.
+by clicking on any study. Then try browsing from [idr-next.openmicroscopy.org/](http://idr-next.openmicroscopy.org/) in your incognito browser window.
 
 After you have cleared the cache, you go back to the "normal" viewing mode of the server you worked with (i.e. you exit the ssh-ing terminal where you accessed via port 9000 and are accessing the e.g. `idr-next` webclient of the server via some form of VPN or directly when in UoD). Once in that webclient, make sure you click on "Studies" above the left-hand side tree. This is necessary especially if you added a new Project or Screen or deleted one. Otherwise, you might falsely conclude that the clearing of the cache was not successful.
 
@@ -1395,7 +1396,7 @@ mapr categories:
 
     source /opt/omero/server/venv3/bin/activate
     omero login demo@localhost
-    omero metadata populate --context deletemap --report --wait 300 --batch 100 --localcfg '{"ns":["openmicroscopy.org/mapr/organism", "openmicroscopy.org/mapr/antibody", "openmicroscopy.org/mapr/gene", "openmicroscopy.org/mapr/cell_line", "openmicroscopy.org/mapr/phenotype", "openmicroscopy.org/mapr/sirna", "openmicroscopy.org/mapr/compound"], "typesToIgnore":["Annotation"]}' --cfg path/to/config-bulkmap.yml <Object>:<id>
+    omero metadata populate --context deletemap --report --wait 300 --batch 100 --localcfg '{"ns":["openmicroscopy.org/mapr/organism", "openmicroscopy.org/mapr/antibody", "openmicroscopy.org/mapr/gene", "openmicroscopy.org/mapr/cell_line", "openmicroscopy.org/mapr/phenotype", "openmicroscopy.org/mapr/sirna", "openmicroscopy.org/mapr/compound", "openmicroscopy.org/mapr/protein"], "typesToIgnore":["Annotation"]}' --cfg path/to/config-bulkmap.yml <Object>:<id>
 
 This may leave behind orphaned annotations which may be cleaned up one
 day. To delete the remaining annotations:
@@ -1426,16 +1427,9 @@ mappings).
 #### Delete the bulk annotations
 
 If the bulk annotations need to be updated because the content of the
-annotation CSV file has changed, either get the bulk
-annotation ID from the Web UI or from the query:
+annotation CSV file has changed you must first delete the existing bulk annotation file(s):
 
-    omero hql --ids-only "select a.id from Project p join p.annotationLinks l join l.child a where a.ns='openmicroscopy.org/omero/bulk_annotations' and p.id=1157"
-    omero hql --ids-only "select a.id from Screen s join s.annotationLinks l join l.child a where a.ns='openmicroscopy.org/omero/bulk_annotations' and s.id=1157"
-
-
-Delete the bulk annotation file:
-
-    omero delete FileAnnotation:<id>
+    omero metadata deletebulkanns Project:<id>|Screen:<id>
 
 #### Re-annotate
 
