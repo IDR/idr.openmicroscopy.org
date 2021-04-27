@@ -77,7 +77,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "http://binder.bioimagearchive.org/v2/gh/ome/omero-guide-cellprofiler/v0.4.0?filepath=notebooks/idr0002.ipynb",
+                        "link": "https://binder.bioimagearchive.org/v2/gh/ome/omero-guide-cellprofiler/v0.4.0?filepath=notebooks/idr0002.ipynb",
                     }
                 ],
                 "dataTypes": [
@@ -297,7 +297,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://binder.bioimagearchive.org/v2/gh/ome/omero-guide-r/v0.1.0?filepath=notebooks/idr0040_Yeast_cell_growth.ipynb",
+                        "link": "http://binder.bioimagearchive.org/v2/gh/ome/omero-guide-r/v0.1.0?filepath=notebooks/idr0040_Yeast_cell_growth.ipynb",
                     }
                 ],
                 "dataTypes": [
