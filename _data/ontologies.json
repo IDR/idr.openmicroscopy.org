@@ -57,6 +57,6 @@
       "url": "https://bioportal.bioontology.org/ontologies/SNOMEDCT",
       "description": "Clinical/Pathology",
       "name": "SNOMED CT"
-    },
+    }
   ]
 }
