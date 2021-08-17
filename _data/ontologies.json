@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "numberOfItems": "9",
-  "name": "Ontologies used",
+  "name": "reference ontologies and databases",
   "itemListElement": [
     {
       "@type": "Website",
