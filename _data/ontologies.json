@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "numberOfItems": "9",
+  "name": "reference ontologies and databases",
+  "itemListElement": [
+    {
+      "@type": "Website",
+      "url": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "description": "Organism",
+      "name": "NCBI Taxonomy"
+    },
+    {
+      "@type": "Website",
+      "url": "https://www.uniprot.org/",
+      "description": "Protein",
+      "name": "UniProt"
+    },
+    {
+      "@type": "Website",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/",
+      "description": "Compound",
+      "name": "PubChem"
+    },
+    {
+      "@type": "Website",
+      "url": "https://www.ebi.ac.uk/cmpo/",
+      "description": "Phenotype",
+      "name": "Cellular Microscopy Phenotype Ontology (CMPO)"
+    },
+    {
+      "@type": "Website",
+      "url": "https://www.ensembl.org",
+      "description": "Gene",
+      "name": "Ensembl"
+    },
+    {
+      "@type": "Website",
+      "url": "https://www.ncbi.nlm.nih.gov/gene",
+      "description": "Gene",
+      "name": "NCBI Gene"
+    },
+    {
+      "@type": "Website",
+      "url": "https://www.ebi.ac.uk/ols/ontologies/fbbi",
+      "description": "Imaging Method",
+      "name": "Biological Imaging Methods Ontology (FBbi)"
+    },
+    {
+      "@type": "Website",
+      "url": "https://www.ebi.ac.uk/efo",
+      "description": "Study type, Screen Type (HCS), Screen Technology Type (HCS), Library Type (HCS), Protocol",
+      "name": "Experimental Factor Ontoloy (EFO)"
+    },
+    {
+      "@type": "Website",
+      "url": "https://bioportal.bioontology.org/ontologies/SNOMEDCT",
+      "description": "Clinical/Pathology",
+      "name": "SNOMED CT"
+    }
+  ]
+}

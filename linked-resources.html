@@ -1,0 +1,39 @@
+---
+layout: idr
+title: ITR
+redirect_from:
+  - linked-resources/
+---
+
+{% assign items=site.data.ontologies.itemListElement | sort: 'description' %}
+
+<header class="marketing-hero">
+    <div class="row homepage text-center">
+        <div class="medium-12 columns">
+            <h1 class="hero-main-header">Linked Resources</h1>
+            <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                List of {{site.data.ontologies.name}} used in IDR. <br/>
+            </p>
+        </div>
+    </div>
+</header>
+
+<hr class="invisible">
+<div class="row align-right">
+  <table class="table">
+    <tr>
+    <th class="table-header">Domain</th>
+    <th class="table-header">Resource</th>
+    </tr>
+    {% for item in items %}
+    <tr>
+      <td class="table-cell">{{ item.description }}</td>
+      <td class="table-cell"><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></td>
+    </tr>
+    {% endfor %}
+  <table>
+</div>
+
+<div id="projectModal" class="project-modal large reveal" data-reveal></div>
+
+<script src="{{ "/js/itr.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
