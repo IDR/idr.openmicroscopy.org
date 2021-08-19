@@ -13,7 +13,6 @@ redirect_from:
             <h1 class="hero-main-header">Linked Resources</h1>
             <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
                 List of {{site.data.ontologies.name}} used in IDR. <br/>
-                The table below maps the resource to the domain it is applied to.
             </p>
         </div>
     </div>
@@ -22,10 +21,14 @@ redirect_from:
 <hr class="invisible">
 <div class="row align-right">
   <table class="table">
+    <tr>
+    <th class="table-header">Domain</th>
+    <th class="table-header">Resource</th>
+    </tr>
     {% for item in items %}
     <tr>
-      <td><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></td>
-      <td class="table-cell">{{ item.description }} <td>
+      <td class="table-cell">{{ item.description }}</td>
+      <td class="table-cell"><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></td>
     </tr>
     {% endfor %}
   <table>
