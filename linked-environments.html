@@ -1,0 +1,201 @@
+---
+layout: idr
+title: Analysis environments
+redirect_from:
+  - linked-environments/
+---
+
+{% assign studies=site.data.notebooks_and_apps.itemListElement | sort: 'name' | where_exp:"item", "item.name contains 'study'" %}
+
+{% assign items=site.data.notebooks_and_apps.itemListElement | sort: 'name' %}
+
+        <!-- begin marketing header -->
+        <header class="marketing-hero">
+            <div class="row homepage text-center">
+
+                <div class="medium-12 columns">
+                    <h1 class="hero-main-header">IDR and Analysis</h1>
+                    <p class="hero-subheader small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1">
+                     <p>The Image Data Resource (IDR) uses Analysis Environments provided and maintained by third parties.
+                     </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- begin Background section -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Environments</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                        <p>
+                        We have a set of Notebooks and apps that can be run in several
+                        environments managed by third party. IDR mainly uses <a href="https://binderhub.readthedocs.io/en/latest/">BinberHub</a>.
+                        The set can be run by anyone without a login is available to anyone interested in exploring and mining the diverse and vast range of image data and metadata in the IDR. All notebook sessions are subject to available resources, are limited in the network resources they can access, and will automatically terminate after a period of inactivity. Do not store anything you wish to keep.
+                       </p>
+                        <ul>
+                            <li>The public BinderHub <a href="https://mybinder.org">mybinder.org</a></li>
+                            <li>A dedicated BinderHub <a href="https://binder.bioimagearchive.org">binder.bioimagearchive.org</a> hosted <a href="https://www.ebi.ac.uk/">EMBL-EBI</a></li>
+                            <li>Some notebooks can be run in <a href="https://colab.research.google.com/">Google Colab</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Notebooks and Apps</h2>
+        </div>
+        <!-- begin Notebooks section -->
+        <hr class="invisible">
+        <div class="row column text-center">
+            <h3>Notebooks specific to IDR studies</h2>
+        </div>
+        <div class="row align-right">
+            <table class="table">
+            {% assign count = 0 %}
+            <tr>
+            {% for item in studies %}
+
+              {% assign links=item.breadcrumb %}
+              {% if count == 3 %}
+                {% assign count = 0 %}
+                </tr>
+                <tr>
+              {% endif %}
+                <td class="table-cell">
+                <table class="table">
+                <tr>
+                <td class="table-cell"><a href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
+                </tr>
+                <tr>
+                <td class="table-cell">{{ item.name }}: {{ item.description }}</td>
+                </tr>
+                <tr>
+                <td class="table-cell">
+                {% for l in links %}
+                  <a href="{{ l.url }}" target="_blank"><img src="{{ l.image }}" alt="{{ l.name }}"/></a>
+                {% endfor %}
+                </td>
+                </tr>
+                </table>
+                </td>
+              {% assign count = count | plus: 1 %}
+           {% endfor %}
+           </tr>
+           <table>
+        </div>
+        <hr class="invisible">
+        <div class="row column text-center">
+            <h3>Generic notebooks exploring IDR</h2>
+        </div>
+        <div class="row align-right">
+            <table class="table">
+            {% assign count = 0 %}
+            <tr>
+            {% for item in items %}
+              {% if item.name contains "API" %}
+              {% assign links=item.breadcrumb %}
+              {% if count == 3 %}
+                {% assign count = 0 %}
+                </tr>
+                <tr>
+              {% endif %}
+                <td class="table-cell">
+                <table class="table">
+                <tr>
+                <td class="table-cell"><a href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
+                </tr>
+                <tr>
+                <td class="table-cell">{{ item.description }}</td>
+                </tr>
+                <tr>
+                <td class="table-cell">
+                {% for l in links %}
+                  <a href="{{ l.url }}" target="_blank"><img src="{{ l.image }}" alt="{{ l.name }}"/></a>
+                {% endfor %}
+                </td>
+                </tr>
+                </table>
+                </td>
+              {% assign count = count | plus: 1 %}
+              {% endif %}
+           {% endfor %}
+           </tr>
+           <table>
+        </div>
+
+        <div class="row column text-center">
+            <h3>Using tools to explore IDR</h2>
+        </div>
+        <div class="row align-right">
+            <table class="table">
+            {% assign count = 0 %}
+            <tr>
+            {% for item in items %}
+              {% if item.name contains "Tools" %}
+              {% assign links=item.breadcrumb %}
+              {% if count == 3 %}
+                {% assign count = 0 %}
+                </tr>
+                <tr>
+              {% endif %}
+                <td class="table-cell">
+                <table class="table">
+                <tr>
+                <td class="table-cell"><a href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
+                </tr>
+                <tr>
+                <td class="table-cell">{{ item.description }}</td>
+                </tr>
+                <tr>
+                <td class="table-cell">
+                {% for l in links %}
+                  <a href="{{ l.url }}" target="_blank"><img src="{{ l.image }}" alt="{{ l.name }}"/></a>
+                {% endfor %}
+                </td>
+                </tr>
+                </table>
+                </td>
+              {% assign count = count | plus: 1 %}
+              {% endif %}
+           {% endfor %}
+           </tr>
+           <table>
+        </div>
+        <!-- end Notebooks section -->
+
+
+
+       <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Developing your own</h2>
+        </div>
+        <div class="row">
+            <div class="small-10 small-centered medium-10 medium-centered columns">
+                <div class="row horizontal">
+                    <div>
+                      <h1 class="text-center">GitHub login</h1>
+                      <p>
+                        If you are interested in developing your own data analysis notebooks on our analysis platform please contact us with your GitHub username.
+                        This will give you more computational resources including scratch storage space than is available through the public access.
+                      </p>
+                      <p>
+                        We will do our best to maintain this scratch space across upgrades, though in the event of unforeseen issues we may need to delete all scratch space, and you should consider it as suitable for temporary storage only.
+                        Your scratch space may be deleted without warning if you have not logged in for over a month.
+                      </p>
+                      <div class="row column text-center">
+                        <a href="https://login.binder.bioimagearchive.org/" class="large button sites-button">Login with GitHub</a>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
