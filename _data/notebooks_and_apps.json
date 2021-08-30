@@ -40,7 +40,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Display lineage",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0113",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/13425213",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Access Images and metadata using idr-py",
       "url": "https://idr.openmicroscopy.org/webclient/?show=project-1903",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/9822152",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Access Images and metadata using omero-py",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0062",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/6001240",
@@ -97,7 +97,7 @@
       ]
     },
         {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Access Data using R-gateway",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0021",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/1884839",
@@ -112,7 +112,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Analyse using Fiji",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0021",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/1884839",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Analyse using ilastik",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0062",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/6001240",
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Analyse using cellprofiler",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0002",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/179693",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebPage",
       "description": "Analyse using EBImage",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0040",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/3491334",
