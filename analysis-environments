@@ -2,7 +2,7 @@
 layout: idr
 title: Analysis environments
 redirect_from:
-  - linked-environments/
+  - analysis-environments/
 ---
 
 {% assign studies=site.data.notebooks_and_apps.itemListElement | sort: 'name' | where_exp:"item", "item.name contains 'study'" %}
