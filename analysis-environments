@@ -33,9 +33,10 @@ redirect_from:
                 <div class="row horizontal">
                     <div>
                         <p>
-                        We have a set of Notebooks and apps that can be run in several
+                        We have a set of notebooks and apps that can be run in several
                         environments managed by third party. IDR mainly uses <a href="https://binderhub.readthedocs.io/en/latest/">BinderHub</a>.
-                        The set can be run by anyone without a login is available to anyone interested in exploring and mining the diverse and vast range of image data and metadata in the IDR. All notebook sessions are subject to available resources, are limited in the network resources they can access, and will automatically terminate after a period of inactivity. Do not store anything you wish to keep.
+                        The set can be run by anyone without a login and it is available to anyone interested in exploring and mining the diverse and vast range of image data and metadata in the IDR. All notebook sessions are subject to available resources, are limited in the network resources they can access, and will automatically terminate after a period of inactivity. Do not store anything you wish to keep.
+                        Below is a list of environments currently supported.
                        </p>
                         <ul>
                             <li>The public BinderHub <a href="https://mybinder.org">mybinder.org</a></li>
