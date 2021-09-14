@@ -73,9 +73,6 @@ redirect_from:
                 <td>
                 <table>
                 <tr>
-                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
-                </tr>
-                <tr>
                 <td>{{ item.name }}: {{ item.description }}</td>
                 </tr>
                 <tr>
@@ -84,6 +81,9 @@ redirect_from:
                   <a href="{{ l.url }}" target="_blank"><img style="margin:0" src="{{ l.image }}" alt="{{ l.name }}"/></a>
                 {% endfor %}
                 </td>
+                </tr>
+                <tr height="120px">
+                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}" style="max-height:100%; max-width:100%"/></a></td>
                 </tr>
                 </table>
                 </td>
@@ -111,9 +111,6 @@ redirect_from:
                 <td>
                 <table>
                 <tr>
-                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
-                </tr>
-                <tr>
                 <td>{{ item.description }}</td>
                 </tr>
                 <tr>
@@ -122,6 +119,9 @@ redirect_from:
                   <a href="{{ l.url }}" target="_blank"><img style="margin:0" src="{{ l.image }}" alt="{{ l.name }}"/></a>
                 {% endfor %}
                 </td>
+                </tr>
+                <tr height="120px">
+                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}" style="max-height:100%; max-width:100%"/></a></td>
                 </tr>
                 </table>
                 </td>
@@ -150,9 +150,6 @@ redirect_from:
                 <td>
                 <table>
                 <tr>
-                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}" style="max-height:100%; max-width:100%"/></a></td>
-                </tr>
-                <tr>
                 <td>{{ item.description }}</td>
                 </tr>
                 <tr>
@@ -161,6 +158,9 @@ redirect_from:
                   <a href="{{ l.url }}" target="_blank"><img style="margin:0" src="{{ l.image }}" alt="{{ l.name }}"/></a>
                 {% endfor %}
                 </td>
+                </tr>
+                <tr height="120px">
+                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}" style="max-height:100%; max-width:100%"/></a></td>
                 </tr>
                 </table>
                 </td>
