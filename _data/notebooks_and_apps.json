@@ -57,7 +57,7 @@
     {
       "@type": "WebPage",
       "description": "Access Images and metadata using idr-py",
-      "url": "https://idr.openmicroscopy.org/webclient/?show=project-1903",
+      "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0083",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/9822152",
       "name": "API",
       "breadcrumb": [
@@ -78,8 +78,8 @@
     {
       "@type": "WebPage",
       "description": "Access Images and metadata using omero-py",
-      "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0062",
-      "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/6001240",
+      "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0044",
+      "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/4007801",
       "name": "API",
       "breadcrumb": [
         {
