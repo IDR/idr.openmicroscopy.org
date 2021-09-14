@@ -60,29 +60,28 @@ redirect_from:
             <h3>Notebooks specific to IDR studies</h2>
         </div>
         <div class="row align-right">
-            <table class="table">
+            <table>
             {% assign count = 0 %}
-            <tr>
+            <tr style="text-align:left;vertical-align:top;">
             {% for item in studies %}
-
               {% assign links=item.breadcrumb %}
               {% if count == 3 %}
                 {% assign count = 0 %}
                 </tr>
                 <tr>
               {% endif %}
-                <td class="table-cell">
-                <table class="table">
+                <td>
+                <table>
                 <tr>
-                <td class="table-cell"><a href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
+                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
                 </tr>
                 <tr>
-                <td class="table-cell">{{ item.name }}: {{ item.description }}</td>
+                <td>{{ item.name }}: {{ item.description }}</td>
                 </tr>
                 <tr>
-                <td class="table-cell">
+                <td>
                 {% for l in links %}
-                  <a href="{{ l.url }}" target="_blank"><img src="{{ l.image }}" alt="{{ l.name }}"/></a>
+                  <a href="{{ l.url }}" target="_blank"><img style="margin:0" src="{{ l.image }}" alt="{{ l.name }}"/></a>
                 {% endfor %}
                 </td>
                 </tr>
@@ -98,9 +97,9 @@ redirect_from:
             <h3>Generic notebooks exploring IDR</h2>
         </div>
         <div class="row align-right">
-            <table class="table">
+            <table>
             {% assign count = 0 %}
-            <tr>
+            <tr style="text-align:left;vertical-align:top;">
             {% for item in items %}
               {% if item.name contains "API" %}
               {% assign links=item.breadcrumb %}
@@ -109,18 +108,18 @@ redirect_from:
                 </tr>
                 <tr>
               {% endif %}
-                <td class="table-cell">
-                <table class="table">
+                <td>
+                <table>
                 <tr>
-                <td class="table-cell"><a href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
+                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
                 </tr>
                 <tr>
-                <td class="table-cell">{{ item.description }}</td>
+                <td>{{ item.description }}</td>
                 </tr>
                 <tr>
-                <td class="table-cell">
+                <td>
                 {% for l in links %}
-                  <a href="{{ l.url }}" target="_blank"><img src="{{ l.image }}" alt="{{ l.name }}"/></a>
+                  <a href="{{ l.url }}" target="_blank"><img style="margin:0" src="{{ l.image }}" alt="{{ l.name }}"/></a>
                 {% endfor %}
                 </td>
                 </tr>
@@ -137,9 +136,9 @@ redirect_from:
             <h3>Using tools to explore IDR</h2>
         </div>
         <div class="row align-right">
-            <table class="table">
+            <table>
             {% assign count = 0 %}
-            <tr>
+            <tr style="text-align:left;vertical-align:top;">
             {% for item in items %}
               {% if item.name contains "Tools" %}
               {% assign links=item.breadcrumb %}
@@ -148,18 +147,18 @@ redirect_from:
                 </tr>
                 <tr>
               {% endif %}
-                <td class="table-cell">
-                <table class="table">
+                <td>
+                <table>
                 <tr>
-                <td class="table-cell"><a href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.name }}"/></a></td>
+                <td><a href="{{ item.url }}" target="_blank"><img style="margin:0" src="{{ item.image }}" alt="{{ item.name }}" style="max-height:100%; max-width:100%"/></a></td>
                 </tr>
                 <tr>
-                <td class="table-cell">{{ item.description }}</td>
+                <td>{{ item.description }}</td>
                 </tr>
                 <tr>
-                <td class="table-cell">
+                <td>
                 {% for l in links %}
-                  <a href="{{ l.url }}" target="_blank"><img src="{{ l.image }}" alt="{{ l.name }}"/></a>
+                  <a href="{{ l.url }}" target="_blank"><img style="margin:0" src="{{ l.image }}" alt="{{ l.name }}"/></a>
                 {% endfor %}
                 </td>
                 </tr>
