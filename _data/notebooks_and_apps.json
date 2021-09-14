@@ -98,7 +98,7 @@
     },
         {
       "@type": "WebPage",
-      "description": "Access Data using R-gateway",
+      "description": "Access Images and metadata using R-gateway",
       "url": "https://idr.openmicroscopy.org/search/?query=Name:idr0021",
       "image": "https://idr.openmicroscopy.org/webclient/render_thumbnail/1884839",
       "name": "API",
