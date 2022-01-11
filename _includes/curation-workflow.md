@@ -1572,7 +1572,7 @@ First make the private GitHub study repository visible.
 Add it to the https://github.com/IDR/idr-metadata as a submodule.
 Assuming you already have a local up-to-date checkout of `idr-metadata` run:
 
-    $ git submodule add git://github.com/IDR/idr0042-nirschl-wsideeplearning
+    $ git submodule add https://github.com/IDR/idr0042-nirschl-wsideeplearning
 
 Commit and push your changes to your fork of `idr-metadata`, and open a PR.
 
