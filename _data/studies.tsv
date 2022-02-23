@@ -1,4 +1,4 @@
-Study	Container	Introduced	Internal ID	Sets	Wells	Experiments (wells for screens, imaging experiments for non-screens)	Targets (genes, small molecules, geographic locations, or combination of factors (idr0019, 26, 34, 38)	Acquisitions	5D Images	Planes	Size (TB)	Size	# of Files	avg. size (MB)	Avg. Image Dim (XYZCT)
+Study	Container	Introduced	Internal ID	Sets	Wells	Experiments (wells for screens, imaging experiments for non-screens)	Targets (genes, small molecules, geographic locations, or combination of factors (idr0019, 26, 34, 38)	Acquisitions	5D Images	Planes	Size (TB)	Size	# of Files	avg. size (MB)	Avg. Image Dim (XYZCT)	Sample Type
 idr0001-graml-sysgro	screenA	demo1	3	192	18432	18432	3005	1143	109728	3511296	10.05569923	10055699234784	219606	45.78972904	1376 x 1040 x 16 x 2 x 1
 idr0002-heriche-condensation	screenA	demo2	102	12	1152	1152	102	12	1152	773760	2.095992298	2095992297526	762482	2.74890725	1344 x 1024 x 1 x 2 x 330
 idr0003-breker-plasticity	screenA	demo1	51	85	32640	32640	6234	85	97920	293760	0.2030157197	203015719716	391869	0.5180703748	672 x 512 x 1 x 3 x 1
