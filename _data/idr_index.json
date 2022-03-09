@@ -6,18 +6,18 @@
             "videos": [
                 {
                     "id": "N9Den172mHo",
-                    "title": "Video: From Publication to IDR",
-                    "text": "Explore linkage between publications and studies in IDR. View images and Regions of interest (ROIs) in IDR. Download the metadata associated with the ROIs."
+                    "title": "Video: From publication to IDR",
+                    "text": "Find a specific IDR study from a publication. View images and Regions of Interest (ROIs) in IDR. Explore study metadata."
                 },
                 {
                     "id": "ybHnoFS0b_k",
-                    "title": "Video: From Gene to images",
-                    "text": "Query for images associated with a gene. Explore the retrieved images and metadata. View the images in context of a plate."
+                    "title": "Video: From gene to images",
+                    "text": "Query images by gene. Explore retrieved images and metadata. View images in context of a plate."
                 },
                 {
                     "id": "rG-qAHZl-p0",
                     "title": "Video: Analytical results",
-                    "text": "Query for images associated with a compound. Find Sars-COVID-2 screening study. Explore images in relation to analytical data submitted by authors."
+                    "text": "Query images by compound. Find Sars-COVID-2 dataset. Explore images in relation to analytical data submitted by authors."
                 }
             ]
         },
