@@ -1,0 +1,36 @@
+{
+    "tabs": [
+        {
+            "title": "Exploring IDR",
+            "text": "",
+            "videos": [
+                {
+                    "id": "N9Den172mHo",
+                    "title": "Video: From Publication to IDR",
+                    "text": "Explore linkage between publications and studies in IDR. View images and Regions of interest (ROIs) in IDR. Download the metadata associated with the ROIs."
+                },
+                {
+                    "id": "ybHnoFS0b_k",
+                    "title": "Video: From Gene to images",
+                    "text": "Query for images associated with a gene. Explore the retrieved images and metadata. View the images in context of a plate."
+                },
+                {
+                    "id": "rG-qAHZl-p0",
+                    "title": "Video: Analytical results",
+                    "text": "Query for images associated with a compound. Find Sars-COVID-2 screening study. Explore images in relation to analytical data submitted by authors."
+                }
+            ]
+        },
+        {
+            "title": "Analyse Data",
+            "text": "<p>The IDR server is built with <a target='_blank' href='https://www.openmicroscopy.org/omero/'>OMERO</a>, allowing access to all image data and metadata via an open API in Python, R, Java, MATLAB and REST/JSON. See the <a target='_blank' href='https://omero-guides.readthedocs.io/en/latest/api_usage.html'>OMERO API guide</a> for more information.</p><p>For examples of analysis tools working with OMERO to access and analyse data, see the <a target='_blank' href='https://omero-guides.readthedocs.io/en/latest/external_tools.html'>analysis tools guide</a>.</p>",
+            "videos": [
+                {
+                    "id": "2qeJbudXnp4",
+                    "title": "Video: Compound analysis: SARS-CoV-2",
+                    "text": "Build analysis environment. Access metadata and images. Calculate IC50 and download. Explore dose-response curves."
+                }
+            ]
+        }
+    ]
+}
