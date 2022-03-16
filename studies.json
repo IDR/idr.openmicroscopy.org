@@ -1,0 +1,31 @@
+---
+title: Studies
+redirect_from:
+- studies/
+---
+
+{"studies":[
+{% for study in site.data.studies %}
+{
+"Study": "{{ study.Study }}",
+"Container": "{{ study.Container }}",
+"Introduced": "{{ study.Introduced }}",
+"Internal ID": {{ study['Internal ID'] }},
+"Sets": {{ study.Sets }},
+"Wells": {{ study.Wells }},
+"Experiments (wells for screens, imaging experiments for non-screens)": "{{ study['Experiments (wells for screens, imaging experiments for non-screens)']}}",
+"Targets (genes, small molecules, geographic locations, or combination of factors (idr0019, 26, 34, 38)": "{{ study['Targets (genes, small molecules, geographic locations, or combination of factors (idr0019, 26, 34, 38)']}}",
+"Acquisitions": "{{ study.Acquisitions }}",
+"5D Images": {{ study['5D Images'] }},
+"Planes": {{ study.Planes }},
+"Size (TB)": {{ study['Size (TB)'] }},
+"Size": {{ study.Size }},
+"# of Files": {{ study['# of Files'] }},
+"avg. size (MB)": {{ study['avg. size (MB)'] }},
+"Avg. Image Dim (XYZCT)": "{{ study['Avg. Image Dim (XYZCT)'] }}",
+"Sample Type": "{{ study['Sample Type'] }}"
+}{% if forloop.last == false %},{% endif %}
+{% endfor %}
+]
+}
+
