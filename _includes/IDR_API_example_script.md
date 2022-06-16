@@ -2,7 +2,7 @@
 # Example of using the IDR web API
 
 OMERO.web uses a default session backend authentication scheme for authentication.
-First create a HTTP session using the [`requests`](http://docs.python-requests.org/en/master/) library:
+First create a HTTP session using the [`requests`](https://requests.readthedocs.io) library:
 
 
 ```python
