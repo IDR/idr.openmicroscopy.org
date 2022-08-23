@@ -24,11 +24,11 @@
    guided by EuroBioimaging on the definition (search for ‘reference’
    within the [Eurobioimaging-Elixir Image
    Data Strategy
-   document](http://www.eurobioimaging.eu/sites/default/files/Euro-BioImaging_Elixir_Image_Data_Strategy_0.pdf)
+   document](https://www.eurobioimaging.eu/sites/default/files/Euro-BioImaging_Elixir_Image_Data_Strategy_0.pdf)
    but we aim to publish datasets that have value beyond simply
    supporting an original publication. Criteria we use (this is on
    our [submission help
-   page](http://idr.openmicroscopy.org/about/submission.html))
+   page](https://idr.openmicroscopy.org/about/submission.html))
    are:
 
      - Datasets **associated** with an existing or upcoming publication
@@ -196,7 +196,7 @@ Remember to cc `idr@openmicroscopy.org` in all emails.
 
   - Test the data is publicly downloadable using the instructions
     described in
-    [<span class="underline">https://idr.openmicroscopy.org/about/download.html</span>](http://idr.openmicroscopy.org/about/download.html)
+    [<span class="underline">https://idr.openmicroscopy.org/about/download.html</span>](https://idr.openmicroscopy.org/about/download.html)
 
   - If the raw data is made available before the IDR publication, open
     and deploy a PR against IDR/deployment to make the accession
@@ -1342,7 +1342,7 @@ Then navigate to the screen or project you have annotated and open some
 of the wells or images.
 
 Also browse from the front page [http://localhost:9000/](http://localhost:9000/)
-by clicking on any study. Then try browsing from [idr-next.openmicroscopy.org/](http://idr-next.openmicroscopy.org/) in your incognito browser window.
+by clicking on any study. Then try browsing from [idr-next.openmicroscopy.org/](https://idr-next.openmicroscopy.org/) in your incognito browser window.
 
 After you have cleared the cache, you go back to the "normal" viewing mode of the server you worked with (i.e. you exit the ssh-ing terminal where you accessed via port 9000 and are accessing the e.g. `idr-next` webclient of the server via some form of VPN or directly when in UoD). Once in that webclient, make sure you click on "Studies" above the left-hand side tree. This is necessary especially if you added a new Project or Screen or deleted one. Otherwise, you might falsely conclude that the clearing of the cache was not successful.
 
@@ -1769,13 +1769,13 @@ docker-compose run --rm -u $ID bioformats2raw \
 The output of `bioformats2raw` only contains the `multiscale` metadata. To add the OMERO rendering metadata, use:
 
 ```
-curl -o- http://idr.openmicroscopy.org/webclient/imgData/9836839/ > 9836839.zarr/omero.json
+curl -o- https://idr.openmicroscopy.org/webclient/imgData/9836839/ > 9836839.zarr/omero.json
 ```
 
 Or for a set of directories:
 
 ```
-for x in $(seq 9836831 9836838); do curl -o- http://idr.openmicroscopy.org/webclient/imgData/${x%%.zarr}/ > ${x%%.zarr}.zarr/omero.json; done
+for x in $(seq 9836831 9836838); do curl -o- https://idr.openmicroscopy.org/webclient/imgData/${x%%.zarr}/ > ${x%%.zarr}.zarr/omero.json; done
 ```
 
 Once that has been done, you can combine the `omero.json` output with the `.zattrs` file using:
