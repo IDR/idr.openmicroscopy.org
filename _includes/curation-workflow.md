@@ -369,7 +369,7 @@ and in social media announcements about the dataset.
 
 **Screen Imaging Method -** I have been using terms from the
 [<span class="underline">Biological imaging ontology
-(Fbbi)</span>](https://www.ebi.ac.uk/ols/ontologies/fbbi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFBbi_00000222)
+(Fbbi)</span>](https://www.ebi.ac.uk/ols/ontologies/fbbi)
 which covers most terms.
 
 **Screen Technology Type** - e.g. RNAi screen. See the
