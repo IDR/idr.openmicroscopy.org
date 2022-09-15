@@ -162,9 +162,9 @@ for a in session.get(url).json()['annotations']:
 ----
 
 
-## Attributes (e.g. Gene Symbol...)
+## Attributes (e.g. Gene Symbol, Phenotype Term Accession...)
 
-### Load all the possible attributes associated to images:
+### Load all the possible values associated to a specific key e.g. Gene Symbol:
 ```python
 KEYS_SEARCH = "https://idr.openmicroscopy.org/searchengine/api/v1/resources/{type}/searchvaluesusingkey/?key={key}"
 
@@ -205,6 +205,4 @@ if 'results' in json['results']:
         key_values = image['key_values']
         for k in key_values:
             print("%s, %s" % (k['name'], k['value']))
-
-
 ```
