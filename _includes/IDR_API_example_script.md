@@ -162,54 +162,49 @@ for a in session.get(url).json()['annotations']:
 ----
 
 
-## Attributes (e.g. Gene, Phenotype...)
+## Attributes (e.g. Gene Symbol...)
 
-### Get Screens that are annotated with gene:
+### Load all the possible attributes associated to images:
 ```python
-SCREENS_PROJECTS_URL = "https://idr.openmicroscopy.org/mapr/api/{key}/?value={value}"
+KEYS_SEARCH = "https://idr.openmicroscopy.org/searchengine/api/v1/resources/{type}/searchvaluesusingkey/?key={key}"
 
-qs = {'key': 'gene', 'value': 'CDC20'}
-url = SCREENS_PROJECTS_URL.format(**qs)
-for s in session.get(url).json()['screens']:
-    screen_id = s['id']
-    print (s['id'], s['name'])
+values = []
+qs1 = {'type': 'image', 'key': KEY}
+url = KEYS_SEARCH.format(**qs1)  
+json = session.get(url).json()
+for d in json['data']:
+    if d['Value']:
+        values.append(d['Value'])
+ values.sort()
+ print(values)
 ```
 
 ----
 
 
-### Get Plates in Screen that are annotated with gene:
+### Get the Ids of the Images that are annotated with a given gene:
 ```python
-PLATES_URL = "https://idr.openmicroscopy.org/mapr/api/{key}/plates/?value={value}&id={screen_id}"
 
-qs = {'key': 'gene', 'value': 'CDC20', 'screen_id': screen_id}
-url = PLATES_URL.format(**qs)
-for p in session.get(url).json()['plates']:
-    plate_id = p['id']
-    print (p['id'], p['name'])
-```
+IMAGE_URL = "{base}/webclient/?show=image-{image_id}"
+IMAGE_VIEWER = "{base}/webclient/img_detail/{image_id}/"
+THUMBNAIL_URL = "{base}/webclient/render_thumbnail/{image_id}/"
+ATTRIBUTES_URL = "{base}/webclient/api/annotations/?type=map&image={image_id}"  # noqa
 
-----
+KEY_VALUE_SEARCH = "https://idr.openmicroscopy.org/searchengine/api/v1/resources/{type}/search/?key={key}&value={value}"
+gene = "ade8"
+qs1 = {'type': 'image', 'key': KEY, 'value': gene}
+url = KEY_VALUE_SEARCH.format(**qs1)  
+json = session.get(url).json()
+if 'results' in json['results']:
+    images = json['results']['results']
+    for image in images:
+        image_id = image['id']
+        print('Image link:', IMAGE_URL.format(**{'base': IDR_BASE_URL, 'image_id': image_id}))
+        print('Image viewer link:', IMAGE_VIEWER.format(**{'base': IDR_BASE_URL, 'image_id': image_id}))
+        print('Thumbnail URL:', THUMBNAIL_URL.format(**{'base': IDR_BASE_URL, 'image_id': image_id}))
+        key_values = image['key_values']
+        for k in key_values:
+            print("%s, %s" % (k['name'], k['value']))
 
 
-### Get Images in Plate that are annotated with gene:
-```python
-IMAGES_URL = "https://idr.openmicroscopy.org/mapr/api/{key}/images/?value={value}&node={parent_type}&id={parent_id}"
-
-IMAGE_URL = "https://idr.openmicroscopy.org/webclient/?show=image-{image_id}"
-IMAGE_VIEWER = "https://idr.openmicroscopy.org/webclient/img_detail/{image_id}/"
-THUMBNAIL_URL = "https://idr.openmicroscopy.org/webclient/render_thumbnail/{image_id}/"
-ATTRIBUTES_URL = "https://idr.openmicroscopy.org/webclient/api/annotations/?type=map&image={image_id}"
-
-qs = {'key': 'gene', 'value': 'CDC20', 'parent_type': 'plate', 'parent_id': plate_id}
-url = IMAGES_URL.format(**qs)
-for i in session.get(url).json()['images']:
-    image_id = i['id']
-    print 'Image link:', IMAGE_URL.format(**{'image_id': image_id})
-    print 'Image viewer link:', IMAGE_VIEWER.format(**{'image_id': image_id})
-    print 'Thumbnail URL:', THUMBNAIL_URL.format(**{'image_id': image_id})
-    url = ATTRIBUTES_URL.format(**{'image_id': image_id})
-    print 'Annotations:'
-    for a in session.get(url).json()['annotations']:
-        print '\t%s' % a['values']
 ```
