@@ -182,7 +182,7 @@ for d in json['data']:
 ----
 
 
-### Get the Ids of the Images that are annotated with a given gene:
+### Get the Images that are annotated with a given gene:
 ```python
 
 IMAGE_URL = "{base}/webclient/?show=image-{image_id}"
