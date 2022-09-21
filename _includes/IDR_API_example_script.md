@@ -186,6 +186,7 @@ values.sort()
 ### Get the Images that are annotated with a given gene:
 ```python
 
+KEY = "Gene Symbol"
 IMAGE_URL = "{base}/webclient/?show=image-{image_id}"
 IMAGE_VIEWER = "{base}/webclient/img_detail/{image_id}/"
 THUMBNAIL_URL = "{base}/webclient/render_thumbnail/{image_id}/"
