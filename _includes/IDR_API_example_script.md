@@ -190,6 +190,7 @@ IMAGE_URL = "{base}/webclient/?show=image-{image_id}"
 IMAGE_VIEWER = "{base}/webclient/img_detail/{image_id}/"
 THUMBNAIL_URL = "{base}/webclient/render_thumbnail/{image_id}/"
 ATTRIBUTES_URL = "{base}/webclient/api/annotations/?type=map&image={image_id}"  # noqa
+IDR_BASE_URL = "https://idr.openmicroscopy.org"
 
 KEY_VALUE_SEARCH = "https://idr.openmicroscopy.org/searchengine/api/v1/resources/{type}/search/?key={key}&value={value}"
 gene = "ade8"
