@@ -177,7 +177,7 @@ for d in json['data']:
     if d['Value']:
         values.append(d['Value'])
 values.sort()
- print(values)
+print (values)
 ```
 
 ----
@@ -207,5 +207,5 @@ if 'results' in json['results']:
         print('Thumbnail URL:', THUMBNAIL_URL.format(**{'base': IDR_BASE_URL, 'image_id': image_id}))
         key_values = image['key_values']
         for k in key_values:
-            print("%s, %s" % (k['name'], k['value']))
+            print ("%s, %s" % (k['name'], k['value']))
 ```
