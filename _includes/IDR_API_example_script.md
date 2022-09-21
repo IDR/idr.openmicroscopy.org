@@ -166,6 +166,7 @@ for a in session.get(url).json()['annotations']:
 
 ### Load all the possible values associated to a specific key e.g. Gene Symbol:
 ```python
+KEY = "Gene Symbol"
 KEYS_SEARCH = "https://idr.openmicroscopy.org/searchengine/api/v1/resources/{type}/searchvaluesusingkey/?key={key}"
 
 values = []
