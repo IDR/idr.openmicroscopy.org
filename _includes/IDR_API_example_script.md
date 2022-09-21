@@ -175,7 +175,7 @@ json = session.get(url).json()
 for d in json['data']:
     if d['Value']:
         values.append(d['Value'])
- values.sort()
+values.sort()
  print(values)
 ```
 
