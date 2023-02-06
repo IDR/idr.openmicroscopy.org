@@ -54,7 +54,7 @@
     },
     {
       "@type": "Website",
-      "url": "https://bioportal.bioontology.org/ontologies/SNOMEDCT",
+      "url": "https://www.snomed.org",
       "description": "Clinical/Pathology",
       "name": "SNOMED CT"
     }
