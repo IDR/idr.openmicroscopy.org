@@ -326,7 +326,7 @@ in a separate column (see idr0016 as an example of this).
 **Study Contacts** - List contacts in columns. Usually there is a
 ‘submitter’ but any of the roles under organization role in the
 [<span class="underline">Experimental Factor
-Ontology</span>](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0002012)
+Ontology</span>](https://www.ebi.ac.uk/ols4/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0002012)
 could be used.
 
 **Term Source Name/URI** - this lists the acronym and URL for any
@@ -369,7 +369,7 @@ and in social media announcements about the dataset.
 
 **Screen Imaging Method -** I have been using terms from the
 [<span class="underline">Biological imaging ontology
-(Fbbi)</span>](https://www.ebi.ac.uk/ols/ontologies/fbbi)
+(Fbbi)</span>](https://www.ebi.ac.uk/ols4/ontologies/fbbi)
 which covers most terms.
 
 **Screen Technology Type** - e.g. RNAi screen. See the
@@ -415,7 +415,7 @@ for the samples that were treated according to that protocol.
 **Phenotypes** - this section lists all the phenotypes that the authors
 identified and their mapping to ontology terms. Usually the
 [<span class="underline">Cellular Microscopy Phenotype
-Ontology</span>](https://www.ebi.ac.uk/ols/ontologies/cmpo) is used. If
+Ontology</span>](https://www.ebi.ac.uk/ols4/ontologies/cmpo) is used. If
 a term does not exist I request it via the
 [<span class="underline">github issues for
 CMPO</span>](https://github.com/EBISPOT/CMPO/issues). They have just
@@ -542,7 +542,7 @@ are:
 Others that might be useful could be Disease, Disease Stage, Clinical
 Treatment. I try to take attribute type names from the
 [<span class="underline">Experimental Factor
-Ontology</span>](https://www.ebi.ac.uk/ols/ontologies/efo) (EFO) but a
+Ontology</span>](https://www.ebi.ac.uk/ols4/ontologies/efo) (EFO) but a
 new attribute term could also be made up if needed.
 
 Then we add columns to say which ontology term these attribute values
@@ -552,7 +552,7 @@ Then we add columns to say which ontology term these attribute values
 ![image12.png](img/curation-workflow/image12.png)
 
 Look for the term in the [<span class="underline">Ontology lookup
-service</span>](https://www.ebi.ac.uk/ols/index) which lists lots of
+service</span>](https://www.ebi.ac.uk/ols4/) which lists lots of
 different ontologies about lots of different biology/chemistry fields.
 If given a choice I tend to use terms that are in EFO because I am
 familiar with it. Usually I try to actually use the ontology term itself
@@ -599,7 +599,7 @@ are not lots of versions of the same thing. Secondly at some point we
 will probably use the ontology terms in querying. E.g. you might want to
 query for images from breast cancer cell lines. The ontology has already
 classified the cell lines into
-[<span class="underline">categories</span>](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0002885)
+[<span class="underline">categories</span>](https://www.ebi.ac.uk/ols4/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0002885)
 like this so we could use the ontology to select all the images where
 the sample has been annotated with an EFO term that is classified as a
 breast cancer cell line.
