@@ -1,6 +1,6 @@
 ## General instructions
 
-The raw data of all studies published in IDR can be downloaded using the FTP. We recommend using the [FileZilla client](https://filezilla-project.org/download.php).
+The raw data of all studies published in IDR can be downloaded using using anonymous File Transfer Protocol (FTP). We recommend using the [FileZilla client](https://filezilla-project.org/download.php).
 
 You can download both whole studies as well as parts/single images.
 
