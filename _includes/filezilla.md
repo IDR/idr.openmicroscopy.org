@@ -6,7 +6,7 @@ You can download both whole studies as well as parts/single images.
 
 The ftp host is available using the following details:
 
-- host: `ftp.ebi.ac.uk/pub/databases/IDR/`
+- host: `ftp.ebi.ac.uk`
 
 ## Desktop client step-by-step
 
