@@ -1,6 +1,6 @@
 ## General instructions
 
-The raw data of all studies published in IDR can be downloaded using anonymous File Transfer Protocol (FTP) or [Globus](https://www.globus.org/).
+The raw data of all studies published in IDR can be downloaded using [Globus](https://www.globus.org/) or anonymous File Transfer Protocol (FTP).
 
 You can download both whole studies as well as parts/single images.
 
@@ -13,13 +13,16 @@ Download and install [Globus connect personal](https://www.globus.org/globus-con
 You might have to create an account, or you can use other login providers like ORCiD.
 
 Go to "Web: Transfer files" to get to the Web UI.
+
 <img src="img/filezilla/globus_1.png" alt="Globus Web UI" />
 
 Then in the File Manager / Collections search for "EMBL-EBI Public Data".
-<img src="img/filezilla/globus_2.png" alt="Globus Collection search" />
 
-In there you should be able to navigate through the same directory structure like on the FTP server /pub/databases/IDR/. 
-<img src="img/filezilla/globus_3.png" alt="Globus IDR collection" />
+<img src="img/filezilla/globus_2.png" alt="Globus Collection search" width="50%" />
+
+In there you should be able to navigate through the same directory structure like on the FTP server /pub/databases/IDR/ to get to the IDR submission you want to download. 
+
+<img src="img/filezilla/globus_3.png" alt="Globus IDR collection" width="50%" />
 
 ## FTP
 
