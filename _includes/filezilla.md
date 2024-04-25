@@ -4,7 +4,7 @@ The raw data of all studies published in IDR can be downloaded using [Globus](ht
 
 You can download both whole studies as well as parts/single images.
 
-We recommend using the [Globus](https://www.globus.org/).
+We recommend using the Globus.
 
 ## Globus
 
@@ -30,7 +30,7 @@ The ftp host is available using the following details:
 
 - host: `ftp.ebi.ac.uk`
 
-## Desktop client step-by-step
+### Desktop client step-by-step
 
 Download and install the [FileZilla client](https://filezilla-project.org/download.php).
 
