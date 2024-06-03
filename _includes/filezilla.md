@@ -30,6 +30,31 @@ The ftp host is available using the following details:
 
 - host: `ftp.ebi.ac.uk`
 
+### CLI client step by step
+
+Connect to the FTP server:
+
+    $ ftp ftp.ebi.ac.uk
+
+The FTP server being anonymous only, use `ftp` or `anonymous` (with no password) to log in.
+Make sure that passive mode is on:
+
+    ftp> passive
+
+Change the directory:
+
+    ftp> cd /pub/databases/IDR/
+
+You may list all the studies in the IDR:
+
+    ftp> ls
+
+Or a single one, e.g.:
+
+    ftp> ls idr0044-*
+
+Use the `get` command to download a specific file, and `bye` to close the connection.
+
 ### Desktop client step-by-step
 
 Download and install the [FileZilla client](https://filezilla-project.org/download.php).
