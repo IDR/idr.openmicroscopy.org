@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build static website
         run: ./build.sh
         env:
@@ -17,7 +17,7 @@ jobs:
       - name: Create website archive
         run: tar -zcvf ${{ github.event.repository.name }}.tar.gz -C _site ./
       - name: Upload website archive as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.repository.name }}.tar.gz
           path: ${{ github.event.repository.name }}.tar.gz
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download website archive
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ github.event.repository.name }}.tar.gz
       - name: Create checksum
