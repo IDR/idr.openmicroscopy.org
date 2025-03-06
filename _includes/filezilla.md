@@ -53,7 +53,13 @@ Or a single one, e.g.:
 
     ftp> ls idr0044-*
 
-Use the `get` command to download a specific file, and `bye` to close the connection.
+Change the mode to `binary`
+
+    ftp> binary
+
+Use the `get` command to download a specific file.
+
+    ftp> get "path-to-file-in-ftp-server" "path-to-local-file"
 
 ### Desktop client step-by-step
 
