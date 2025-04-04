@@ -320,6 +320,19 @@
         "datasets": []
     },
     {
+        "name": "Phindr3D",
+        "biseToolUrl": "https://biii.eu/phindr3d",
+        "projectUrl": "https://github.com/DWALab/Phindr3D",
+        "domains": [
+            "bio-imaging"
+        ],
+        "tags": [
+            "STAND_ALONE",
+            "MANUAL"
+        ],
+        "datasets": []
+    },
+    {
         "name": "TrackMate",
         "biseToolUrl": "https://biii.eu/trackmate",
         "projectUrl": "https://imagej.net/TrackMate",
