@@ -81,10 +81,16 @@ In the right-hand pane, browse the IDR studies to be downloaded. Check the sizes
 
 ## How to find the path for a specific Image/Plate
 
-If you want to download a specific Image/Plate, you can find the path by clicking on the "file paths" icon:
+If you want to download a specific Image/Plate:
+
+1. Navigate to the particular image in OMERO.web, e.g. https://idr.openmicroscopy.org/webclient/?show=image-14788705
+
+2. Click on the "file paths" icon in top-right corner and copy the path.
+
+3. Construct the path to use using following example:
 
 <img src="img/filezilla/file-paths.png" alt="File paths" width="50%" />
 
-The example shows that the file for this image ([15301_week8_PAS](https://idr.openmicroscopy.org/webclient/?show=image-14788705))can be found at `idr0148-schumacher-kidneytem/20220927-Globus/0000-assay_1-light_microscopy/15301_week8_PAS.tiff`.
+The example shows that the file for this image ([15301_week8_PAS](https://idr.openmicroscopy.org/webclient/?show=image-14788705)) can be found at `idr0148-schumacher-kidneytem/20220927-Globus/0000-assay_1-light_microscopy/15301_week8_PAS.tiff`.
 
-But keep in mind, that you usually can't download a single image from a Plate, but you can find the path to the Plate to download.
+Note: You usually can't find a path to a single image from a Plate - the path example above will list paths to ALL the images from that Plate, even if only one is selected. The download of one image from a Plate is possible, but it will be hard to ascertain the precise position of the downloaded image in the PLate after download. Nevertheless, you can use the path to the whole Plate to download.
