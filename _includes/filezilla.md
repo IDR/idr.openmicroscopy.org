@@ -78,3 +78,13 @@ The left-hand pane is showing your local machine folders. Select the folder into
 In the right-hand pane, browse the IDR studies to be downloaded. Check the sizes of the folders using the README files. Click onto a folder and expand it. Right-click on the desired folder or file and click `Download` in the context menu.
 
 <img src="img/filezilla/filezilla-download.png" alt="FileZilla Desktop" width="50%" />
+
+## How to find the path for a specific Image/Plate
+
+If you want to download a specific Image/Plate, you can find the path by clicking on the "file paths" icon:
+
+<img src="img/filezilla/file-paths.png" alt="File paths" width="50%" />
+
+The example shows that the file for this image ([15301_week8_PAS](https://idr.openmicroscopy.org/webclient/?show=image-14788705))can be found at `idr0148-schumacher-kidneytem/20220927-Globus/0000-assay_1-light_microscopy/15301_week8_PAS.tiff`.
+
+But keep in mind, that you usually can't download a single image from a Plate, but you can find the path to the Plate to download.
