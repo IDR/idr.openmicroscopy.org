@@ -4196,9 +4196,6 @@ readers do not read off random characters that represent icons */
 .fa-waze:before {
   content: "\f83f"; }
 
-.fa-bluesky {
-  --fa: "\e671"; }
-
 .fa-weebly:before {
   content: "\f5cc"; }
 
