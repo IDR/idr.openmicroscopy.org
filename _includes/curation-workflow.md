@@ -505,7 +505,7 @@ A01, A02, A03 etc if that is how they are in the files you receive.
 A ‘well number’ is usually added for nice sorting by Plate then Well Number
 rather than Plate then Well (e.g. A1, A2, A3) because Excel will sort it
 to be A1, A10, A2 etc). I add the well number using a
-[<span class="underline">lookup</span>](https://www.gcflearnfree.org/excel-tips/how-to-use-excels-vlookup-function/1/)
+[<span class="underline">lookup</span>](https://support.microsoft.com/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929?utm_source=chatgpt.com)
 from some Excel files I have created
 (384WellPlateNumbersAndLocations.xlsx,
 48WellPlateNumbersAndLocations.xlsx, 96WellPlateNumbersAndLocations.xlsx
