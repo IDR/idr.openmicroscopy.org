@@ -48,7 +48,7 @@ redirect_from:
 
                         <p>IDR datasets are annotated with author-supplied metadata (e.g., annotations, defined regions, feature vectors
                         and ontological annotations) that are all stored and available for browsing. All metadata are also available
-                        through the <a href="https://www.openmicroscopy.org/site/support/omero5.2/developers/Modules/Api.html">OMERO API</a>.
+                        through the <a href="api.html">JSON API</a>.
 
                         <p>If you are interested in submitting data to the IDR, see <a href="submission.html">our submission guidelines</a>.</p>
                     </div>
@@ -101,17 +101,14 @@ redirect_from:
             <div class="small-10 small-centered medium-10 medium-centered columns">
                 <div class="row horizontal">
                     <div>
-                        <p>IDR uses OME’s <a href="https://www.openmicroscopy.org/site/products/bio-formats">Bio-Formats</a>
+                        <p>IDR uses <a href="https://ngff.openmicroscopy.org/specifications/latest/index.html">OME-Zarr</a>
                         and <a href="https://www.openmicroscopy.org/site/products/omero">OMERO</a> tools to read, manage and
-                        serve data, and provide links to EMBL-EBI’s molecular and structural resources. The resource is built
-                        upon EMBL-EBI’s OpenStack-based Embassy infrastructure. All tools used for reading and converting
+                        serve data. The resource is built on <a href="https://www.dundee.ac.uk/">University of Dundee's</a> vSphere Cloud infrastructure and 
+                        cloud-optimized object storage provided by <a href="https://www.ebi.ac.uk/">European Bioinformatics Institute (EMBL-EBI)</a>.
+                        All tools used for reading and converting
                         metadata associated with <a href="https://github.com/IDR/idr-metadata">each dataset</a> and all scripts
-                        used to build the <a href="https://github.com/IDR/infrastructure">infrastructure</a> are maintained
-                        and available. A parallel system that enables computational re-analysis of IDR data will be released soon.</p>
-
-                        <p>The IDR includes a <a href="/jupyter">virtual analysis environment</a> that provides full access to all data.</p>
-
-                        <p>Details on accessing the public IDR API are available under <a href="api.html">about/api.html</a>.
+                        are maintained and available.</p>
+                        <p>Details on accessing the public IDR API are available under <a href="api.html">JSON API</a>.</p>
                     </div>
                 </div>
             </div>
