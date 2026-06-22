@@ -7,19 +7,7 @@ faqs:
   - id: supportedformats
     question: What are the file formats accepted?
     answer: >
-      The IDR uses the Bio-Formats library for reading imaging data.
-      Bio-Formats supports over 150 proprietary and open file formats (see the
-      <a href="https://docs.openmicroscopy.org/bio-formats/latest/supported-formats.html">full list</a>).
-      At a minimum, your data should be readable by an up-to-date version of
-      Bio-Formats e.g. using the <a href="https://docs.openmicroscopy.org/bio-formats/latest/users/comlinetools/display.html">showinf utility</a>
-      or the Image/Fiji plugin.
-  - id: recommendedformats
-    question: What are the preferred formats for submission?
-    answer: >
-      We strongly encourage imaging data deposition using open file formats
-      such as OME-TIFF. Where possible the original raw data should be
-      submitted, though you can also submit analyzed or processed data if you
-      think it is more usable.
+      The IDR uses <a href="https://ngff.openmicroscopy.org/">OME-Zarr</a>.
   - idr: sizelimit
     question: Is there a size limit for data deposition?
     answer: >
