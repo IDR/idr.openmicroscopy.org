@@ -69,20 +69,6 @@
                 "dataTypes": [
                     "FEATURE"
                 ]
-            },
-            {
-                "name": "idr0002",
-                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0002",
-                "availability": "upon request",
-                "material": [
-                    {
-                        "name": "Notebook",
-                        "link": "https://binder.bioimagearchive.org/v2/gh/ome/omero-guide-cellprofiler/v0.4.0?filepath=notebooks/idr0002.ipynb",
-                    }
-                ],
-                "dataTypes": [
-                    "MATERIAL"
-                ]
             }
         ]
     },
@@ -111,20 +97,6 @@
                 "dataTypes": [
                     "FEATURE",
                     "ROI"
-                ]
-            },
-            {
-                "name": "idr0040",
-                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0040",
-                "availability": "upon request",
-                "material": [
-                    {
-                        "name": "Notebook",
-                        "link": "https://binder.bioimagearchive.org/v2/gh/ome/omero-guide-r/v0.1.0?filepath=notebooks/idr0040_Yeast_cell_growth.ipynb",
-                    }
-                ],
-                "dataTypes": [
-                    "MATERIAL"
                 ]
             }
         ]
@@ -165,7 +137,7 @@
                 "material": [
                     {
                         "name": "Notebook",
-                        "link": "https://binder.bioimagearchive.org/v2/gh/ome/omero-guide-ilastik/v0.2.3?filepath=notebooks/idr0062_pixel_classification_zarr.ipynb",
+                        "link": "https://github.com/ome/omero-guide-ilastik/blob/master/notebooks/idr0062_pixel_classification_zarr.ipynb",
                     }
                 ],
                 "dataTypes": [
@@ -221,20 +193,6 @@
                     "ROI",
                     "FEATURE"
                 ]
-            },
-            {
-                "name": "idr0021",
-                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0021",
-                "availability": "upon request",
-                "material": [
-                    {
-                        "name": "Notebook",
-                        "link": "https://binder.bioimagearchive.org/v2/gh/ome/omero-guide-fiji/v0.2.0?filepath=notebooks/idr0021.ipynb",
-                    }
-                ],
-                "dataTypes": [
-                    "MATERIAL"
-                ]
             }
         ]
     },
@@ -289,22 +247,7 @@
         "tags": [
             "STAND_ALONE"
         ],
-        "datasets": [
-            {
-                "name": "idr0040",
-                "link": "https://idr.openmicroscopy.org/search/?query=Name:idr0040",
-                "availability": "upon request",
-                "material": [
-                    {
-                        "name": "Notebook",
-                        "link": "http://binder.bioimagearchive.org/v2/gh/ome/omero-guide-r/v0.1.0?filepath=notebooks/idr0040_Yeast_cell_growth.ipynb",
-                    }
-                ],
-                "dataTypes": [
-                    "MATERIAL"
-                ]
-            }
-        ]
+        "datasets": []
     },
     {
         "name": "Osirix",
